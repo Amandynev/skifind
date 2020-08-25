@@ -10,10 +10,37 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_143515) do
+ActiveRecord::Schema.define(version: 2020_08_25_145211) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "activities", force: :cascade do |t|
+    t.string "activity_name"
+    t.string "activity_description"
+    t.bigint "resort_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["resort_id"], name: "index_activities_on_resort_id"
+  end
+
+  create_table "preferences", force: :cascade do |t|
+    t.integer "user_id"
+    t.integer "resort_id"
+    t.string "visitor_name"
+    t.string "roommate"
+    t.string "budget"
+    t.string "day_activities"
+    t.string "biological_clock"
+    t.string "accommodation"
+    t.string "spot"
+    t.string "night_activities"
+    t.string "expectations"
+    t.string "geocation"
+    t.string "kilometers"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "resorts", force: :cascade do |t|
     t.string "resort_name"
@@ -35,4 +62,5 @@ ActiveRecord::Schema.define(version: 2020_08_25_143515) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "activities", "resorts"
 end
