@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_25_154715) do
+ActiveRecord::Schema.define(version: 2020_08_25_161213) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,8 +25,6 @@ ActiveRecord::Schema.define(version: 2020_08_25_154715) do
   end
 
   create_table "preferences", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "resort_id"
     t.string "visitor_name"
     t.string "roommate"
     t.string "budget"
@@ -40,6 +38,8 @@ ActiveRecord::Schema.define(version: 2020_08_25_154715) do
     t.string "kilometers"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_preferences_on_user_id"
   end
 
   create_table "resorts", force: :cascade do |t|
@@ -63,4 +63,5 @@ ActiveRecord::Schema.define(version: 2020_08_25_154715) do
   end
 
   add_foreign_key "activities", "resorts"
+  add_foreign_key "preferences", "users"
 end
