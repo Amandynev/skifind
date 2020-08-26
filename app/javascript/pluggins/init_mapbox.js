@@ -1,4 +1,11 @@
 import mapboxgl from 'mapbox-gl';
+import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
+// [...]
+if (mapElement) {
+  // [...]
+  map.addControl(new MapboxGeocoder({ accessToken: mapboxgl.accessToken,
+                                      mapboxgl: mapboxgl }));
+}
 
 const mapElement = document.getElementById('map');
 
@@ -6,7 +13,7 @@ const buildMap = () => {
   mapboxgl.accessToken = mapElement.dataset.mapboxApiKey;
   return new mapboxgl.Map({
     container: 'map',
-    style: 'mapbox://styles/mapbox/streets-v10'
+    style: 'mapbox://styles/amandynev/ckebc9bxb14am19r9qpkvseov'
   });
 };
 

@@ -1,5 +1,6 @@
 class ResortsController < ApplicationController
     skip_before_action :authenticate_user!, only: [ :index, :show ]
+    before_action :set_resort, only: [ :show ]
 
     def index
         @resorts = Resort.all
@@ -7,7 +8,7 @@ class ResortsController < ApplicationController
 
     def show
         @resort = Resort.new
-        @resort = resort.find(params[:id])
+        @resort = Resort.find(params[:id])
         @activity = Activity.new
         @markers = [{
         lat: @resort.latitude,
