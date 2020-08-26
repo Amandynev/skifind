@@ -1,1 +1,30 @@
-<h1>Hello you</h1>
+<div class="container-title"></div>
+  <div class="title">
+    <h1>Unique stays</h1>
+    <p>No reservation costs! Great Rates!</br>
+      Manage your bookings. Sign-in for the best MyIgloo experience. </br>
+      Plan a different kind of getaway to uncover the hidden gems near you.</p>
+  </div>
+</div>
+
+<div class="container d-flex justify-content-center">
+  <div class="row">
+    <div class="col-md-4 col-sm-6">
+
+    <% @resorts.each do |resort|  %>
+      <div class="card-product">
+        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
+        <div class="card-product-infos">
+          <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort.resort_address %></p>
+
+          <div class="text-content">
+            <h2><%= resort.resort_name %></h2>
+            <p><%=  resort.resort_description%></p>
+          </div>
+        </div>
+    <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>
