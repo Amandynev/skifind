@@ -25,17 +25,17 @@ puts "create resorts"
     resort_address: "73320, Alpes du nord",
     resort_description: "Pistes variées, plein de lieux d'activités, 3 villages au choix pour ton budget, Tignes t'offrira le plaisir de profiter de cette station été comme hiver",
     visitor_name: "#",
-    roommate: "entre potes", "en couple",
+    roommate: ["entre potes", "en couple"],
     budget: "Modéré, la passion et la raison",
-    day_activities: "Ski, ski, ski !", "Balades en raquettes", "Luge", "Activités insolites",
-    biological_clock: "Lève tôt pour en profiter au maximum", "Soirées après-ski",
-    accommodation: "Appart, avec un coin cuisine", "Hôtel de luxe",
-    spot: "En bas de la piste, pas de perte de temps !", "Près des bars et de la boite de nuit",
-    night_activities: "La tournée des bars", "Un ciné",
-    expectations: "Beaucoup de pistes de ski", "Une station enneigée", "Un lieu vivant la nuit", "Une forêt pour se balader",
-    geocation: "Oui", "Non"
-    kilometers: "Je suis prêt à me déplacer pour ma station idéale", "Au maximum 500kms", "Au plus près de chez moi",
-
+    day_activities: ["Ski, ski, ski !", "Balades en raquettes", "Luge", "Activités insolites"],
+    biological_clock: ["Lève tôt pour en profiter au maximum", "Soirées après-ski"],
+    accommodation: ["Appart, avec un coin cuisine", "Hôtel de luxe"],
+    spot: ["En bas de la piste, pas de perte de temps !", "Près des bars et de la boite de nuit"],
+    night_activities: ["La tournée des bars", "Un ciné"],
+    expectations: ["Beaucoup de pistes de ski", "Une station enneigée", "Un lieu vivant la nuit", "Une forêt pour se balader"],
+    geocation: ["Oui", "Non"],
+    kilometers: ["Je suis prêt à me déplacer pour ma station idéale", "Au maximum 500kms", "Au plus près de chez moi"],
+  )
     #user: user_one)
   tignes.photos.attach(io: file, filename: 'nes.png', content_type: 'image/png')
   tignes.save
