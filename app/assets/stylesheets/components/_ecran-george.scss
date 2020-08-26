@@ -1,0 +1,61 @@
+
+.container-georges {
+  background-image: url(background-georges.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: calc( 100vh - 66px );
+  position: relative;
+}
+
+.ecran-interface-george {
+  position: absolute;
+  right: 110px;
+  bottom: 60px;
+  width: 30%;
+  height: 90%;
+  background-color: rgba(255,255,255,0.6);
+  border: 2px solid white;
+  border-radius: 15px;
+  overflow: scroll;
+}
+
+@media(max-width: 1440px) {
+  .ecran-interface-george {
+    right: 50px;
+    bottom: 60px;
+    width: 40%;
+
+  }
+}
+
+@media(max-width: 1200px) {
+  .ecran-interface-george {
+    right: 20px;
+    bottom: 60px;
+    width: 40%;
+  }
+}
+
+@media(max-width: 900px) {
+  .ecran-interface-george {
+    right: 20px;
+    bottom: 60px;
+    width: 40%;
+
+  }
+}
+
+@media(max-width: 520px) {
+  .ecran-interface-george {
+    right: 5%;
+    width: 90%;
+    bottom: 10px;
+    height: 90%;
+  }
+}
+
+
+
+
+
