@@ -10,7 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
 ActiveRecord::Schema.define(version: 2020_08_25_161213) do
 
   # These are extensions that must be enabled in order to support this database
@@ -24,7 +23,6 @@ ActiveRecord::Schema.define(version: 2020_08_25_161213) do
     t.datetime "updated_at", precision: 6, null: false
     t.index ["resort_id"], name: "index_activities_on_resort_id"
   end
-
 
   create_table "preferences", force: :cascade do |t|
     t.string "visitor_name"
@@ -77,4 +75,4 @@ ActiveRecord::Schema.define(version: 2020_08_25_161213) do
 
   add_foreign_key "activities", "resorts"
   add_foreign_key "preferences", "users"
-
+end
