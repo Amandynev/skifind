@@ -63,7 +63,30 @@
             </div>
             <%= f.input :accommodation, collection: ["Appart, avec un coin cuisine", "Chalet, du typique", "Hôtel de luxe", "De l'insolite"], label: false %>
 
+            <div class="border-radius-10px bg-white w-50 p-2 m-2" >
+              Ton coin idéal ?
+            </div>
+            <div class="d-flex justify-content-end ">
+              <div class="border-radius-10px bg-blue w-50 p-2 m-2">
+                spot
+              </div>
+            </div>
+              <%= f.input :spot, collection: ["Au calme, juste la nature et moi", "En bas de la piste, pas de perte de temps !", "Près des bars et de la boite de nuit", "A proximité des commerces"], label:false %>
+
+            <div class="border-radius-10px bg-white w-50 p-2 m-2" >
+              Ta soirée idéale ?
+            </div>
+            <div class="d-flex justify-content-end ">
+              <div class="border-radius-10px bg-blue w-50 p-2 m-2">
+                night_activities
+              </div>
+            </div>
+            <%= f.input :night_activities, collection: ["Du repos pour être en forme sur les pistes", "La tournée des bars", "Un resto", "Un ciné"], label: false %>
+
+
             <%= f.submit "blabla" %>
+
+
         </div>
         <div class="d-flex justify-content-end ">
           <div class="border-radius-10px bg-blue w-50 p-2 m-2">
