@@ -1,24 +1,30 @@
-<div class="container-title"></div>
-  <div class="title">
-    <h1>Unique stays</h1>
-    <p>No reservation costs! Great Rates!</br>
-      Manage your bookings. Sign-in for the best MyIgloo experience. </br>
-      Plan a different kind of getaway to uncover the hidden gems near you.</p>
+<div class="container-title-index ">
+  <div class="row">
+    <div class="index-infos">
+      <h1 class="title-index">Vos stations françaises</h1>
+      <p>Retrouves toutes les stations disponibles!</br>
+        Parcours skifind afin de trouver <strong>Ta</strong> station préférée. </br>
+        Mais si tu veux allier envies et skis, n'hésites pas à parler avec George!</p>
+    </div>
   </div>
 </div>
 
 <div class="container d-flex justify-content-center">
   <div class="row">
-    <div class="col-md-4 col-sm-6">
+    <div>
       <% @resorts.each do |resort|  %>
-        <div class="card-product">
-              <%= image_tag resort.photo_asset, alt: "Tignes", width: 200, class: "img" %>
-          <div class="card-product-infos">
-              <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort.resort_address %></p>
-              <h4><%= resort.resort_name %></h4>
-              <p><%=  resort.resort_description%></p>
+
+        <%= link_to resort_path(resort), class: 'link-without-style' do %>
+          <div class="card-product">
+                <%= image_tag resort.photo_asset, alt: "Tignes", width: 200, class: "img" %>
+            <div class="card-product-infos">
+                <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort.resort_address %></p>
+                <h4 class="titre_h4"><%= resort.resort_name %></h4>
+                <p><%=  resort.resort_description%></p>
+            </div>
           </div>
-        </div>
+        <% end %>
+
       <% end %>
     </div>
   </div>
