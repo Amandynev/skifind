@@ -1,0 +1,23 @@
+.card-description {
+    display: flex;
+    align-items: center;
+    height: 280px;
+    width: 700px;
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    padding: 8px 16px;
+    border: 1px solid #02245C;
+
+}
+
+
+.description{
+  font-size: 14px;
+}
+
+.site-officiel {
+  position:absolute;
+  bottom: 20px;
+  right: 30px;
+}
