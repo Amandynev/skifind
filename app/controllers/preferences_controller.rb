@@ -8,7 +8,7 @@ class PreferencesController < ApplicationController
   def create
     @preference = Preference.new(preference_params)
     @preference.user = current_user
-    if @preference.save
+    if @preference.save!
       redirect_to root_path, notice: 'preference was successfully created.'
     else
       render :new
@@ -16,6 +16,6 @@ class PreferencesController < ApplicationController
   end
 
   def preference_params
-    params.require(:preference).permit(:visitor_name, :roommate, :budget, :day_activities, :biological_clock, :accommodation)
+    params.require(:preference).permit(:visitor_name, :roommate, :budget, :day_activities, :biological_clock, :accommodation, :spot, :night_activities, :expectations, :kilometers )
   end
 end
