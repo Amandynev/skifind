@@ -23,6 +23,6 @@ class ResortsController < ApplicationController
 
     def resort_params
         params.require(:resort).permit(:resort_name, :resort_addres, :resort_description, :visitor_name, :roommate, :budget,
-        :day_activities, :biological_clock, :accommodation, :spot, :night_activities, :expectations, :geocation, :kilometers)
+        :day_activities, :biological_clock, :accommodation, :spot, :night_activities, :expectations, :geocation, :kilometers, :photo_asset)
     end
 end

@@ -1,5 +1,62 @@
-<div class="container-home">
-  <%= link_to "GO", new_preference_path, class: "btn" %>
+<div class="banner-home d-flex justify-content-center align-items-center flex-column">
+  <div class="title">
+    <h1>Parle avec Georges pour trouver ta station</h1>
+  </div>
+    <%= link_to "GO", new_preference_path, class: "buton-primary" %>
+</div>
+
+<div class="container d-flex flex-column">
+  <h2>Les 8 bonnes raisons pour partir au Ski</h2>
+    <div class="d-flex">
+      <div class="card" style="width: 18rem;">
+      <div class="inner">
+        <img class="card-img-top" src="https://images.unsplash.com/photo-1533420896084-06d2bce5365f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80" alt="Ice">
+      </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title" style="text-align: center;">Plongez sous la glace</h5>
+          <p class="card-text"> <strong>Vous êtes amateur de sensations fortes ?</strong>
+            Vivez une véritable aventure et un voyage hors temps sous la glace...</p>
+          <%= link_to "Explore", new_preference_path, class: "buton-explore align-self-end" %>
+        </div>
+      </div>
+
+      <div class="card" style="width: 18rem;">
+      <div class="inner">
+        <img class="card-img-top" src="https://images.unsplash.com/photo-1579755209948-20d5b46be7be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" alt="Ice">
+      </div>
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title" style="text-align: center;"> Nuit insolite dans un Igloo</h5>
+          <p class="card-text"> <strong>Quoi de plus insolite qu'une nuit dans un igloo ?</strong>
+            Venez vivre cette expérience hors norme...</p>
+          <%= link_to "Explore", new_preference_path, class: "buton-explore align-self-end" %>
+        </div>
+      </div>
+
+    <div class="card" style="width: 18rem;">
+    <div class="inner">
+      <img class="card-img-top" src="https://images.unsplash.com/photo-1577489114892-8ff285156454?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=358&q=80" alt="Ice">
+    </div>
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title" style="text-align: center;">Balades inoubliables</h5>
+        <p class="card-text"> <strong>Besoin de vous ressourcer dans un cadre naturel exceptionnel?</strong>
+          Explorez les forêts enneigés en raquettes...</p>
+        <%= link_to "Explore", new_preference_path, class: "buton-explore align-self-end" %>
+      </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+    <div class="inner">
+      <img class="card-img-top" src="https://images.unsplash.com/photo-1581418983065-dd8044e39fca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80" alt="Ice">
+    </div>
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title" style="text-align: center;">Soirées de folie</h5>
+        <p class="card-text"> <strong>Faites la tournée des bars entre amis !</strong>
+         Après l'effort, le réconfort ! Profitez d'une bonne bière ou d'un bon vin chaud...
+        </p>
+        <%= link_to "Explore", new_preference_path, class: "buton-explore align-self-end" %>
+      </div>
+    </div>
+  </div>
 </div>
 
 

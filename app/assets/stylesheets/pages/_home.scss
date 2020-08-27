@@ -1,2 +1,81 @@
 // Specific CSS for your home-page
+.banner-home{
+    background-image:    asset-url('Background-home2.jpg');
+    background-size:     cover;
+    background-position: center;
+    width:               100vw;
+    height:              calc( 100vh - 66px );
+  }
 
+// .container {
+//   margin-top: 20px;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr 1fr;
+//   grid-gap: 15px;
+// }
+
+.container h2 {
+    color:#011028;
+}
+
+.inner {
+  overflow: hidden;
+}
+.inner img {
+  height: 250px;
+  transition: all 1.5s ease;
+}
+
+.inner:hover img {
+  transform:scale(1.5);
+}
+  //Cards_home_page
+
+.card-title{
+  color:#011028;
+  font-size: 22px;
+}
+
+.card-text{
+  color:#02245C;
+  font-size: 14px;
+}
+
+.title h1 {
+  color: #02245C;
+}
+
+//Button_home_page
+
+.buton-primary {
+  color: white;
+  padding: 10px 40px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(#033FA0, #02245C);
+  transition: background 0.3s ease;
+  border: 1px solid #02245C;
+  text-decoration: none;
+}
+
+.buton-primary:hover {
+  background: linear-gradient(#02245C, #011028);
+  text-decoration: none;
+  color: white;
+}
+
+.buton-explore {
+color: white;
+  padding: 7px 10px;
+  border-radius: 4px;
+  background: linear-gradient(#033FA0, #02245C);
+  transition: background 0.3s ease;
+  border: 1px solid #02245C;
+  text-decoration: none;
+}
+
+.buton-explore:hover {
+background: linear-gradient(#02245C, #011028);
+text-decoration: none;
+color: white;
+}

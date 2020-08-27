@@ -1,0 +1,105 @@
+.card-product{
+  overflow: hidden;
+  height: 220px;
+  width: 93vw;
+  background: white;
+  display: flex;
+  align-items: center;
+  position: relative;
+  border: 1px solid #02245C;
+  transition: .3s;
+  margin-bottom: 10px;
+}
+
+
+.card-product img {
+  height: 210px ;
+  width: 280px;
+  padding-left:5px;
+}
+
+.card-product:after{
+  content: 'Check out';
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  font-size: 16px;
+  color:#02245C;
+  font-weight: bold;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  background: white;
+  top: 20px;
+  bottom: 20px;
+  opacity: 0;
+  transform: rotate3d(-1,1,0,100deg);
+  transition: .4s;
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  text-decoration: none;
+}
+.card-product:hover:after {
+  opacity: .9;
+  transform: rotate3d(0,0,0,0deg);
+}
+
+.card-product:hover .link {
+  opacity: 1;
+
+}
+
+.localisation {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  position:absolute;
+  top: 20px;
+  right: 30px;
+
+}
+
+.card-product .card-product-infos {
+  padding: 10px;
+  font-size: 12px;
+}
+.titre_h4{
+  color: #02245C;
+}
+
+@media(max-width: 600px) {
+
+  .card-product .card-product-infos {
+  padding: 10px;
+  font-size: 8px;
+  height: 90px;
+  width: 70vw;
+}
+
+.localisation {
+  font-size: 5px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  position:absolute;
+  top: 20px;
+  right: 30px;
+}
+
+.card-product{
+  height: 90px;
+  width: 70vw;
+
+}
+
+.card-product img {
+  height: 80px ;
+  width: 100px;
+  padding-left:5px;
+}
+
+}
+
+
