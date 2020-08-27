@@ -1,2 +1,38 @@
 // Specific CSS for your home-page
+.banner-home{
+    background-image:    asset-url('Background-home2.jpg');
+    background-size:     cover;
+    background-position: center;
+    width:               100vw;
+    height:              calc( 100vh - 66px );
+  }
+  
+.card-activities-info {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 15px;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding: 0px 60px;
+}
 
+.buton-primary {
+    color: white;
+    padding: 10px 40px;
+    border-radius: 4px;
+    font-weight: bold;
+    background: linear-gradient(#033FA0, #02245C);
+    transition: background 0.3s ease;
+    border: 1px solid #02245C;
+    text-decoration: none;
+  }
+  
+  .buton-primary:hover {
+    background: linear-gradient(#02245C, #011028);
+    text-decoration: none;
+    color: white;
+  }
+
+  
