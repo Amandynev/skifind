@@ -32,7 +32,14 @@ puts "create resorts"
     roommate: "entre potes",
     budget: "Modéré, la passion et la raison",
     photo_asset: "Tignes.jpg",
-  )
+
+    )
+file = URI.open("https://cdm0lfbn.cloudimg.io/v7/_origin_/image_uploader/photos/86/original/tignes-le-lavachet-tignes-le-lac--lavachet.jpg?p=large")
+tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://img2.onthesnow.com/image/xl/97/tignes_resort_france_97081.jpg")
+tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://www.tignespro.net/upload/dossiers/photos/614_snow-driving-fabre-tignes_001_redimensionner.jpg")
+tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
   vars = Resort.create!(
     resort_name: "Vars",
