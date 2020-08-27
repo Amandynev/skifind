@@ -1,6 +1,36 @@
-<h1>je suis la show</h1>
+<div class="container mt-5 mb-5">
+  
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
 
-<div id="map"
+      <div class="carousel-item active">
+        <%= image_tag "https://res.cloudinary.com/djx6df7xu/image/upload/v1598522148/skifind/tignes_3_igpmac.jpg", class: 'd-block w-100' %>
+      </div>
+
+      <div class="carousel-item">
+        <%= image_tag "https://res.cloudinary.com/djx6df7xu/image/upload/v1598522078/skifind/tignes_1_qin5h0.jpg", class: 'd-block w-100' %>
+      </div>
+
+      <div class="carousel-item">
+        <%= image_tag "https://res.cloudinary.com/djx6df7xu/image/upload/v1598522078/skifind/tignes_2_l9qg5a.jpg", class: 'd-block w-100' %>
+      </div>
+    </div>
+
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+
+  <div id="map"
      style="width: 100%; height: 600px;"
      data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
+
+</div>
