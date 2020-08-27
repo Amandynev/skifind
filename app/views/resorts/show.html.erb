@@ -1,9 +1,10 @@
-<div class="container mt-5 mb-5">
+<div class="box mt-5 mb-3 ml-5 mr-5">
+
      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
           <div class="carousel-inner">
           <% @resort.landscapes.each_with_index do |photo, index| %>
              <div class="carousel-item <%= 'active' if index == 0 %>">
-               <%= cl_image_tag photo.key, crop: :fill %>
+               <%= cl_image_tag photo.key, height: 600, width: 1600, crop: :fill %>
              </div>
           <% end %>
 
