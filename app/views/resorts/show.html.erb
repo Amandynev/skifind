@@ -3,7 +3,7 @@
           <div class="carousel-inner">
           <% @resort.landscapes.each_with_index do |photo, index| %>
              <div class="carousel-item <%= 'active' if index == 0 %>">
-               <%= cl_image_tag photo.key, crop: :fill %>
+               <%= cl_image_tag photo.key, height: 550, width: 1600, crop: :fill %>
              </div>
           <% end %>
 
@@ -18,12 +18,26 @@
           </a>
      </div>
 
-  <div id="map"
-     style="width: 100%; height: 600px;"
-     data-markers="<%= @markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>">
-  </div>
+
+
+    <div class="container d-flex" id="padding0">
+      <div class="card-description" >
+
+
+        <p class="localisation"> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.resort_address %></p>
+
+        <div class="description">
+          <%= @resort.resort_description %>
+
+        <div class="site-officiel">
+          <a target="_blank" href="https://www.tignes.net/">Site officiel</a>
+        </div>
+
+      </div>
+    </div>
 
 </div>
+
+
 
 
