@@ -32,13 +32,14 @@ tignes = Resort.create!(
     roommate: "entre potes",
     budget: "Modéré, la passion et la raison",
     photo_asset: "Tignes.jpg",
-
     )
+
 file = URI.open("https://www.tignes.net/uploads/media/page_block/0001/73/06fcfba68b24b6cab24cf3e56e6f43101530e418.jpeg")
 tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 file = URI.open("https://img2.onthesnow.com/image/xl/97/tignes_resort_france_97081.jpg")
 tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 file = URI.open("https://cdm0lfbn.cloudimg.io/v7/_origin_/image_uploader/photos/86/original/tignes-le-lavachet-tignes-le-lac--lavachet.jpg?p=large")
+
 tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
 vars = Resort.create!(
@@ -59,7 +60,7 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
 file = URI.open("https://www.cgh-residences.com/photos/stations/sliders/vars-2_287.jpg")
 vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
-courchevel = Resort.create!(
+  courchevel = Resort.create!(
     resort_name: "Courchevel",
     resort_address: "Mairie 228 rue de la mairie Saint-Bon chef-Lieu, 73120, France",
     resort_description: "C'est LA station qui répondra à toutes tes exigences. Tu auras de la bonne neige sous les skis et des paillettes plein les yeux pour le reste! Tu veux changer d'ambiance et tenter
