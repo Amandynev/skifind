@@ -6,12 +6,14 @@
     width:               100vw;
     height:              calc( 100vh - 66px );
   }
-.container{
-  margin-top: 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 15px;
-}
+
+// .container {
+//   margin-top: 20px;
+//   display: grid;
+//   grid-template-columns: 1fr 1fr 1fr 1fr;
+//   grid-gap: 15px;
+// }
+
 .container h2 {
     color:#011028;
 }

@@ -1,44 +1,41 @@
-<div class="container mt-5 mb-3">
+<div class="container">
 
-     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-          <div class="carousel-inner">
-          <% @resort.landscapes.each_with_index do |photo, index| %>
-             <div class="carousel-item <%= 'active' if index == 0 %>">
-               <%= cl_image_tag photo.key, height: 550, width: 1600, crop: :fill %>
-
-             </div>
-          <% end %>
-
-          </div>
-          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
-     </div>
+<!-----------------------title ------------------------->
 
 
-
-    <div class="container d-flex" id="padding0">
-      <div class="card-description" >
-
-
-        <p class="localisation"> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.resort_address %></p>
-
-        <div class="description">
-          <%= @resort.resort_description %>
-
-        <div class="site-officiel">
-          <a target="_blank" href="https://www.tignes.net/">Site officiel</a>
-        </div>
-
+<!-----------------------carousel ------------------------->
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <% @resort.landscapes.each_with_index do |photo, index| %>
+         <div class="carousel-item <%= 'active' if index == 0 %>">
+            <%= cl_image_tag photo.key, height: 550, width: 1200, crop: :fill %>
+         </div>
+      <% end %>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+</div>
+<!-----------------------card descritpion ------------------------->
+<div class="container d-flex">
+  <div class="card-description" >
+    <p class="localisation"> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.resort_address %></p>
+    <div class="description">
+      <%= @resort.resort_description %>
+      <div class="site-officiel">
+      <a target="_blank" href="https://www.tignes.net/">Site officiel</a>
       </div>
     </div>
-
+  </div>
 </div>
+
+
 
 
 
