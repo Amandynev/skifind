@@ -16,8 +16,11 @@
   padding-left:5px;
 }
 
+
+
 .card-product:after{
-  content: '';
+  content: 'Text affiche lors du hover';
+  text-align: center;
   display: block;
   background: white;
   top: 20px;
@@ -32,22 +35,6 @@
 .card-product:hover:after{
   opacity: .9;
   transform: rotate3d(0,0,0,0deg);
-}
-
-.text-content{
-  top: 45%;
-  opacity: 0;
-  z-index: 1;
-  transform: translate(10%,-30%);
-  transition: .3s;
-  text-align: center;
-  color: black;
-}
-
-.card-product:hover .text-content{
-  opacity: 1;
-  transform: translate(0,-50%);
-  transition-delay: .3s;
 }
 
 .localisation {
