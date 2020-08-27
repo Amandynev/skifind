@@ -21,7 +21,7 @@ puts "create resorts"
 
   # file = URI.open('https://www.tignes.net/uploads/media/page/0001/60/a95bc639ea1436153d77584753c7982b4cd22a49.jpeg')
 
-  photo_tignes = File.open('app/assets/images/Tignes.jpg')
+
   tignes = Resort.create!(
     resort_name: "Tignes",
     resort_address: "Route du Rosset, 73320 Tignes, France",
@@ -31,8 +31,8 @@ puts "create resorts"
     visitor_name: "#",
     roommate: "entre potes",
     budget: "Modéré, la passion et la raison",
+    photo_asset: "Tignes.jpg",
   )
-  photo_tignes.save!
 
   File.open('app/assets/images/vars.jpg')
   vars = Resort.create!(
@@ -44,9 +44,10 @@ puts "create resorts"
     visitor_name: "#",
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
+    photo_asset: "vars.jpg",
   )
 
-  File.open('app/assets/images/courchevel.jpg')
+
   courchevel = Resort.create!(
     resort_name: "Courchevel",
     resort_address: "Mairie 228 rue de la mairie Saint-Bon chef-Lieu, 73120, France",
@@ -56,6 +57,7 @@ puts "create resorts"
     visitor_name: "#",
     roommate: "en couple",
     budget: "Illimité, c'est les vacances",
+    photo_asset: "courchevel.jpg",
   )
 
   File.open('app/assets/images/combloux.jpg')
@@ -68,6 +70,7 @@ puts "create resorts"
     visitor_name: "#",
     roommate: "en famille",
     budget: "Modeste, je veux faire des économies",
+    photo_asset: "combloux.jpg",
   )
 
   File.open('app/assets/images/avoriaz.jpg')
@@ -79,6 +82,7 @@ puts "create resorts"
     visitor_name: "#",
     roommate: "entre potes",
     budget: "Illimité, c'est les vacances",
+    photo_asset: "avoriaz.jpg",
   )
 
   File.open('app/assets/images/isola.jpg')
@@ -91,6 +95,7 @@ puts "create resorts"
     visitor_name: "#",
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
+    photo_asset: "isola.jpg",
   )
 
   File.open('app/assets/images/bolquere.jpg')
@@ -103,6 +108,7 @@ puts "create resorts"
     visitor_name: "#",
     roommate: "entre potes",
     budget: "Modeste, je veux faire des économies",
+    photo_asset: "bolquere.jpg",
   )
 
   File.open('app/assets/images/puyvalador.jpg')
@@ -115,6 +121,7 @@ puts "create resorts"
     visitor_name: "#",
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
+    photo_asset: "puyvalador.jpg",
   )
 
   File.open('app/assets/images/besse.jpg')
@@ -127,6 +134,7 @@ puts "create resorts"
     visitor_name: "#",
     roommate: "en couple",
     budget: "Illimité, c'est les vacances",
+    photo_asset: "besse.jpg",
   )
 
   File.open('app/assets/images/chalmazel.jpg')
@@ -139,6 +147,7 @@ puts "create resorts"
     visitor_name: "#",
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
+    photo_asset: "chalmazel.jpg",
   )
 
   File.open('app/assets/images/morbier.jpg')
@@ -151,6 +160,7 @@ puts "create resorts"
     visitor_name: "#",
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
+    photo_asset: "morbier.jpg",
   )
 
   File.open('app/assets/images/metabief.jpg')
@@ -163,4 +173,5 @@ puts "create resorts"
     visitor_name: "#",
     roommate: "en couple",
     budget: "Modeste, je veux faire des économies",
+    photo_asset: "metabief.jpg",
   )

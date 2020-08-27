@@ -10,18 +10,16 @@
 <div class="container d-flex justify-content-center">
   <div class="row">
     <div class="col-md-4 col-sm-6">
-
-    <% @resorts.each do |resort|  %>
-      <div class="card-product">
-        <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/skateboard.jpg" />
-        <div class="card-product-infos">
-            <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort.resort_address %></p>
-            <h2><%= resort.resort_name %></h2>
-            <p><%=  resort.resort_description%></p>
+      <% @resorts.each do |resort|  %>
+        <div class="card-product">
+          <div class="card-product-infos">
+              <%= image_tag resort.photo_asset, alt: "Tignes", width: 200 %>
+              <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort.resort_address %></p>
+              <h2><%= resort.resort_name %></h2>
+              <p><%=  resort.resort_description%></p>
+          </div>
         </div>
-    <% end %>
-
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
