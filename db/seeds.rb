@@ -21,17 +21,18 @@ puts "create resorts"
 
   # file = URI.open('https://www.tignes.net/uploads/media/page/0001/60/a95bc639ea1436153d77584753c7982b4cd22a49.jpeg')
 
-  File.open('app/assets/images/Tignes.jpg')
+  photo_tignes = File.open('app/assets/images/Tignes.jpg')
   tignes = Resort.create!(
     resort_name: "Tignes",
     resort_address: "Route du Rosset, 73320 Tignes, France",
     resort_description: "Pistes variées, plein de lieux d'activités, 3 villages au choix pour ton budget, Tignes t'offrira le plaisir de profiter de cette station été comme hiver. Au sein de
-    l'espace Killy, ton forfait te permettra d'aller aussi bien sur les pistes de Tignes que celles de Val d'Isère, t'offrant un vaste choix de niveau sur les pistes, mais aussi le plaisir de 
+    l'espace Killy, ton forfait te permettra d'aller aussi bien sur les pistes de Tignes que celles de Val d'Isère, t'offrant un vaste choix de niveau sur les pistes, mais aussi le plaisir de
     pouvoir te poser prendre un verere à la Folie-Douce. Le soir, fais toi une petite tournée des bars ou un ciné si tu es trop claqué.",
     visitor_name: "#",
     roommate: "entre potes",
     budget: "Modéré, la passion et la raison",
   )
+  photo_tignes.save!
 
   File.open('app/assets/images/vars.jpg')
   vars = Resort.create!(
@@ -49,8 +50,8 @@ puts "create resorts"
   courchevel = Resort.create!(
     resort_name: "Courchevel",
     resort_address: "Mairie 228 rue de la mairie Saint-Bon chef-Lieu, 73120, France",
-    resort_description: "C'est LA station qui répondra à toutes tes exigences. Tu auras de la bonne neige sous les skis et des paillettes plein les yeux pour le reste! Tu veux changer d'ambiance et tenter 
-    une meilleure aventure? Pas de problème, l'insolite fait partie des possibilités offertes par Courchevel! Et si tu aimes garder les pieds sur terre, alterne toute l'année entre les bons restos et les 
+    resort_description: "C'est LA station qui répondra à toutes tes exigences. Tu auras de la bonne neige sous les skis et des paillettes plein les yeux pour le reste! Tu veux changer d'ambiance et tenter
+    une meilleure aventure? Pas de problème, l'insolite fait partie des possibilités offertes par Courchevel! Et si tu aimes garder les pieds sur terre, alterne toute l'année entre les bons restos et les
     moments shopping dans les magasins de luxe qui t'ouvriront en grand leurs portes.",
     visitor_name: "#",
     roommate: "en couple",
@@ -62,7 +63,7 @@ puts "create resorts"
     resort_name: "Combloux",
     resort_address: "132 Route de la Mairie, 74920 Combloux, France",
     resort_description: "Station sans prétention mais qui répond aux besoins du plus grand nombre: de la neige mais aussi plein d'activités sur et en dehors du ski. Combloux saura t'offrir également ce qu'elle
-    a de mieux: un cadre familiale idéal, des pistes suffisantes en nombre sans s'ennuyer, des cours de ski pour tous les âges afin de skier entre parents et enfants. Mais aussi des sorties en forêt à la 
+    a de mieux: un cadre familiale idéal, des pistes suffisantes en nombre sans s'ennuyer, des cours de ski pour tous les âges afin de skier entre parents et enfants. Mais aussi des sorties en forêt à la
     recherche des animaux et notamment de l'effrayant dahu qui rôde dans le coin!",
     visitor_name: "#",
     roommate: "en famille",
@@ -73,7 +74,7 @@ puts "create resorts"
   avoriaz = Resort.create!(
     resort_name: "Avoriaz",
     resort_address: "1 Place de l'Église, 74110 Morzine, France",
-    resort_description: "Un domaine sympa et enneigé, qui t'offrira de belles possibilités de ski l'hiver avec tes potes. Pense bien à avoir un bon niveau car le domaine est sympa pour dévaler les pistes en ski 
+    resort_description: "Un domaine sympa et enneigé, qui t'offrira de belles possibilités de ski l'hiver avec tes potes. Pense bien à avoir un bon niveau car le domaine est sympa pour dévaler les pistes en ski
     ou en snow. Si tu viens à Avoriaz à une autre période de l'année, pas de problème, tu auras la possiblité de t'amuser parmi toutes les activités offertes au sein de la station, du matin au soir, surtout le soir.",
     visitor_name: "#",
     roommate: "entre potes",
@@ -96,8 +97,8 @@ puts "create resorts"
   bolquere = Resort.create!(
     resort_name: "Bolquère",
     resort_address: "2 Grand'Rue, 66210 Bolquère, France",
-    resort_description: "De quoi skier, de quoi t'amuser à moindre frais, cette station est faite pour toi ! L'hiver, la neige est au rendez-vous pour te permettre de 
-    chausser les skis ou le snow. L'été, coupe ton téléphone pour apprécier de bonnes balades dans la montagne sans souffrir de la chaleur. La station est un cadre de 
+    resort_description: "De quoi skier, de quoi t'amuser à moindre frais, cette station est faite pour toi ! L'hiver, la neige est au rendez-vous pour te permettre de
+    chausser les skis ou le snow. L'été, coupe ton téléphone pour apprécier de bonnes balades dans la montagne sans souffrir de la chaleur. La station est un cadre de
     vie agréable où il y fait bon vivre sans se ruiner.",
     visitor_name: "#",
     roommate: "entre potes",
@@ -108,8 +109,8 @@ puts "create resorts"
   puyvalador = Resort.create!(
     resort_name: "Puyvalador",
     resort_address: "7 Rue des Trois Fontaines, 66210 Puyvalador, France",
-    resort_description: "soleil, ciel bleu et air pur t'offriront un super moment une fois sur place. Profite-en pour skier ou snowboarder sur les pistes prévues à cet effet. 
-    En fin de journée, sors la luge pout t'amuser avec tes enfants. L'été, viens t'amuser à tester toutes les activités proposées par la station. Et sinon viens juste nous 
+    resort_description: "soleil, ciel bleu et air pur t'offriront un super moment une fois sur place. Profite-en pour skier ou snowboarder sur les pistes prévues à cet effet.
+    En fin de journée, sors la luge pout t'amuser avec tes enfants. L'été, viens t'amuser à tester toutes les activités proposées par la station. Et sinon viens juste nous
     dire bonjour entre 2 balades ;)",
     visitor_name: "#",
     roommate: "en famille",
@@ -121,7 +122,7 @@ puts "create resorts"
     resort_name: "Besse",
     resort_address: "2 Place de la Mairie, 63610 Besse-et-Saint-Anastaise, France",
     resort_description: "Au pied du puy de Sancy, tu pourras prendre le temps de te détendre au ski ou au ski tranquillement en couple pour te ressourcer. Si le ski n'est pas pour toi,
-    viens juste te détendre dans un spa ou une balade au choix dans cet environnement de qualité. Pense aussi à te loger: ça tombe bien, Besse a tout ce qu'il faut pour t'accuillir dans 
+    viens juste te détendre dans un spa ou une balade au choix dans cet environnement de qualité. Pense aussi à te loger: ça tombe bien, Besse a tout ce qu'il faut pour t'accuillir dans
     les conditions idéales que tu souhaiteras pour toi ou ton couple.",
     visitor_name: "#",
     roommate: "en couple",
@@ -132,7 +133,7 @@ puts "create resorts"
   chalmazel = Resort.create!(
     resort_name: "Chalmazel",
     resort_address: "Le Bourg, 42920 Chalmazel, France",
-    resort_description: "Viens profiter des charmes de Chalmazel été comme hiver avec des randos, du vélos ou bien sur du ski sans oublier les balades en raquette! A Chalmazel, 
+    resort_description: "Viens profiter des charmes de Chalmazel été comme hiver avec des randos, du vélos ou bien sur du ski sans oublier les balades en raquette! A Chalmazel,
     le domaine t'offre le temps de prendre le temps pour varier les plaisirs des activités. Ensuite, profite du cadre en famille pour te ressourcer avec les bienfaits offerts
     par la nature.",
     visitor_name: "#",
@@ -144,7 +145,7 @@ puts "create resorts"
   morbier = Resort.create!(
     resort_name: "Morbier",
     resort_address: "53 Route Blanche, 39400 Morbier, France",
-    resort_description: "A 925m d'altitude, viens découvrir la beauté de la nature et sois à son contact. Laisse toi envouter par ses pistes l'hiver qui te surprendront 
+    resort_description: "A 925m d'altitude, viens découvrir la beauté de la nature et sois à son contact. Laisse toi envouter par ses pistes l'hiver qui te surprendront
     par la qualité du domaine. L'été, viens apprécier ses forets naturelles, sa faune et la flore qui t'ouvrent tous tous tes sens et te permettra d'apprendre à tes enfants
     d'être au plus près de la nature tout en la respectant.",
     visitor_name: "#",
@@ -157,7 +158,7 @@ puts "create resorts"
     resort_name: "Metabief",
     resort_address: "16 Rue du Village, 25370 Métabief",
     resort_description: "En plein coeur du Jura, tu trouveras de quoi être au calme et te ressourcer en chaussant les skis ou les baskets selon la saison. L'hiver, n'oublie pas de
-    t'habiller chaudement pour sortir et t'épanouir. Le reste de l'année, viens profiter des activités faites pour 2, que ce soit dans les pasces naturels ou dans les lieux faits 
+    t'habiller chaudement pour sortir et t'épanouir. Le reste de l'année, viens profiter des activités faites pour 2, que ce soit dans les pasces naturels ou dans les lieux faits
     pour vous ressourcer en couple ou à plusieurs.",
     visitor_name: "#",
     roommate: "en couple",
