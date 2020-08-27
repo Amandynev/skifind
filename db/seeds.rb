@@ -22,7 +22,7 @@ puts "create resorts"
   # file = URI.open('https://www.tignes.net/uploads/media/page/0001/60/a95bc639ea1436153d77584753c7982b4cd22a49.jpeg')
 
 
-  tignes = Resort.create!(
+tignes = Resort.create!(
     resort_name: "Tignes",
     resort_address: "Route du Rosset, 73320 Tignes, France",
     resort_description: "Pistes variées, plein de lieux d'activités, 3 villages au choix pour ton budget, Tignes t'offrira le plaisir de profiter de cette station été comme hiver. Au sein de
@@ -32,16 +32,15 @@ puts "create resorts"
     roommate: "entre potes",
     budget: "Modéré, la passion et la raison",
     photo_asset: "Tignes.jpg",
-
     )
-file = URI.open("https://cdm0lfbn.cloudimg.io/v7/_origin_/image_uploader/photos/86/original/tignes-le-lavachet-tignes-le-lac--lavachet.jpg?p=large")
-tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 file = URI.open("https://img2.onthesnow.com/image/xl/97/tignes_resort_france_97081.jpg")
+tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://cdm0lfbn.cloudimg.io/v7/_origin_/image_uploader/photos/86/original/tignes-le-lavachet-tignes-le-lac--lavachet.jpg?p=large")
 tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 file = URI.open("https://www.tignespro.net/upload/dossiers/photos/614_snow-driving-fabre-tignes_001_redimensionner.jpg")
 tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
-  vars = Resort.create!(
+vars = Resort.create!(
     resort_name: "Vars",
     resort_address: "Sainte-Maire, 05560 Vars, France",
     resort_description: "Une station faite pour toi et tes proches! Vars alterne entre ski plaisir et plaisir de l'après ski tout l'année. L'été, viens apprécier la verdure des alpages, les montagnes
@@ -52,7 +51,12 @@ tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'ima
     budget: "Modéré, la passion et la raison",
     photo_asset: "vars.jpg",
   )
-
+file = URI.open("https://cdn-s-www.ledauphine.com/images/6942EE97-310C-4E8E-9422-CE553014C090/NW_detail/title-1549198713.jpg")
+vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://cdn-s-www.ledauphine.com/images/4DE560F9-723B-4B0B-8397-5D8F3AAF13ED/NW_detail/reconnu-pour-son-interet-ecologique-paysager-et-culturel-le-val-d-escreins-vient-de-reintegrer-officiellement-le-parc-naturel-regional-du-queyras-par-decret-ministeriel-photo-le-dl-1558707346.jpg")
+vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://skipass.fr/p/resorts/774/header-vars-de20c-1.jpg")
+vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
   courchevel = Resort.create!(
     resort_name: "Courchevel",
