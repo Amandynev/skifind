@@ -6,8 +6,9 @@
   display: flex;
   align-items: center;
   position: relative;
-  border: 1px solid rgba(80, 137, 145, 0.4);
+  border: 1px solid #02245C;
   transition: .3s;
+  margin-bottom: 10px;
 }
 
 .card-product img {
@@ -15,8 +16,6 @@
   width: 280px;
   padding-left:5px;
 }
-
-
 
 .card-product:after{
   content: 'Text affiche lors du hover';
@@ -49,5 +48,9 @@
 }
 
 .card-product .card-product-infos {
-  padding: 16px;
+  padding: 10px;
+  font-size: 12px;
+}
+h4{
+  color: #02245C;
 }

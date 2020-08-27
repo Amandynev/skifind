@@ -34,7 +34,6 @@ puts "create resorts"
     photo_asset: "Tignes.jpg",
   )
 
-  File.open('app/assets/images/vars.jpg')
   vars = Resort.create!(
     resort_name: "Vars",
     resort_address: "Sainte-Maire, 05560 Vars, France",
@@ -60,7 +59,7 @@ puts "create resorts"
     photo_asset: "courchevel.jpg",
   )
 
-  File.open('app/assets/images/combloux.jpg')
+
   combloux = Resort.create!(
     resort_name: "Combloux",
     resort_address: "132 Route de la Mairie, 74920 Combloux, France",
@@ -73,7 +72,7 @@ puts "create resorts"
     photo_asset: "combloux.jpg",
   )
 
-  File.open('app/assets/images/avoriaz.jpg')
+
   avoriaz = Resort.create!(
     resort_name: "Avoriaz",
     resort_address: "1 Place de l'Église, 74110 Morzine, France",
@@ -85,7 +84,7 @@ puts "create resorts"
     photo_asset: "avoriaz.jpg",
   )
 
-  File.open('app/assets/images/isola.jpg')
+
   isola = Resort.create!(
     resort_name: "Isola 2000",
     resort_address: "Résidence Lombarde 06420 ISOLA 2000, France",
@@ -98,7 +97,7 @@ puts "create resorts"
     photo_asset: "isola.jpg",
   )
 
-  File.open('app/assets/images/bolquere.jpg')
+
   bolquere = Resort.create!(
     resort_name: "Bolquère",
     resort_address: "2 Grand'Rue, 66210 Bolquère, France",
@@ -111,7 +110,7 @@ puts "create resorts"
     photo_asset: "bolquere.jpg",
   )
 
-  File.open('app/assets/images/puyvalador.jpg')
+
   puyvalador = Resort.create!(
     resort_name: "Puyvalador",
     resort_address: "7 Rue des Trois Fontaines, 66210 Puyvalador, France",
@@ -124,7 +123,7 @@ puts "create resorts"
     photo_asset: "puyvalador.jpg",
   )
 
-  File.open('app/assets/images/besse.jpg')
+
   besse = Resort.create!(
     resort_name: "Besse",
     resort_address: "2 Place de la Mairie, 63610 Besse-et-Saint-Anastaise, France",
@@ -137,7 +136,7 @@ puts "create resorts"
     photo_asset: "besse.jpg",
   )
 
-  File.open('app/assets/images/chalmazel.jpg')
+
   chalmazel = Resort.create!(
     resort_name: "Chalmazel",
     resort_address: "Le Bourg, 42920 Chalmazel, France",
@@ -150,7 +149,7 @@ puts "create resorts"
     photo_asset: "chalmazel.jpg",
   )
 
-  File.open('app/assets/images/morbier.jpg')
+
   morbier = Resort.create!(
     resort_name: "Morbier",
     resort_address: "53 Route Blanche, 39400 Morbier, France",
@@ -163,7 +162,7 @@ puts "create resorts"
     photo_asset: "morbier.jpg",
   )
 
-  File.open('app/assets/images/metabief.jpg')
+
   metabief = Resort.create!(
     resort_name: "Metabief",
     resort_address: "16 Rue du Village, 25370 Métabief",
