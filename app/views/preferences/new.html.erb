@@ -1,125 +1,172 @@
-<div class="container-georges">
+<div id="georges" class="container-georges">
   <div class="ecran-interface-george">
     <div class="ecran-interface-george2">
         <div>
           <%= simple_form_for @preference do |f| %>
-            <div class="border-radius-10px bg-white w-50 p-2 m-2" >
-              Faisons connaissance, moi c'est Georges et toi ?
-            </div>
-            <div class="d-flex justify-content-end ">
-              <div class="border-radius-10px bg-blue w-50 p-2 m-2">
-                name
+
+            <div class="d-flex justify-content-start" >
+              <div class="border-radius-10px bg-white p-2 m-2" >
+                Faisons connaissance, moi c'est Georges et toi ?
               </div>
             </div>
-            <%= f.input :visitor_name, placeholder: "Name", label: false %>
-
-            <div class="border-radius-10px bg-white w-50 p-2 m-2" >
-              Tu as prévu de partir ?
-            </div>
             <div class="d-flex justify-content-end ">
-              <div class="border-radius-10px bg-blue w-50 p-2 m-2">
-                roomate
+              <div class="border-radius-10px border-radius-10px mw-50 p-2 m-2">
+                <%= f.input :visitor_name, placeholder: "Name", label: false %>
               </div>
             </div>
-            <%= f.input :roommate, collection: Preference::ROOMATE, label: false %>
 
-            <div class="border-radius-10px bg-white w-50 p-2 m-2" >
-              Quel est-ton budget ?
-            </div>
-            <div class="d-flex justify-content-end ">
-              <div class="border-radius-10px bg-blue w-50 p-2 m-2">
-                budget
+
+              <div class="d-flex justify-content-start" >
+                <div class="border-radius-10px bg-white p-2 m-2" >
+                  Tu as prévu de partir:
+                </div>
               </div>
-            </div>
-            <%= f.input :budget, collection: Preference::BUDGET, label: false %>
+              <% Preference::ROOMMATE.each do |key, value|%>
+                <div class="d-flex justify-content-end ">
+                  <div class="btn-georges roommate border-radius-10px bg-blue mw-50 p-2 m-2"
+                       data-roommate="<%= key %>"
+                      style="cursor: pointer;">
+                   <%= value %>
+                  </div>
+                </div>
+              <% end %>
+            <%= f.input :roommate, label: false, input_html: { class: 'd-none' } %>
 
-            <div class="border-radius-10px bg-white w-50 p-2 m-2" >
-              Ta journée idéale ?
-            </div>
-            <div class="d-flex justify-content-end ">
-              <div class="border-radius-10px bg-blue w-50 p-2 m-2">
-                day_activities
+              <div class="d-flex justify-content-start" >
+                <div class="border-radius-10px bg-white p-2 m-2" >
+                  Quel est-ton budget ?
+                </div>
               </div>
-            </div>
-            <%= f.input :day_activities, collection: Preference::DAY_ACTIVITIES, label: false %>
+              <% Preference::BUDGET.each do |key, value|%>
+                <div class="d-flex justify-content-end">
+                  <div class="btn-georges budget border-radius-10px bg-blue mw-50 p-2 m-2"
+                       data-budget="<%= key %>"
+                       style="cursor: pointer;">
+                      <%= value %>
+                  </div>
+                </div>
+              <% end %>
+              <%= f.input :budget, label: false, input_html: { class: 'd-none' } %>
 
-            <div class="border-radius-10px bg-white w-50 p-2 m-2" >
-              Tu es plutôt ?
-            </div>
-            <div class="d-flex justify-content-end ">
-              <div class="border-radius-10px bg-blue w-50 p-2 m-2">
-                biological_clock
+              <div class="d-flex justify-content-start" >
+                <div class="border-radius-10px bg-white p-2 m-2" >
+                  Ta journée idéale :
+                </div>
               </div>
-            </div>
-            <%= f.input :biological_clock, collection: Preference::BIOLOGICAL_CLOCK, label: false %>
+              <% Preference::DAY_ACTIVITIES.each do |key, value|%>
+                <div class="d-flex justify-content-end ">
+                  <div class="btn-georges day_activities border-radius-10px bg-blue mw-50 p-2 m-2"
+                     data-day_activities="<%= key %>"
+                     style="cursor: pointer;">
+                    <%= value %>
+                  </div>
+                </div>
+              <% end %>
+              <%= f.input :day_activities, label: false, input_html: { class: 'd-none' } %>
 
-            <div class="border-radius-10px bg-white w-50 p-2 m-2" >
-              Ton logement idéal ?
-            </div>
-            <div class="d-flex justify-content-end ">
-              <div class="border-radius-10px bg-blue w-50 p-2 m-2">
-                accommodation
+              <div class="d-flex justify-content-start" >
+                <div class="border-radius-10px bg-white p-2 m-2" >
+                  Tu es plutôt...
+                </div>
               </div>
-            </div>
-            <%= f.input :accommodation, collection: Preference::ACCOMMODATION, label: false %>
+              <% Preference::BIOLOGICAL_CLOCK.each do |key, value|%>
+                <div class="d-flex justify-content-end ">
+                 <div class="btn-georges biological_clock border-radius-10px bg-blue mw-50 p-2 m-2"
+                       data-biological_clock="<%= key %>"
+                       style="cursor: pointer;">
+                    <%= value %>
+                  </div>
+                </div>
+              <% end %>
+              <%= f.input :biological_clock, label: false, input_html: { class: 'd-none' } %>
 
-            <div class="border-radius-10px bg-white w-50 p-2 m-2" >
-              Ton coin idéal ?
-            </div>
-            <div class="d-flex justify-content-end ">
-              <div class="border-radius-10px bg-blue w-50 p-2 m-2">
-                spot
+              <div class="d-flex justify-content-start" >
+                <div class="border-radius-10px bg-white p-2 m-2" >
+                  Ton logement idéal...
+                </div>
               </div>
-            </div>
-              <%= f.input :spot, collection: Preference::SPOT, label:false %>
-
-            <div class="border-radius-10px bg-white w-50 p-2 m-2" >
-              Ta soirée idéale ?
-            </div>
-            <div class="d-flex justify-content-end ">
-              <div class="border-radius-10px bg-blue w-50 p-2 m-2">
-                night_activities
+              <% Preference::ACCOMMODATION.each do |key, value|%>
+                <div class="d-flex justify-content-end ">
+                  <div class="btn-georges accommodation border-radius-10px bg-blue mw-50 p-2 m-2"
+                       data-accommodation="<%= key %>"
+                       style="cursor: pointer;">
+                  <%= value %>
+                  </div>
+                </div>
+              <% end %>
+            <%= f.input :accommodation, label: false, input_html: { class: 'd-none' } %>
+              <div class="d-flex justify-content-start" >
+                <div class="border-radius-10px bg-white p-2 m-2" >
+                  Ton coin idéal...
+                </div>
               </div>
-            </div>
-            <%= f.input :night_activities, collection: Preference::NIGHT_ACTIVITIES, label: false %>
-
-            <div class="border-radius-10px bg-white w-50 p-2 m-2" >
-              Qu'attends tu des vacances au ski...
-            </div>
-            <div class="d-flex justify-content-end ">
-              <div class="border-radius-10px bg-blue w-50 p-2 m-2">
-                expectations
+              <% Preference::SPOT.each do |key, value|%>
+                <div class="d-flex justify-content-end ">
+                  <div class="btn-georges spot border-radius-10px bg-blue mw-50 p-2 m-2"
+                       data-spot="<%= key %>"
+                       style="cursor: pointer;">
+                    <%= value %>
+                  </div>
+                </div>
+              <% end %>
+              <%= f.input :spot, label: false, input_html: { class: 'd-none' } %>
+              <div class="d-flex justify-content-start" >
+                <div class="border-radius-10px bg-white p-2 m-2" >
+                  Ta soirée idéale...
+                </div>
               </div>
-            </div>
-            <%= f.input :expectations, collection: Preference::EXPECTATIONS, label: false %>
-
-            <div class="border-radius-10px bg-white w-50 p-2 m-2" >
-              Veux-tu être géolocalisé afin de profiter à 100% de notre service personnalisé?
-            </div>
-            <div class="d-flex justify-content-end ">
-              <div class="border-radius-10px bg-blue w-50 p-2 m-2">
+              <% Preference::NIGHT_ACTIVITIES.each do |key, value|%>
+                <div class="d-flex justify-content-end ">
+                  <div class="btn-georges night_activities border-radius-10px bg-blue mw-50 p-2 m-2"
+                       data-night_activities="<%= key %>"
+                       style="cursor: pointer;">
+                    <%= value %>
+                  </div>
+                </div>
+              <% end %>
+              <%= f.input :night_activities, label: false, input_html: { class: 'd-none' } %>
+              <div class="d-flex justify-content-start" >
+                <div class="border-radius-10px bg-white p-2 m-2" >
+                  Qu'attends tu des vacances au ski...
+                </div>
+              </div>
+              <% Preference::EXPECTATIONS.each do |key, value|%>
+                <div class="d-flex justify-content-end ">
+                  <div class="btn-georges expectations border-radius-10px bg-blue mw-50 p-2 m-2"
+                       data-expectations="<%= key %>"
+                       style="cursor: pointer;">
+                    <%= value %>
+                  </div>
+                </div>
+              <% end %>
+            <%= f.input :expectations, label: false, input_html: { class: 'd-none' } %>
+              <div class="d-flex justify-content-start" >
+                <div class="border-radius-10px bg-white p-2 m-2" >
+                  Veux-tu être géolocalisé afin de profiter à 100% de notre service personnalisé?
+                </div>
+              </div>
+            <div class="d-flex justify-content-end">
+              <div class="border-radius-10px bg-blue mw-50 p-2 m-2">
                 geocation
               </div>
             </div>
             <%= f.input :geocation, as: :boolean %>
-
-            <div class="border-radius-10px bg-white w-50 p-2 m-2" >
-              Combien de km es-tu prêt à faire ?
-            </div>
-            <div class="d-flex justify-content-end ">
-              <div class="border-radius-10px bg-blue w-50 p-2 m-2">
-                kilometers
+              <div class="d-flex justify-content-start" >
+                <div class="border-radius-10px bg-white p-2 m-2" >
+                  Combien de km es-tu prêt à faire ?
+                </div>
               </div>
-            </div>
-            <%= f.input :kilometers, collection: Preference::KILOMETERS, label: false %>
+              <% Preference::KILOMETERS.each do |key, value|%>
+                <div class="d-flex justify-content-end">
+                  <div class="btn-georges kilometers border-radius-10px bg-blue mw-50 p-2 m-2"
+                       data-kilometers="<%= key %>"
+                       style="cursor: pointer;">
+                    <%= value %>
+                  </div>
+                </div>
+              <% end %>
+            <%= f.input :kilometers, label: false, input_html: { class: 'd-none' } %>
             <%= f.submit "blabla" %>
-
-
-        </div>
-        <div class="d-flex justify-content-end ">
-          <div class="border-radius-10px bg-blue w-50 p-2 m-2">
-
-          </div>
         </div>
       <% end %>
     </div>
