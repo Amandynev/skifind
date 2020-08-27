@@ -11,11 +11,6 @@
   margin-bottom: 10px;
 }
 
-.link {
-  opacity: 0;
-  backface-visibility: hidden;
-}
-
 
 .card-product img {
   height: 210px ;
@@ -25,7 +20,10 @@
 
 .card-product:after{
   content: 'Check out';
+  font-family: "Nunito", "Helvetica", "sans-serif";
+  font-size: 16px;
   color:#02245C;
+  font-weight: bold;
   justify-content: center;
   display: flex;
   align-items: center;
