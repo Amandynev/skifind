@@ -9,7 +9,7 @@ require("@rails/activestorage").start()
 require("channels")
 
 document.addEventListener('turbolinks:load', () => {
-  mouseover();  
+  mouseover();
 })
 
 
@@ -44,4 +44,3 @@ import { mouseover } from '../channels/mouseover';
   if (georgesElement) {
     initGeorges();
   }
-});

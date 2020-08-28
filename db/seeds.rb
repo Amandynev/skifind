@@ -33,11 +33,13 @@ tignes = Resort.create!(
     budget: "Modéré, la passion et la raison",
     photo_asset: "Tignes.jpg",
     )
+
+file = URI.open("https://www.tignes.net/uploads/media/page_block/0001/73/06fcfba68b24b6cab24cf3e56e6f43101530e418.jpeg")
+tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 file = URI.open("https://img2.onthesnow.com/image/xl/97/tignes_resort_france_97081.jpg")
 tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 file = URI.open("https://cdm0lfbn.cloudimg.io/v7/_origin_/image_uploader/photos/86/original/tignes-le-lavachet-tignes-le-lac--lavachet.jpg?p=large")
-tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
-file = URI.open("https://www.tignespro.net/upload/dossiers/photos/614_snow-driving-fabre-tignes_001_redimensionner.jpg")
+
 tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
 vars = Resort.create!(
@@ -51,11 +53,11 @@ vars = Resort.create!(
     budget: "Modéré, la passion et la raison",
     photo_asset: "vars.jpg",
   )
-file = URI.open("https://cdn-s-www.ledauphine.com/images/6942EE97-310C-4E8E-9422-CE553014C090/NW_detail/title-1549198713.jpg")
-vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
-file = URI.open("https://cdn-s-www.ledauphine.com/images/4DE560F9-723B-4B0B-8397-5D8F3AAF13ED/NW_detail/reconnu-pour-son-interet-ecologique-paysager-et-culturel-le-val-d-escreins-vient-de-reintegrer-officiellement-le-parc-naturel-regional-du-queyras-par-decret-ministeriel-photo-le-dl-1558707346.jpg")
-vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 file = URI.open("https://skipass.fr/p/resorts/774/header-vars-de20c-1.jpg")
+vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://www.vars.com/thumbnail/detail/uploads/photos/7/4/7/0/chalet-ecuelle.jpeg?v=1531302683")
+vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://www.cgh-residences.com/photos/stations/sliders/vars-2_287.jpg")
 vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
   courchevel = Resort.create!(
@@ -69,9 +71,14 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
     budget: "Illimité, c'est les vacances",
     photo_asset: "courchevel.jpg",
   )
+file = URI.open("http://www.aaarentcars.fr/sites/default/files/styles/image_article/public/field/image/courchevel_1.jpg?itok=kzON8vZQ")
+courchevel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://www.chalet-etagne.fr/images/interface/slide_ete.jpg")
+courchevel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://cdn-s-www.ledauphine.com/images/2D142324-8971-47B2-AF7B-7E5495649631/NW_detail/title-1573140040.jpg")
+courchevel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
-
-  combloux = Resort.create!(
+combloux = Resort.create!(
     resort_name: "Combloux",
     resort_address: "132 Route de la Mairie, 74920 Combloux, France",
     resort_description: "Station sans prétention mais qui répond aux besoins du plus grand nombre: de la neige mais aussi plein d'activités sur et en dehors du ski. Combloux saura t'offrir également ce qu'elle
@@ -82,9 +89,14 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
     budget: "Modeste, je veux faire des économies",
     photo_asset: "combloux.jpg",
   )
+file = URI.open("https://ete.combloux.com/images/cache/ed34c785dd1eb0fc718ddf07cec782a4_w1400_h800_cp.jpg")
+combloux.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://www.terresens.com/wp-content/uploads/2018/07/Comblouxweb-768x512.jpg")
+combloux.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://ete.combloux.com/images/cache/7d0bc7776e95b8b1f71488f3486dd672_w1400_h800_cp.jpg")
+combloux.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
-
-  avoriaz = Resort.create!(
+avoriaz = Resort.create!(
     resort_name: "Avoriaz",
     resort_address: "1 Place de l'Église, 74110 Morzine, France",
     resort_description: "Un domaine sympa et enneigé, qui t'offrira de belles possibilités de ski l'hiver avec tes potes. Pense bien à avoir un bon niveau car le domaine est sympa pour dévaler les pistes en ski
@@ -94,9 +106,14 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
     budget: "Illimité, c'est les vacances",
     photo_asset: "avoriaz.jpg",
   )
+file = URI.open("https://media-exp1.licdn.com/dms/image/C561BAQE_olXWJNwAfA/company-background_10000/0?e=1598626800&v=beta&t=9zx0TT9Cd0hfVCVi-GHuDMv2mzz_v4Qv5pTLWYd561U")
+avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+# file = URI.open("https://avoriaz.evolution2.com/wp-content/uploads/2017/09/avoriaz-ete-1900x700.jpg")
+# avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("http://media.sit.savoie-mont-blanc.com/original/75641/2-6272576.jpg")
+avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
-
-  isola = Resort.create!(
+isola = Resort.create!(
     resort_name: "Isola 2000",
     resort_address: "Résidence Lombarde 06420 ISOLA 2000, France",
     resort_description: "Idéal en famille pour profiter du ski comme d'un bel ensoleillement, Isola 2000 saura te ravir tout au long de l'année. Avec son versant sud, l'hiver découvre les pistes et prends un bain de
@@ -107,9 +124,14 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
     budget: "Modéré, la passion et la raison",
     photo_asset: "isola.jpg",
   )
+file = URI.open("https://img6.custompublish.com/getfile.php/4274581.1046.qnbiwbwmmjql7q/468x0/6152431_4274581.jpg")
+isola.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://www.isola2000.com/wp-content/uploads/2018/07/landscapeVTT-1280x476.jpg")
+isola.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://skipass.fr/p/resorts/635/header-isola-2000-b4dc3-1.jpg")
+isola.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
-
-  bolquere = Resort.create!(
+bolquere = Resort.create!(
     resort_name: "Bolquère",
     resort_address: "2 Grand'Rue, 66210 Bolquère, France",
     resort_description: "De quoi skier, de quoi t'amuser à moindre frais, cette station est faite pour toi ! L'hiver, la neige est au rendez-vous pour te permettre de
@@ -120,9 +142,14 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
     budget: "Modeste, je veux faire des économies",
     photo_asset: "bolquere.jpg",
   )
+file = URI.open("https://img2.onthesnow.com/image/gg/33/1_334855.jpg")
+bolquere.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Bolquere_vue1.JPG/1280px-Bolquere_vue1.JPG")
+bolquere.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://img3.onthesnow.com/image/gg/47/1_471416.jpg")
+bolquere.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
-
-  puyvalador = Resort.create!(
+puyvalador = Resort.create!(
     resort_name: "Puyvalador",
     resort_address: "7 Rue des Trois Fontaines, 66210 Puyvalador, France",
     resort_description: "soleil, ciel bleu et air pur t'offriront un super moment une fois sur place. Profite-en pour skier ou snowboarder sur les pistes prévues à cet effet.
@@ -133,9 +160,15 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
     budget: "Modéré, la passion et la raison",
     photo_asset: "puyvalador.jpg",
   )
+file = URI.open("https://img6.onthesnow.com/image/gg/35/1_358547.jpg")
+puyvalador.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Puyvalador_vue1.JPG/1280px-Puyvalador_vue1.JPG")
+puyvalador.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://img2.onthesnow.com/image/gg/35/1_358573.jpg")
+puyvalador.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
 
-  besse = Resort.create!(
+besse = Resort.create!(
     resort_name: "Besse",
     resort_address: "2 Place de la Mairie, 63610 Besse-et-Saint-Anastaise, France",
     resort_description: "Au pied du puy de Sancy, tu pourras prendre le temps de te détendre au ski ou au ski tranquillement en couple pour te ressourcer. Si le ski n'est pas pour toi,
@@ -146,9 +179,15 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
     budget: "Illimité, c'est les vacances",
     photo_asset: "besse.jpg",
   )
+file = URI.open("https://img6.onthesnow.com/image/xl/52/station_de_ski_besse_super_524975.jpg")
+besse.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://www.belambra.fr/files/live/sites/Belambra/files/contributed/Fiche%20Club/Ete/Superbesse/FichesClub/belambra-club-vacances-sup-1.jpg?t=thumbnail524x337")
+besse.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://img6.onthesnow.com/image/gg/14/1_143783.jpg")
+besse.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
 
-  chalmazel = Resort.create!(
+chalmazel = Resort.create!(
     resort_name: "Chalmazel",
     resort_address: "Le Bourg, 42920 Chalmazel, France",
     resort_description: "Viens profiter des charmes de Chalmazel été comme hiver avec des randos, du vélos ou bien sur du ski sans oublier les balades en raquette! A Chalmazel,
@@ -159,9 +198,15 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
     budget: "Modéré, la passion et la raison",
     photo_asset: "chalmazel.jpg",
   )
+file = URI.open("https://esf.chalmazel.net/local/cache-gd2/84/78d957a496a87d5afd9611bf0fcb9a.jpg?1508403688")
+chalmazel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://prod20181119031003542900000001.s3.eu-west-1.amazonaws.com/LARGE/94401-94958.jpeg")
+chalmazel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://cdn-s-www.leprogres.fr/images/0D9051BC-0F29-4698-873F-796860F2BE07/NW_detail/title-1454004277.jpg")
+chalmazel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
 
-  morbier = Resort.create!(
+morbier = Resort.create!(
     resort_name: "Morbier",
     resort_address: "53 Route Blanche, 39400 Morbier, France",
     resort_description: "A 925m d'altitude, viens découvrir la beauté de la nature et sois à son contact. Laisse toi envouter par ses pistes l'hiver qui te surprendront
@@ -172,9 +217,15 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
     budget: "Modéré, la passion et la raison",
     photo_asset: "morbier.jpg",
   )
+file = URI.open("http://haut-jura.com/images/lesmarais2_-_J.CARROT.JPG")
+morbier.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("http://www.horloge-edifice.fr/images/Documents/Morbier-Vue-village.jpg")
+morbier.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://www.jura-tourism.com/wp-content/uploads/2019/01/juratourisme_07141_a5-1024x683.jpg")
+morbier.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
 
-  metabief = Resort.create!(
+metabief = Resort.create!(
     resort_name: "Metabief",
     resort_address: "16 Rue du Village, 25370 Métabief",
     resort_description: "En plein coeur du Jura, tu trouveras de quoi être au calme et te ressourcer en chaussant les skis ou les baskets selon la saison. L'hiver, n'oublie pas de
@@ -185,3 +236,9 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
     budget: "Modeste, je veux faire des économies",
     photo_asset: "metabief.jpg",
   )
+file = URI.open("https://img6.onthesnow.com/image/xl/46/remontees_mecaniques_metabief_466145.jpg")
+metabief.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("http://www.metabief.fr/userfiles/images/1_SITE_2019(1).JPG")
+metabief.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://cdn-s-www.estrepublicain.fr/images/050D81B1-9366-489E-AEE4-819C01A70E1F/NW_detail/pendant-ces-quatre-semaines-de-vacances-d-hiver-la-station-de-ski-de-metabief-espere-atteindre-la-vente-d-environ-120-000-journees-skieur-photo-er-h-c-1581446162.jpg")
+metabief.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
