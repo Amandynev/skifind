@@ -255,6 +255,7 @@ file = URI.open('https://images.unsplash.com/photo-1579755209948-20d5b46be7be?ix
     resort_id: tignes.id,
   )
   activity_igloo.save!
+  activity_igloo.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
 
 file = URI.open('https://images.unsplash.com/photo-1577489114892-8ff285156454?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=358&q=80')
 activity_balade = Activity.new(
@@ -264,6 +265,7 @@ Explorez les forêts enneigés en raquettes...",
 resort_id: tignes.id,
 )
 activity_balade.save!
+activity_balade.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
 
 file = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/88423295_1077172352664893_5598987717175148544_o.jpg?_nc_cat=103&_nc_sid=9267fe&_nc_ohc=0TAFYYUl7kUAX_I0aFj&_nc_ht=scontent-cdt1-1.xx&oh=28f5b43110807546a286dbef0f0cf6cc&oe=5F6C7B37')
 activity_soiree = Activity.new(
@@ -273,6 +275,7 @@ Après l'effort, le réconfort ! Profitez d'une bonne bière ou d'un bon vin cha
 resort_id: tignes.id,
 )
 activity_soiree.save!
+activity_soiree.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
 
 file = URI.open('https://images.unsplash.com/photo-1575032748932-70116d68ed58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
 activity_degustation = Activity.new(
@@ -282,6 +285,7 @@ Dégustez en famille, en amis ou en couple de bons vins et fromages locaux...",
 resort_id: tignes.id,
 )
 activity_degustation.save!
+activity_degustation.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
 
 
 file = URI.open('https://images.unsplash.com/photo-1470010762743-1fa2363f65ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
@@ -292,6 +296,7 @@ Piscine, jacuzzi, sauna ou hammam vous attendent...",
 resort_id: tignes.id,
 )
 activity_spa.save!
+activity_spa.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
 
 file = URI.open('https://scontent-cdg2-1.xx.fbcdn.net/v/t31.0-8/17240672_10155040428452618_3262403974147800417_o.jpg?_nc_cat=100&_nc_sid=9267fe&_nc_ohc=uKoB_nLZWrUAX_qKsRC&_nc_ht=scontent-cdg2-1.xx&oh=5bc4ed1ff23161fcd9eb478dec507cd7&oe=5F6DAFA6')
   activity_plongee = Activity.new(
@@ -301,6 +306,7 @@ Vivez une véritable aventure et un voyage hors temps sous la glace...",
 resort_id: tignes.id,
 )
   activity_plongee.save!
+  activity_plongee.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
 
 file = URI.open('https://images.unsplash.com/photo-1549220167-afcb1da28402?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 activity_vtt = Activity.new(
@@ -310,6 +316,7 @@ Ranger votre vélo en hiver, c'est trop facile.. Venez vous éclater dans la nei
 resort_id: tignes.id,
 )
 activity_vtt.save!
+activity_vtt.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
 
 file = URI.open('https://images.unsplash.com/photo-1520891422668-fe731254aff0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 activity_luge = Activity.new(
@@ -319,3 +326,4 @@ Fous rires et amusement garantis !",
 resort_id: tignes.id,
 )
 activity_luge.save!
+activity_luge.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
