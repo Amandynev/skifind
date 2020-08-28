@@ -57,13 +57,13 @@ const preventDefaultSubmitOnEnter = () => {
   }
 }
 
-// const loadDynamicBannerText = (text, id) => {
-//   new Typed(`#${id}`, {
-//     strings: ["", text],
-//     typeSpeed: 50,
-//     loop: false
-//   });
-// }
+const loadDynamicBannerText = (text, id) => {
+  new Typed(`#${id}`, {
+    strings: ["", text],
+    typeSpeed: 50,
+    loop: false
+  });
+}
 
 const initGeorges = () => {
   preventDefaultSubmitOnEnter();
@@ -82,9 +82,12 @@ const initGeorges = () => {
   const geocationIdElement = document.getElementById('geocation');
   const remerciementIdElement = document.getElementById('remerciement');
 
+  loadDynamicBannerText("Faisons connaissance, moi c'est Georges et toi ?", "name-question");
   nameIdElement.addEventListener("keyup", (event) => {
     if (event.key === "Enter") {
       roommateIdElement.classList.remove("d-none");
+      loadDynamicBannerText("Tu as prévu de partir:", "roommate-question");
+
     }
   })
 
@@ -95,8 +98,8 @@ const initGeorges = () => {
       //fillInPerferenceRoomateForm
       roommates.forEach(element => element.classList.add("d-none"));
       roommate.classList.remove("d-none");
+      loadDynamicBannerText("Quel est ton budget ?", "budget-question");
       budgetIdElement.classList.remove("d-none");
-      // loadDynamicBannerText("Learn to code", "budget-question");
     });
   });
 
@@ -106,6 +109,7 @@ const initGeorges = () => {
       updateFormBudget();
       budgets.forEach(element => element.classList.add("d-none"));
       budget.classList.remove("d-none");
+      loadDynamicBannerText("Ta journée idéale :", "day_activities-question");
       day_activitiesIdElement.classList.remove("d-none");
     });
   });
