@@ -13,6 +13,7 @@
 
 .container h2 {
     color:#011028;
+    margin-bottom: 16px;
 }
 
 .inner {
@@ -31,15 +32,14 @@
 color: white;
   padding: 7px 10px;
   border-radius: 4px;
-  background: linear-gradient(#033FA0, #02245C);
+  background: linear-gradient(#02245C, #011028);
   transition: background 0.3s ease;
   border: 1px solid #02245C;
   text-decoration: none;
 }
 
 .buton-explore:hover {
-background: linear-gradient(#02245C, #011028);
+background: linear-gradient(#033FA0, #02245C);
 text-decoration: none;
 color: white;
 }
-
