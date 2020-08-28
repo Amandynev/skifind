@@ -1,18 +1,19 @@
 // Specific CSS for your home-page
+
 .banner-home{
-    background-image:    asset-url('Background-home2.jpg');
-    background-size:     cover;
-    background-position: center;
-    width:               100vw;
-    height:              calc( 100vh - 66px );
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+  background-image:    asset-url('Background-home2.jpg');
+  background-size:     cover;
+  background-position: center;
+  width:               100vw;
+  height:              100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   }
 
 .container h2 {
-    color:#011028;
+  color:#011028;
 }
 
 .inner {
@@ -75,8 +76,8 @@ color: white;
 }
 
 .buton-explore:hover {
-background: linear-gradient(#02245C, #011028);
-text-decoration: none;
-color: white;
+  background: linear-gradient(#02245C, #011028);
+  text-decoration: none;
+  color: white;
 }
 
