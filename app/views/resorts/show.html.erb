@@ -47,11 +47,15 @@
               <div class="slopes-title d-flex align-items-center">
                  <i class="fas fa-skiing pictogramme-color"></i><span><%= @resort.slopes_title %></span>
               </div>
-              <div class="slopes-colors d-flex flex-column align-items-center">
-                 <i class="fas fa-circle circle-green d-flex align-items-center mb-3"></i><span><%= @resort.slopes_green %></span>
-                 <i class="fas fa-circle circle-blue d-flex align-items-center mb-3"></i><span><%= @resort.slopes_blue %></span>
-                 <i class="fas fa-circle circle-red d-flex align-items-center mb-3"></i><span><%= @resort.slopes_red %></span>
-                 <i class="fas fa-circle circle-black d-flex align-items-center mb-3"><span></i><%= @resort.slopes_black %></span>
+              <div class="slopes-colors d-flex align-items-center">
+                <div class="colors-left flex-column mr-3">
+                   <span><%= @resort.slopes_green %></span><i class="fas fa-circle circle-green d-flex flex-column align-items-center mb-3"></i>
+                   <span><%= @resort.slopes_blue %></span><i class="fas fa-circle circle-blue d-flex flex-column align-items-center mb-3"></i>
+                 </div>
+                 <div class="colors-right flex-column ">
+                   <span><%= @resort.slopes_red %></span><i class="fas fa-circle circle-red d-flex flex-column align-items-center mb-3"></i>
+                   </i><%= @resort.slopes_black %></span><i class="fas fa-circle circle-black d-flex flex-column align-items-center mb-3"></i>
+                </div>
               </div>
             </div>
 
