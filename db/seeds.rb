@@ -370,7 +370,7 @@ metabief.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'i
 file = URI.open('https://images.unsplash.com/photo-1579755209948-20d5b46be7be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
   activity_igloo = Activity.new(
     activity_name: "Nuit insolite dans un Igloo",
-    activity_description: "Quoi de plus insolite qu'une nuit dans un igloo ?
+    activity_description: "Quoi de plus insolite qu'une nuit dans un igloo ?\n
     Venez vivre cette expérience hors norme...",
     resort_id: tignes.id,
   )
@@ -380,7 +380,7 @@ file = URI.open('https://images.unsplash.com/photo-1579755209948-20d5b46be7be?ix
 file = URI.open('https://images.unsplash.com/photo-1577489114892-8ff285156454?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=358&q=80')
 activity_balade = Activity.new(
 activity_name: "Balades inoubliables",
-activity_description: "Besoin de vous ressourcer dans un cadre naturel exceptionnel?
+activity_description: "Besoin de vous ressourcer dans un cadre naturel exceptionnel?\n
 Explorez les forêts enneigés en raquettes...",
 resort_id: tignes.id,
 )
@@ -390,7 +390,7 @@ activity_balade.photo.attach(io: file, filename: 'activity.png', content_type: '
 file = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/88423295_1077172352664893_5598987717175148544_o.jpg?_nc_cat=103&_nc_sid=9267fe&_nc_ohc=0TAFYYUl7kUAX_I0aFj&_nc_ht=scontent-cdt1-1.xx&oh=28f5b43110807546a286dbef0f0cf6cc&oe=5F6C7B37')
 activity_soiree = Activity.new(
 activity_name: "Soirées de folie",
-activity_description: "Faites la tournée des bars entre amis !
+activity_description: "Faites la tournée des bars entre amis!\n
 Après l'effort, le réconfort ! Profitez d'une bonne bière ou d'un bon vin chaud...",
 resort_id: tignes.id,
 )
@@ -400,7 +400,7 @@ activity_soiree.photo.attach(io: file, filename: 'activity.png', content_type: '
 file = URI.open('https://images.unsplash.com/photo-1575032748932-70116d68ed58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
 activity_degustation = Activity.new(
 activity_name: "Dégustation de vins et fromages",
-activity_description: "Découvrez le patrimoine gastronomique d'une région
+activity_description: "Découvrez le patrimoine gastronomique d'une région! \n
 Dégustez en famille, entre amis ou en couple de bons vins et fromages locaux...",
 resort_id: tignes.id,
 )
@@ -411,7 +411,7 @@ activity_degustation.photo.attach(io: file, filename: 'activity.png', content_ty
 file = URI.open('https://images.unsplash.com/photo-1470010762743-1fa2363f65ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 activity_spa = Activity.new(
 activity_name: "Profitez d'un Spa",
-activity_description: "Envie de vous détendre et récupérer au maximum ?
+activity_description: "Envie de vous détendre et récupérer au maximum?\n
 Piscine, jacuzzi, sauna ou hammam vous attendent...",
 resort_id: tignes.id,
 )
@@ -421,7 +421,7 @@ activity_spa.photo.attach(io: file, filename: 'activity.png', content_type: 'ima
 file = URI.open('https://scontent-cdg2-1.xx.fbcdn.net/v/t31.0-8/17240672_10155040428452618_3262403974147800417_o.jpg?_nc_cat=100&_nc_sid=9267fe&_nc_ohc=uKoB_nLZWrUAX_qKsRC&_nc_ht=scontent-cdg2-1.xx&oh=5bc4ed1ff23161fcd9eb478dec507cd7&oe=5F6DAFA6')
   activity_plongee = Activity.new(
 activity_name: "Plongez sous la glace",
-activity_description: "Vous êtes amateur de sensations fortes ?
+activity_description: "Vous êtes amateur de sensations fortes? \n
 Vivez une véritable aventure et un voyage hors temps sous la glace...",
 resort_id: tignes.id,
 )
@@ -431,8 +431,8 @@ resort_id: tignes.id,
 file = URI.open('https://images.unsplash.com/photo-1549220167-afcb1da28402?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 activity_vtt = Activity.new(
 activity_name: "Faites du VTT sur neige",
-activity_description: "Les vrais roulent en VTT sur la neige !
-Ranger votre vélo en hiver, c'est trop facile.. Venez vous éclater dans la neige !",
+activity_description: "Les vrais roulent en VTT sur la neige! \n
+Ranger votre vélo en hiver, c'est trop facile.. Venez vous éclater dans la neige!",
 resort_id: tignes.id,
 )
 activity_vtt.save!
@@ -441,8 +441,8 @@ activity_vtt.photo.attach(io: file, filename: 'activity.png', content_type: 'ima
 file = URI.open('https://images.unsplash.com/photo-1520891422668-fe731254aff0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 activity_luge = Activity.new(
 activity_name: "Divertissez vous en famille",
-activity_description: "Dévalez les pistes de luge en famille, entre amis ou en couple..
-Fous rires et amusement garantis !",
+activity_description: "Dévalez les pistes de luge en famille, entre amis ou en couple..\n
+Fous rires et amusement garantis!",
 resort_id: tignes.id,
 )
 activity_luge.save!
