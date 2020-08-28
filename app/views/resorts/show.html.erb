@@ -23,13 +23,48 @@
   </div>
 </div>
 <!-----------------------card descritpion ------------------------->
-<div class="container d-flex">
-  <div class="card-description" >
-    <p class="localisation"> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.resort_address %></p>
-    <div class="description">
-      <%= @resort.resort_description %>
-      <div class="site-officiel">
-      <a target="_blank" href="https://www.tignes.net/">Site officiel</a>
+  <div class="container d-flex">
+    <div class="card-description" >
+      <p class="localisation-show"> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.resort_address %></p>
+      <div class="description">
+        <%= @resort.resort_description %>
+        <div class="site-officiel">
+          <a target="_blank" href="https://www.tignes.net/">Site officiel</a>
+        </div>
+      <div class="pictogramme d-flex justify-content-around mt-4">
+
+          <div class="pictogramme-left">
+            <div class="altitude d-flex align-items-center">
+              <i class="fas fa-mountain pictogramme-color"></i><span><%= @resort.altitude %></span>
+            </div>
+            <div class="opening d-flex align-items-center">
+              <i class="far fa-calendar-alt pictogramme-color"></i><span><%= @resort.opening_time %></span>
+            </div>
+            <div class="slopes-title d-flex align-items-center">
+               <i class="fas fa-skiing pictogramme-color"></i><span><%= @resort.slopes_title %></span>
+            </div>
+            <div class="slopes-colors d-flex flex-column align-items-center">
+               <i class="fas fa-circle circle-green d-flex align-items-center mb-3"></i><span><%= @resort.slopes_green %></span>
+               <i class="fas fa-circle circle-blue d-flex align-items-center mb-3"></i><span><%= @resort.slopes_blue %></span>
+               <i class="fas fa-circle circle-red d-flex align-items-center mb-3"></i><span><%= @resort.slopes_red %></span>
+               <i class="fas fa-circle circle-black d-flex align-items-center mb-3"><span></i><%= @resort.slopes_black %></span>
+            </div>
+          </div>
+
+          <div class="pictogramme-right ">
+            <div class="kids-garden d-flex align-items-center">
+              <i class="fas fa-child pictogramme-color"></i><span><%= @resort.kids_garden %></span>
+            </div>
+            <div class="snowpark d-flex align-items-center">
+              <i class="fas fa-snowboarding pictogramme-color"></i><span><%= @resort.snowpark %></span>
+            </div>
+            <div class="free-carpak d-flex align-items-center">
+              <i class="fas fa-parking pictogramme-color"></i><span><%= @resort.free_carpark %></span>
+            </div>
+          </div>
+
+      </div>
+
       </div>
     </div>
   </div>
