@@ -1,7 +1,8 @@
+import Typed from 'typed.js';
+
 const georgesElement = document.getElementById('georges');
 
 const updateFormRoommate = () => {
-  console.log('toto')
   const answer = event.target.dataset.roommate;
   document.getElementById('preference_roommate').value = answer;
 }
@@ -32,7 +33,6 @@ const updateFormSpot = () => {
 }
 
 const updateFormNightActivities = () => {
-  console.log('toto')
   const answer = event.target.dataset.night_activities;
   document.getElementById('preference_night_activities').value = answer;
 }
@@ -57,8 +57,19 @@ const preventDefaultSubmitOnEnter = () => {
   }
 }
 
+// const loadDynamicBannerText = (text, id) => {
+//   new Typed(`#${id}`, {
+//     strings: ["", text],
+//     typeSpeed: 50,
+//     loop: false
+//   });
+// }
+
 const initGeorges = () => {
   preventDefaultSubmitOnEnter();
+
+  const submitGeorgesIdElement = document.getElementById('submit-georges');
+  const nameIdElement = document.getElementById('name');
   const roommateIdElement = document.getElementById('roommate');
   const budgetIdElement = document.getElementById('budget');
   const day_activitiesIdElement = document.getElementById('day_activities');
@@ -69,15 +80,23 @@ const initGeorges = () => {
   const expectationsIdElement = document.getElementById('expectations');
   const kilometersIdElement = document.getElementById('kilometers');
   const geocationIdElement = document.getElementById('geocation');
+  const remerciementIdElement = document.getElementById('remerciement');
 
+  nameIdElement.addEventListener("keyup", (event) => {
+    if (event.key === "Enter") {
+      roommateIdElement.classList.remove("d-none");
+    }
+  })
 
   const roommates = document.querySelectorAll('.roommate');
   roommates.forEach(function(roommate) {
     roommate.addEventListener('click',  function(){
       updateFormRoommate();
+      //fillInPerferenceRoomateForm
       roommates.forEach(element => element.classList.add("d-none"));
       roommate.classList.remove("d-none");
       budgetIdElement.classList.remove("d-none");
+      // loadDynamicBannerText("Learn to code", "budget-question");
     });
   });
 
@@ -161,19 +180,20 @@ const initGeorges = () => {
     });
   });
 
-  const geocations = document.querySelectorAll('.geocation');
-  geocations.forEach(function(geocation) {
-    geocation.addEventListener('click', function check() {
-    document.updateFormGeocation("myCheck").checked = true;
+  const geocationTrue = document.getElementById('geocation-true');
+  const geocationFalse = document.getElementById('geocation-false');
+  geocationTrue.addEventListener('click', function check() {
+    document.getElementById("preference_geocation").checked = true;
+    remerciementIdElement.classList.remove("d-none");
+    submitGeorgesIdElement.classList.remove("d-none");
 
-      geocations.forEach(element => element.classList.add("d-none"));
-      geocationsIdElement.classList.remove("d-none");
-
-      function check() {
-    document.getElementById("myCheck").checked = true;
-      }
-
-    });
+    // submitForm
+  });
+  geocationFalse.addEventListener('click', function check() {
+    document.getElementById("preference_geocation").checked = false;
+    remerciementIdElement.classList.remove("d-none");
+    submitGeorgesIdElement.classList.remove("d-none");
+    // submitForm
   });
 };
 

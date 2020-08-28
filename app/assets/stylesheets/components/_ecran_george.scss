@@ -4,7 +4,7 @@
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 50px);
   position: relative;
 }
 
@@ -23,6 +23,12 @@
   border: 2px solid white;
   border-radius: 15px;
   overflow: scroll;
+}
+
+.ecran-interface-george2 {
+  width:    100%;
+  position: absolute;
+  bottom:   8px;
 }
 
 @media(max-width: 1440px) {
@@ -59,8 +65,4 @@
     height: 90%;
   }
 }
-
-
-
-
 

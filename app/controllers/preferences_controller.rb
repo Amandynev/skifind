@@ -9,7 +9,7 @@ class PreferencesController < ApplicationController
     @preference = Preference.new(preference_params)
     @preference.user = current_user
     if @preference.save
-      redirect_to root_path, notice: 'preference was successfully created.'
+      redirect_to resorts_path, notice: 'preference was successfully created.'
     else
       render :new
     end
