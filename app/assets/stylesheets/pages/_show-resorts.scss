@@ -1,2 +1,70 @@
+.pictogramme-color {
+  color: #02245C;
+  font-size: 20px;
+  padding: 20px;
+}
 
+.pictogramme-right{
+  position:relative
+}
 
+.circle-green{
+  color: #09BC8A;
+}
+
+.circle-blue{
+  color: #02245C;
+}
+.circle-red{
+  color: red;
+  opacity: .7;
+}
+
+.pictogramme{
+  padding: 20px;
+}
+
+.slopes-title {
+  position:relative;
+}
+.slopes-colors{
+  position:absolute;
+  left: 80px;
+
+}
+
+.localisation-show {
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  position:absolute;
+  top: 50px;
+  right: 30px;
+
+}
+
+.resort-title{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 20px;
+  font-weight: bold;
+  color: #02245C;
+}
+
+.photo-caroussel{
+height: 500px;
+width: 100vw;
+}
+
+#map {
+  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.container-show{
+  margin: 0 auto;
+  width: 90vw;
+}

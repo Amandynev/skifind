@@ -8,9 +8,12 @@
 require "open-uri"
 
 puts"destroy resort"
+Activity.destroy_all
 Resort.destroy_all
 
 puts "create resorts"
+
+
 
   #user_one = User.new(
      # first_name: "Aurelien",
@@ -20,6 +23,7 @@ puts "create resorts"
   #user_one.save
 
   # file = URI.open('https://www.tignes.net/uploads/media/page/0001/60/a95bc639ea1436153d77584753c7982b4cd22a49.jpeg')
+
 
 
 tignes = Resort.create!(
@@ -32,6 +36,16 @@ tignes = Resort.create!(
     roommate: "entre potes",
     budget: "Modéré, la passion et la raison",
     photo_asset: "Tignes.jpg",
+    altitude: "2100 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "8",
+    slopes_blue: "36",
+    slopes_red: "22",
+    slopes_black: "16",
+    opening_time: "28/11/20 au 02/05/21",
+    kids_garden: "2 jardins d'enfant",
+    snowpark: "2 snowparks",
+    free_carpark: "payant",
     )
 
 file = URI.open("https://www.tignes.net/uploads/media/page_block/0001/73/06fcfba68b24b6cab24cf3e56e6f43101530e418.jpeg")
@@ -52,6 +66,16 @@ vars = Resort.create!(
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
     photo_asset: "vars.jpg",
+    altitude: "2350 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "11",
+    slopes_blue: "45",
+    slopes_red: "38",
+    slopes_black: "10",
+    opening_time: "05/12/20 au 18/04/21",
+    kids_garden: "2 jardins d'enfant",
+    snowpark: "4 snowparks",
+    free_carpark: "payant",
   )
 file = URI.open("https://skipass.fr/p/resorts/774/header-vars-de20c-1.jpg")
 vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -60,7 +84,7 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
 file = URI.open("https://www.cgh-residences.com/photos/stations/sliders/vars-2_287.jpg")
 vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
-  courchevel = Resort.create!(
+courchevel = Resort.create!(
     resort_name: "Courchevel",
     resort_address: "Mairie 228 rue de la mairie Saint-Bon chef-Lieu, 73120, France",
     resort_description: "C'est LA station qui répondra à toutes tes exigences. Tu auras de la bonne neige sous les skis et des paillettes plein les yeux pour le reste! Tu veux changer d'ambiance et tenter
@@ -70,6 +94,16 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
     roommate: "en couple",
     budget: "Illimité, c'est les vacances",
     photo_asset: "courchevel.jpg",
+    altitude: "1850 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "21",
+    slopes_blue: "41",
+    slopes_red: "36",
+    slopes_black: "11",
+    opening_time: "05/12/20 au 25/04/21",
+    kids_garden: "2 jardins d'enfant",
+    snowpark: "2 snowparks",
+    free_carpark: "payant",
   )
 file = URI.open("http://www.aaarentcars.fr/sites/default/files/styles/image_article/public/field/image/courchevel_1.jpg?itok=kzON8vZQ")
 courchevel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -88,6 +122,16 @@ combloux = Resort.create!(
     roommate: "en famille",
     budget: "Modeste, je veux faire des économies",
     photo_asset: "combloux.jpg",
+    altitude: "1220 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "13",
+    slopes_blue: "18",
+    slopes_red: "30",
+    slopes_black: "8",
+    opening_time: "20/12/20 au 28/03/21",
+    kids_garden: "1 jardin",
+    snowpark: "1 snowpark",
+    free_carpark: "gratuit",
   )
 file = URI.open("https://ete.combloux.com/images/cache/ed34c785dd1eb0fc718ddf07cec782a4_w1400_h800_cp.jpg")
 combloux.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -105,6 +149,16 @@ avoriaz = Resort.create!(
     roommate: "entre potes",
     budget: "Illimité, c'est les vacances",
     photo_asset: "avoriaz.jpg",
+    altitude: "1800 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "7",
+    slopes_blue: "25",
+    slopes_red: "13",
+    slopes_black: "6",
+    opening_time: "21/12/20 au 17/04/21",
+    kids_garden: "2 jardins",
+    snowpark: "2 snowparks",
+    free_carpark: "payant",
   )
 file = URI.open("https://media-exp1.licdn.com/dms/image/C561BAQE_olXWJNwAfA/company-background_10000/0?e=1598626800&v=beta&t=9zx0TT9Cd0hfVCVi-GHuDMv2mzz_v4Qv5pTLWYd561U")
 avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -123,6 +177,16 @@ isola = Resort.create!(
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
     photo_asset: "isola.jpg",
+    altitude: "1800 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "7",
+    slopes_blue: "22",
+    slopes_red: "13",
+    slopes_black: "3",
+    opening_time: "Du 28/11/20 au 21/03/21",
+    kids_garden: "1 jardin d'enfant",
+    snowpark: "1 snowpark",
+    free_carpark: "gratuit",
   )
 file = URI.open("https://img6.custompublish.com/getfile.php/4274581.1046.qnbiwbwmmjql7q/468x0/6152431_4274581.jpg")
 isola.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -141,6 +205,16 @@ bolquere = Resort.create!(
     roommate: "entre potes",
     budget: "Modeste, je veux faire des économies",
     photo_asset: "bolquere.jpg",
+    altitude: "1700 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "15",
+    slopes_blue: "9",
+    slopes_red: "8",
+    slopes_black: "9",
+    opening_time: "29/11/20 au 28/03/21",
+    kids_garden: "1 jardin d'enfant",
+    snowpark: "1 snowpark",
+    free_carpark: "payant",
   )
 file = URI.open("https://img2.onthesnow.com/image/gg/33/1_334855.jpg")
 bolquere.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -159,6 +233,16 @@ puyvalador = Resort.create!(
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
     photo_asset: "puyvalador.jpg",
+    altitude: "1400 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "14",
+    slopes_blue: "9",
+    slopes_red: "14",
+    slopes_black: "8",
+    opening_time: "12/12/20 au 21/03/21",
+    kids_garden: "1 jard'in d'enfant",
+    snowpark: "1 snowpark",
+    free_carpark: "gratuit",
   )
 file = URI.open("https://img6.onthesnow.com/image/gg/35/1_358547.jpg")
 puyvalador.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -178,6 +262,16 @@ besse = Resort.create!(
     roommate: "en couple",
     budget: "Illimité, c'est les vacances",
     photo_asset: "besse.jpg",
+    altitude: "1350 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "5",
+    slopes_blue: "9",
+    slopes_red: "9",
+    slopes_black: "4",
+    opening_time: "12/12/20 au 11/04/21",
+    kids_garden: "1 jardin",
+    snowpark: "1 snowpark",
+    free_carpark: "payant",
   )
 file = URI.open("https://img6.onthesnow.com/image/xl/52/station_de_ski_besse_super_524975.jpg")
 besse.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -197,6 +291,16 @@ chalmazel = Resort.create!(
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
     photo_asset: "chalmazel.jpg",
+    altitude: "1230 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "10",
+    slopes_blue: "14",
+    slopes_red: "15",
+    slopes_black: "5",
+    opening_time: "19/12/20 au 21/03/21",
+    kids_garden: "1 jardin",
+    snowpark: "pas de snwopark",
+    free_carpark: "payant",
   )
 file = URI.open("https://esf.chalmazel.net/local/cache-gd2/84/78d957a496a87d5afd9611bf0fcb9a.jpg?1508403688")
 chalmazel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -216,6 +320,16 @@ morbier = Resort.create!(
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
     photo_asset: "morbier.jpg",
+    altitude: "1000 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "2",
+    slopes_blue: "1",
+    slopes_red: "1",
+    slopes_black: "0",
+    opening_time: "19/12/20 au 28/03/21",
+    kids_garden: "1 jardin",
+    snowpark: "non",
+    free_carpark: "payant",
   )
 file = URI.open("http://haut-jura.com/images/lesmarais2_-_J.CARROT.JPG")
 morbier.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -235,6 +349,16 @@ metabief = Resort.create!(
     roommate: "en couple",
     budget: "Modeste, je veux faire des économies",
     photo_asset: "metabief.jpg",
+    altitude: "1150 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "9",
+    slopes_blue: "12",
+    slopes_red: "11",
+    slopes_black: "3",
+    opening_time: "19/12/20 au 28/03/21",
+    kids_garden: "1 jardin",
+    snowpark: "1 snowpark",
+    free_carpark: "payant",
   )
 file = URI.open("https://img6.onthesnow.com/image/xl/46/remontees_mecaniques_metabief_466145.jpg")
 metabief.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -242,3 +366,84 @@ file = URI.open("http://www.metabief.fr/userfiles/images/1_SITE_2019(1).JPG")
 metabief.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 file = URI.open("https://cdn-s-www.estrepublicain.fr/images/050D81B1-9366-489E-AEE4-819C01A70E1F/NW_detail/pendant-ces-quatre-semaines-de-vacances-d-hiver-la-station-de-ski-de-metabief-espere-atteindre-la-vente-d-environ-120-000-journees-skieur-photo-er-h-c-1581446162.jpg")
 metabief.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+
+file = URI.open('https://images.unsplash.com/photo-1579755209948-20d5b46be7be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
+  activity_igloo = Activity.new(
+    activity_name: "Nuit insolite dans un Igloo",
+    activity_description: "Quoi de plus insolite qu'une nuit dans un igloo ?
+    Venez vivre cette expérience hors norme...",
+    resort_id: tignes.id,
+  )
+  activity_igloo.save!
+  activity_igloo.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
+
+file = URI.open('https://images.unsplash.com/photo-1577489114892-8ff285156454?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=358&q=80')
+activity_balade = Activity.new(
+activity_name: "Balades inoubliables",
+activity_description: "Besoin de vous ressourcer dans un cadre naturel exceptionnel?
+Explorez les forêts enneigés en raquettes...",
+resort_id: tignes.id,
+)
+activity_balade.save!
+activity_balade.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
+
+file = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/88423295_1077172352664893_5598987717175148544_o.jpg?_nc_cat=103&_nc_sid=9267fe&_nc_ohc=0TAFYYUl7kUAX_I0aFj&_nc_ht=scontent-cdt1-1.xx&oh=28f5b43110807546a286dbef0f0cf6cc&oe=5F6C7B37')
+activity_soiree = Activity.new(
+activity_name: "Soirées de folie",
+activity_description: "Faites la tournée des bars entre amis !
+Après l'effort, le réconfort ! Profitez d'une bonne bière ou d'un bon vin chaud...",
+resort_id: tignes.id,
+)
+activity_soiree.save!
+activity_soiree.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
+
+file = URI.open('https://images.unsplash.com/photo-1575032748932-70116d68ed58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
+activity_degustation = Activity.new(
+activity_name: "Dégustation de vins et fromages",
+activity_description: "Découvrez le patrimoine gastronomique d'une région
+Dégustez en famille, en amis ou en couple de bons vins et fromages locaux...",
+resort_id: tignes.id,
+)
+activity_degustation.save!
+activity_degustation.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
+
+
+file = URI.open('https://images.unsplash.com/photo-1470010762743-1fa2363f65ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+activity_spa = Activity.new(
+activity_name: "Profitez d'un Spa",
+activity_description: "Envie de vous détendre et récupérer au maximum ?
+Piscine, jacuzzi, sauna ou hammam vous attendent...",
+resort_id: tignes.id,
+)
+activity_spa.save!
+activity_spa.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
+
+file = URI.open('https://scontent-cdg2-1.xx.fbcdn.net/v/t31.0-8/17240672_10155040428452618_3262403974147800417_o.jpg?_nc_cat=100&_nc_sid=9267fe&_nc_ohc=uKoB_nLZWrUAX_qKsRC&_nc_ht=scontent-cdg2-1.xx&oh=5bc4ed1ff23161fcd9eb478dec507cd7&oe=5F6DAFA6')
+  activity_plongee = Activity.new(
+activity_name: "Plongez sous la glace",
+activity_description: "Vous êtes amateur de sensations fortes ?
+Vivez une véritable aventure et un voyage hors temps sous la glace...",
+resort_id: tignes.id,
+)
+  activity_plongee.save!
+  activity_plongee.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
+
+file = URI.open('https://images.unsplash.com/photo-1549220167-afcb1da28402?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+activity_vtt = Activity.new(
+activity_name: "Faites du VTT sur neige",
+activity_description: "Les vrais roulent en VTT sur la neige !
+Ranger votre vélo en hiver, c'est trop facile.. Venez vous éclater dans la neige !",
+resort_id: tignes.id,
+)
+activity_vtt.save!
+activity_vtt.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
+
+file = URI.open('https://images.unsplash.com/photo-1520891422668-fe731254aff0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
+activity_luge = Activity.new(
+activity_name: "Divertissez vous en famille",
+activity_description: "Dévalez les pistes de luge en famille, entre amis ou en couple..
+Fous rires et amusement garantis !",
+resort_id: tignes.id,
+)
+activity_luge.save!
+activity_luge.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
