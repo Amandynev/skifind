@@ -59,41 +59,121 @@ const preventDefaultSubmitOnEnter = () => {
 
 const initGeorges = () => {
   preventDefaultSubmitOnEnter();
+  const roommateIdElement = document.getElementById('roommate');
+  const budgetIdElement = document.getElementById('budget');
+  const day_activitiesIdElement = document.getElementById('day_activities');
+  const biological_clockIdElement = document.getElementById('biological_clock');
+  const accommodationIdElement = document.getElementById('accommodation');
+  const spotIdElement = document.getElementById('spot');
+  const night_activitiesIdElement = document.getElementById('night_activities');
+  const expectationsIdElement = document.getElementById('expectations');
+  const kilometersIdElement = document.getElementById('kilometers');
+  const geocationIdElement = document.getElementById('geocation');
+
+
   const roommates = document.querySelectorAll('.roommate');
   roommates.forEach(function(roommate) {
-    roommate.addEventListener('click', updateFormRoommate);
+    roommate.addEventListener('click',  function(){
+      updateFormRoommate();
+      roommates.forEach(element => element.classList.add("d-none"));
+      roommate.classList.remove("d-none");
+      budgetIdElement.classList.remove("d-none");
+    });
   });
+
   const budgets = document.querySelectorAll('.budget');
   budgets.forEach(function(budget) {
-    budget.addEventListener('click', updateFormBudget);
+    budget.addEventListener('click', function(){
+      updateFormBudget();
+      budgets.forEach(element => element.classList.add("d-none"));
+      budget.classList.remove("d-none");
+      day_activitiesIdElement.classList.remove("d-none");
+    });
   });
+
   const day_activities = document.querySelectorAll('.day_activities');
   day_activities.forEach(function(day_activitie) {
-    day_activitie.addEventListener('click', updateFormDayActivities);
+    day_activitie.addEventListener('click', function(){
+      updateFormDayActivities();
+      day_activities.forEach(element => element.classList.add("d-none"));
+      day_activitie.classList.remove("d-none");
+      biological_clockIdElement.classList.remove("d-none");
+    });
   });
+
   const biological_clocks = document.querySelectorAll('.biological_clock');
   biological_clocks.forEach(function(biological_clock) {
-    biological_clock.addEventListener('click', updateFormBiologicalClock);
+    biological_clock.addEventListener('click', function(){
+      updateFormBiologicalClock();
+      biological_clocks.forEach(element => element.classList.add("d-none"));
+      biological_clock.classList.remove("d-none");
+      accommodationIdElement.classList.remove("d-none");
+    });
   });
+
   const accommodations = document.querySelectorAll('.accommodation');
   accommodations.forEach(function(accommodation) {
-    accommodation.addEventListener('click', updateFormAccommodation);
+    accommodation.addEventListener('click', function(){
+      updateFormAccommodation();
+      accommodations.forEach(element => element.classList.add("d-none"));
+      accommodation.classList.remove("d-none");
+      spotIdElement.classList.remove("d-none");
+    });
   });
+
   const spots = document.querySelectorAll('.spot');
   spots.forEach(function(spot) {
-    spot.addEventListener('click', updateFormSpot);
+    spot.addEventListener('click', function(){
+      updateFormSpot();
+      spots.forEach(element => element.classList.add("d-none"));
+      spot.classList.remove("d-none");
+      night_activitiesIdElement.classList.remove("d-none");
+    });
   });
+
   const nights_activities = document.querySelectorAll('.night_activities');
   nights_activities.forEach(function(night_activities) {
-    night_activities.addEventListener('click', updateFormNightActivities);
+      night_activities.addEventListener('click', function(){
+      updateFormNightActivities();
+      nights_activities.forEach(element => element.classList.add("d-none"));
+      night_activities.classList.remove("d-none");
+      expectationsIdElement.classList.remove("d-none");
+    });
   });
+
   const expectationss = document.querySelectorAll('.expectations');
   expectationss.forEach(function(expectations) {
-    expectations.addEventListener('click', updateFormExpectations);
+    expectations.addEventListener('click', function(){
+      updateFormExpectations();
+      expectationss.forEach(element => element.classList.add("d-none"));
+      expectations.classList.remove("d-none");
+      kilometersIdElement.classList.remove("d-none");
+    });
   });
+
   const kilometerss = document.querySelectorAll('.kilometers');
   kilometerss.forEach(function(kilometers) {
-    kilometers.addEventListener('click', updateFormKilometers);
+    kilometers.addEventListener('click', function(){
+      updateFormKilometers();
+      kilometerss.forEach(element => element.classList.add("d-none"));
+      kilometersIdElement.classList.remove("d-none");
+      geocationIdElement.classList.remove("d-none");
+    });
+  });
+
+  const geocations = document.querySelectorAll('.geocation');
+  geocations.forEach(function(geocation) {
+    geocation.addEventListener('click', function check() {
+    document.updateFormGeocation("myCheck").checked = true;
+
+      geocations.forEach(element => element.classList.add("d-none"));
+      geocationsIdElement.classList.remove("d-none");
+
+      function check() {
+    document.getElementById("myCheck").checked = true;
+      }
+
+    });
   });
 };
 
