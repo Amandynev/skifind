@@ -58,7 +58,7 @@ tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'ima
 
 vars = Resort.create!(
     resort_name: "Vars",
-    resort_address: "Sainte-Maire, 05560 Vars, France",
+    resort_address: "3 rue dominique, 05560 Vars, France",
     resort_description: "Une station faite pour toi et tes proches! Vars alterne entre ski plaisir et plaisir de l'après ski tout l'année. L'été, viens apprécier la verdure des alpages, les montagnes
     fleuries et te balader sac sur le dos aux côtés des animaux sauvages. L'hiver garde en tête de profiter du plaisir du froid et de la neige, laisse tes enfants découvrir le ski grâce aux écoles
     faites pour ça pendant que tu pourras te prélasser sur les pistes.",
@@ -86,7 +86,7 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
 
 courchevel = Resort.create!(
     resort_name: "Courchevel",
-    resort_address: "Mairie 228 rue de la mairie Saint-Bon chef-Lieu, 73120, France",
+    resort_address: "73120 Courchevel, france",
     resort_description: "C'est LA station qui répondra à toutes tes exigences. Tu auras de la bonne neige sous les skis et des paillettes plein les yeux pour le reste! Tu veux changer d'ambiance et tenter
     une meilleure aventure? Pas de problème, l'insolite fait partie des possibilités offertes par Courchevel! Et si tu aimes garder les pieds sur terre, alterne toute l'année entre les bons restos et les
     moments shopping dans les magasins de luxe qui t'ouvriront en grand leurs portes.",
@@ -114,7 +114,7 @@ courchevel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 
 
 combloux = Resort.create!(
     resort_name: "Combloux",
-    resort_address: "132 Route de la Mairie, 74920 Combloux, France",
+    resort_address: "74920 Combloux, France",
     resort_description: "Station sans prétention mais qui répond aux besoins du plus grand nombre: de la neige mais aussi plein d'activités sur et en dehors du ski. Combloux saura t'offrir également ce qu'elle
     a de mieux: un cadre familiale idéal, des pistes suffisantes en nombre sans s'ennuyer, des cours de ski pour tous les âges afin de skier entre parents et enfants. Mais aussi des sorties en forêt à la
     recherche des animaux et notamment de l'effrayant dahu qui rôde dans le coin!",
@@ -169,7 +169,7 @@ avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'im
 
 isola = Resort.create!(
     resort_name: "Isola 2000",
-    resort_address: "Résidence Lombarde 06420 ISOLA 2000, France",
+    resort_address: "Résidence Lombarde, 06420 ISOLA 2000, France",
     resort_description: "Idéal en famille pour profiter du ski comme d'un bel ensoleillement, Isola 2000 saura te ravir tout au long de l'année. Avec son versant sud, l'hiver découvre les pistes et prends un bain de
     soleil accompagné d'un bon vin chaud en terrasse. L'été, profite-en pour faire des randonnées et pousser ensuite jusqu'à Nice t'amuser sur la French Riviera toute la nuit avec tes potes. Et si tu es en forme, pourquoi
     pas retenter l'évasion vers Isola 2000 !",
@@ -370,7 +370,7 @@ metabief.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'i
 file = URI.open('https://images.unsplash.com/photo-1579755209948-20d5b46be7be?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80')
   activity_igloo = Activity.new(
     activity_name: "Nuit insolite dans un Igloo",
-    activity_description: "Quoi de plus insolite qu'une nuit dans un igloo ?
+    activity_description: "Quoi de plus insolite qu'une nuit dans un igloo ?\n
     Venez vivre cette expérience hors norme...",
     resort_id: tignes.id,
   )
@@ -380,7 +380,7 @@ file = URI.open('https://images.unsplash.com/photo-1579755209948-20d5b46be7be?ix
 file = URI.open('https://images.unsplash.com/photo-1577489114892-8ff285156454?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=358&q=80')
 activity_balade = Activity.new(
 activity_name: "Balades inoubliables",
-activity_description: "Besoin de vous ressourcer dans un cadre naturel exceptionnel?
+activity_description: "Besoin de vous ressourcer dans un cadre naturel exceptionnel?\n
 Explorez les forêts enneigés en raquettes...",
 resort_id: tignes.id,
 )
@@ -390,7 +390,7 @@ activity_balade.photo.attach(io: file, filename: 'activity.png', content_type: '
 file = URI.open('https://scontent-cdt1-1.xx.fbcdn.net/v/t1.0-9/88423295_1077172352664893_5598987717175148544_o.jpg?_nc_cat=103&_nc_sid=9267fe&_nc_ohc=0TAFYYUl7kUAX_I0aFj&_nc_ht=scontent-cdt1-1.xx&oh=28f5b43110807546a286dbef0f0cf6cc&oe=5F6C7B37')
 activity_soiree = Activity.new(
 activity_name: "Soirées de folie",
-activity_description: "Faites la tournée des bars entre amis !
+activity_description: "Faites la tournée des bars entre amis!\n
 Après l'effort, le réconfort ! Profitez d'une bonne bière ou d'un bon vin chaud...",
 resort_id: tignes.id,
 )
@@ -400,8 +400,8 @@ activity_soiree.photo.attach(io: file, filename: 'activity.png', content_type: '
 file = URI.open('https://images.unsplash.com/photo-1575032748932-70116d68ed58?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80')
 activity_degustation = Activity.new(
 activity_name: "Dégustation de vins et fromages",
-activity_description: "Découvrez le patrimoine gastronomique d'une région
-Dégustez en famille, en amis ou en couple de bons vins et fromages locaux...",
+activity_description: "Découvrez le patrimoine gastronomique d'une région! \n
+Dégustez en famille, entre amis ou en couple de bons vins et fromages locaux...",
 resort_id: tignes.id,
 )
 activity_degustation.save!
@@ -411,7 +411,7 @@ activity_degustation.photo.attach(io: file, filename: 'activity.png', content_ty
 file = URI.open('https://images.unsplash.com/photo-1470010762743-1fa2363f65ca?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 activity_spa = Activity.new(
 activity_name: "Profitez d'un Spa",
-activity_description: "Envie de vous détendre et récupérer au maximum ?
+activity_description: "Envie de vous détendre et récupérer au maximum?\n
 Piscine, jacuzzi, sauna ou hammam vous attendent...",
 resort_id: tignes.id,
 )
@@ -421,7 +421,7 @@ activity_spa.photo.attach(io: file, filename: 'activity.png', content_type: 'ima
 file = URI.open('https://scontent-cdg2-1.xx.fbcdn.net/v/t31.0-8/17240672_10155040428452618_3262403974147800417_o.jpg?_nc_cat=100&_nc_sid=9267fe&_nc_ohc=uKoB_nLZWrUAX_qKsRC&_nc_ht=scontent-cdg2-1.xx&oh=5bc4ed1ff23161fcd9eb478dec507cd7&oe=5F6DAFA6')
   activity_plongee = Activity.new(
 activity_name: "Plongez sous la glace",
-activity_description: "Vous êtes amateur de sensations fortes ?
+activity_description: "Vous êtes amateur de sensations fortes? \n
 Vivez une véritable aventure et un voyage hors temps sous la glace...",
 resort_id: tignes.id,
 )
@@ -431,8 +431,8 @@ resort_id: tignes.id,
 file = URI.open('https://images.unsplash.com/photo-1549220167-afcb1da28402?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 activity_vtt = Activity.new(
 activity_name: "Faites du VTT sur neige",
-activity_description: "Les vrais roulent en VTT sur la neige !
-Ranger votre vélo en hiver, c'est trop facile.. Venez vous éclater dans la neige !",
+activity_description: "Les vrais roulent en VTT sur la neige! \n
+Ranger votre vélo en hiver, c'est trop facile.. Venez vous éclater dans la neige!",
 resort_id: tignes.id,
 )
 activity_vtt.save!
@@ -441,8 +441,8 @@ activity_vtt.photo.attach(io: file, filename: 'activity.png', content_type: 'ima
 file = URI.open('https://images.unsplash.com/photo-1520891422668-fe731254aff0?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80')
 activity_luge = Activity.new(
 activity_name: "Divertissez vous en famille",
-activity_description: "Dévalez les pistes de luge en famille, entre amis ou en couple..
-Fous rires et amusement garantis !",
+activity_description: "Dévalez les pistes de luge en famille, entre amis ou en couple..\n
+Fous rires et amusement garantis!",
 resort_id: tignes.id,
 )
 activity_luge.save!
