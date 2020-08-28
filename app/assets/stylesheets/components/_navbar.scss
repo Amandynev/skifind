@@ -1,6 +1,9 @@
 .navbar-lewagon {
+  position: relative;
   justify-content: space-between;
-  background: rgba(255,255,255,0);
+  background-color: white;
+  position: sticky;
+  top: 0;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -9,4 +12,15 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+.logo-skifind {
+  position: absolute;
+  color: white;
+  font-size: 100px;
+}
+
+.logo-toutschuss {
+  position: absolute;
+  top:30px;
 }
