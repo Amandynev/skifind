@@ -4,6 +4,10 @@
   padding: 20px;
 }
 
+.pictogramme-right{
+  position:relative
+}
+
 .circle-green{
   color: #09BC8A;
 }
@@ -25,7 +29,7 @@
 }
 .slopes-colors{
   position:absolute;
-  left: 180px;
+  left: 80px;
 
 }
 
@@ -52,4 +56,15 @@
 .photo-caroussel{
 height: 500px;
 width: 100vw;
+}
+
+#map {
+  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+}
+
+.container-show{
+  margin: 0 auto;
+  width: 90vw;
 }
