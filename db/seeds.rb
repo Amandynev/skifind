@@ -36,6 +36,16 @@ tignes = Resort.create!(
     roommate: "entre potes",
     budget: "Modéré, la passion et la raison",
     photo_asset: "Tignes.jpg",
+    altitude: "2100 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "8",
+    slopes_blue: "36",
+    slopes_red: "22",
+    slopes_black: "16",
+    opening_time: "28/11/20 au 02/05/21",
+    kids_garden: "2 jardins d'enfant",
+    snowpark: "2 snowparks",
+    free_carpark: "payant",
     )
 
 file = URI.open("https://www.tignes.net/uploads/media/page_block/0001/73/06fcfba68b24b6cab24cf3e56e6f43101530e418.jpeg")
@@ -56,6 +66,16 @@ vars = Resort.create!(
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
     photo_asset: "vars.jpg",
+    altitude: "2350 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "11",
+    slopes_blue: "45",
+    slopes_red: "38",
+    slopes_black: "10",
+    opening_time: "05/12/20 au 18/04/21",
+    kids_garden: "2 jardins d'enfant",
+    snowpark: "4 snowparks",
+    free_carpark: "payant",
   )
 file = URI.open("https://skipass.fr/p/resorts/774/header-vars-de20c-1.jpg")
 vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -74,6 +94,16 @@ courchevel = Resort.create!(
     roommate: "en couple",
     budget: "Illimité, c'est les vacances",
     photo_asset: "courchevel.jpg",
+    altitude: "1850 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "21",
+    slopes_blue: "41",
+    slopes_red: "36",
+    slopes_black: "11",
+    opening_time: "05/12/20 au 25/04/21",
+    kids_garden: "2 jardins d'enfant",
+    snowpark: "2 snowparks",
+    free_carpark: "payant",
   )
 file = URI.open("http://www.aaarentcars.fr/sites/default/files/styles/image_article/public/field/image/courchevel_1.jpg?itok=kzON8vZQ")
 courchevel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -92,6 +122,16 @@ combloux = Resort.create!(
     roommate: "en famille",
     budget: "Modeste, je veux faire des économies",
     photo_asset: "combloux.jpg",
+    altitude: "1220 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "13",
+    slopes_blue: "18",
+    slopes_red: "30",
+    slopes_black: "8",
+    opening_time: "20/12/20 au 28/03/21",
+    kids_garden: "1 jardin",
+    snowpark: "1 snowpark",
+    free_carpark: "gratuit",
   )
 file = URI.open("https://ete.combloux.com/images/cache/ed34c785dd1eb0fc718ddf07cec782a4_w1400_h800_cp.jpg")
 combloux.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -109,6 +149,16 @@ avoriaz = Resort.create!(
     roommate: "entre potes",
     budget: "Illimité, c'est les vacances",
     photo_asset: "avoriaz.jpg",
+    altitude: "1800 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "7",
+    slopes_blue: "25",
+    slopes_red: "13",
+    slopes_black: "6",
+    opening_time: "21/12/20 au 17/04/21",
+    kids_garden: "2 jardins",
+    snowpark: "2 snowparks",
+    free_carpark: "payant",
   )
 file = URI.open("https://media-exp1.licdn.com/dms/image/C561BAQE_olXWJNwAfA/company-background_10000/0?e=1598626800&v=beta&t=9zx0TT9Cd0hfVCVi-GHuDMv2mzz_v4Qv5pTLWYd561U")
 avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -127,6 +177,16 @@ isola = Resort.create!(
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
     photo_asset: "isola.jpg",
+    altitude: "1800 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "7",
+    slopes_blue: "22",
+    slopes_red: "13",
+    slopes_black: "3",
+    opening_time: "Du 28/11/20 au 21/03/21",
+    kids_garden: "1 jardin d'enfant",
+    snowpark: "1 snowpark",
+    free_carpark: "gratuit",
   )
 file = URI.open("https://img6.custompublish.com/getfile.php/4274581.1046.qnbiwbwmmjql7q/468x0/6152431_4274581.jpg")
 isola.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -145,6 +205,16 @@ bolquere = Resort.create!(
     roommate: "entre potes",
     budget: "Modeste, je veux faire des économies",
     photo_asset: "bolquere.jpg",
+    altitude: "1700 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "15",
+    slopes_blue: "9",
+    slopes_red: "8",
+    slopes_black: "9",
+    opening_time: "29/11/20 au 28/03/21",
+    kids_garden: "1 jardin d'enfant",
+    snowpark: "1 snowpark",
+    free_carpark: "payant",
   )
 file = URI.open("https://img2.onthesnow.com/image/gg/33/1_334855.jpg")
 bolquere.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -163,6 +233,16 @@ puyvalador = Resort.create!(
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
     photo_asset: "puyvalador.jpg",
+    altitude: "1400 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "14",
+    slopes_blue: "9",
+    slopes_red: "14",
+    slopes_black: "8",
+    opening_time: "12/12/20 au 21/03/21",
+    kids_garden: "1 jard'in d'enfant",
+    snowpark: "1 snowpark",
+    free_carpark: "gratuit",
   )
 file = URI.open("https://img6.onthesnow.com/image/gg/35/1_358547.jpg")
 puyvalador.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -182,6 +262,16 @@ besse = Resort.create!(
     roommate: "en couple",
     budget: "Illimité, c'est les vacances",
     photo_asset: "besse.jpg",
+    altitude: "1350 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "5",
+    slopes_blue: "9",
+    slopes_red: "9",
+    slopes_black: "4",
+    opening_time: "12/12/20 au 11/04/21",
+    kids_garden: "1 jardin",
+    snowpark: "1 snowpark",
+    free_carpark: "payant",
   )
 file = URI.open("https://img6.onthesnow.com/image/xl/52/station_de_ski_besse_super_524975.jpg")
 besse.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -201,6 +291,16 @@ chalmazel = Resort.create!(
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
     photo_asset: "chalmazel.jpg",
+    altitude: "1230 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "10",
+    slopes_blue: "14",
+    slopes_red: "15",
+    slopes_black: "5",
+    opening_time: "19/12/20 au 21/03/21",
+    kids_garden: "1 jardin",
+    snowpark: "pas de snwopark",
+    free_carpark: "payant",
   )
 file = URI.open("https://esf.chalmazel.net/local/cache-gd2/84/78d957a496a87d5afd9611bf0fcb9a.jpg?1508403688")
 chalmazel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -220,6 +320,16 @@ morbier = Resort.create!(
     roommate: "en famille",
     budget: "Modéré, la passion et la raison",
     photo_asset: "morbier.jpg",
+    altitude: "1000 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "2",
+    slopes_blue: "1",
+    slopes_red: "1",
+    slopes_black: "0",
+    opening_time: "19/12/20 au 28/03/21",
+    kids_garden: "1 jardin",
+    snowpark: "non",
+    free_carpark: "payant",
   )
 file = URI.open("http://haut-jura.com/images/lesmarais2_-_J.CARROT.JPG")
 morbier.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -239,6 +349,16 @@ metabief = Resort.create!(
     roommate: "en couple",
     budget: "Modeste, je veux faire des économies",
     photo_asset: "metabief.jpg",
+    altitude: "1150 m",
+    slopes_title: "total de pistes:",
+    slopes_green: "9",
+    slopes_blue: "12",
+    slopes_red: "11",
+    slopes_black: "3",
+    opening_time: "19/12/20 au 28/03/21",
+    kids_garden: "1 jardin",
+    snowpark: "1 snowpark",
+    free_carpark: "payant",
   )
 file = URI.open("https://img6.onthesnow.com/image/xl/46/remontees_mecaniques_metabief_466145.jpg")
 metabief.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
