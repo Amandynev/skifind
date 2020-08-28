@@ -64,7 +64,7 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
 file = URI.open("https://www.cgh-residences.com/photos/stations/sliders/vars-2_287.jpg")
 vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
-  courchevel = Resort.create!(
+courchevel = Resort.create!(
     resort_name: "Courchevel",
     resort_address: "Mairie 228 rue de la mairie Saint-Bon chef-Lieu, 73120, France",
     resort_description: "C'est LA station qui répondra à toutes tes exigences. Tu auras de la bonne neige sous les skis et des paillettes plein les yeux pour le reste! Tu veux changer d'ambiance et tenter
