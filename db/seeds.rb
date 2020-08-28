@@ -281,7 +281,7 @@ file = URI.open('https://images.unsplash.com/photo-1575032748932-70116d68ed58?ix
 activity_degustation = Activity.new(
 activity_name: "Dégustation de vins et fromages",
 activity_description: "Découvrez le patrimoine gastronomique d'une région
-Dégustez en famille, en amis ou en couple de bons vins et fromages locaux...",
+Dégustez en famille, entre amis ou en couple de bons vins et fromages locaux...",
 resort_id: tignes.id,
 )
 activity_degustation.save!
