@@ -12,9 +12,9 @@
 }
 
 
-.card-product img {
+.card-product .img-resort {
   height: 210px ;
-  width: 280px;
+  width: 350px;
   padding-left:5px;
 }
 
@@ -28,7 +28,6 @@
   display: flex;
   align-items: center;
   background: white;
-
   top: 20px;
   bottom: 20px;
   opacity: 0;

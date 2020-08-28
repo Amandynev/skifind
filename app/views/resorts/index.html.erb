@@ -13,10 +13,9 @@
   <div class="row">
     <div>
       <% @resorts.each do |resort|  %>
-
         <%= link_to resort_path(resort), class: 'link-without-style' do %>
           <div class="card-product">
-                <%= image_tag resort.photo_asset, alt: "Tignes", width: 200, class: "img" %>
+                <%= image_tag resort.photo_asset, alt: "Tignes", width: 200, class: "img-resort" %>
             <div class="card-product-infos">
                 <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort.resort_address %></p>
                 <div class="info-resort name mb-5">
