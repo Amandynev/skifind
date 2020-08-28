@@ -58,7 +58,7 @@ tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'ima
 
 vars = Resort.create!(
     resort_name: "Vars",
-    resort_address: "Sainte-Maire, 05560 Vars, France",
+    resort_address: "3 rue dominique, 05560 Vars, France",
     resort_description: "Une station faite pour toi et tes proches! Vars alterne entre ski plaisir et plaisir de l'après ski tout l'année. L'été, viens apprécier la verdure des alpages, les montagnes
     fleuries et te balader sac sur le dos aux côtés des animaux sauvages. L'hiver garde en tête de profiter du plaisir du froid et de la neige, laisse tes enfants découvrir le ski grâce aux écoles
     faites pour ça pendant que tu pourras te prélasser sur les pistes.",
@@ -86,7 +86,7 @@ vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image
 
 courchevel = Resort.create!(
     resort_name: "Courchevel",
-    resort_address: "Mairie 228 rue de la mairie Saint-Bon chef-Lieu, 73120, France",
+    resort_address: "73120 Courchevel, france",
     resort_description: "C'est LA station qui répondra à toutes tes exigences. Tu auras de la bonne neige sous les skis et des paillettes plein les yeux pour le reste! Tu veux changer d'ambiance et tenter
     une meilleure aventure? Pas de problème, l'insolite fait partie des possibilités offertes par Courchevel! Et si tu aimes garder les pieds sur terre, alterne toute l'année entre les bons restos et les
     moments shopping dans les magasins de luxe qui t'ouvriront en grand leurs portes.",
@@ -114,7 +114,7 @@ courchevel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 
 
 combloux = Resort.create!(
     resort_name: "Combloux",
-    resort_address: "132 Route de la Mairie, 74920 Combloux, France",
+    resort_address: "74920 Combloux, France",
     resort_description: "Station sans prétention mais qui répond aux besoins du plus grand nombre: de la neige mais aussi plein d'activités sur et en dehors du ski. Combloux saura t'offrir également ce qu'elle
     a de mieux: un cadre familiale idéal, des pistes suffisantes en nombre sans s'ennuyer, des cours de ski pour tous les âges afin de skier entre parents et enfants. Mais aussi des sorties en forêt à la
     recherche des animaux et notamment de l'effrayant dahu qui rôde dans le coin!",
@@ -169,7 +169,7 @@ avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'im
 
 isola = Resort.create!(
     resort_name: "Isola 2000",
-    resort_address: "Résidence Lombarde 06420 ISOLA 2000, France",
+    resort_address: "Résidence Lombarde, 06420 ISOLA 2000, France",
     resort_description: "Idéal en famille pour profiter du ski comme d'un bel ensoleillement, Isola 2000 saura te ravir tout au long de l'année. Avec son versant sud, l'hiver découvre les pistes et prends un bain de
     soleil accompagné d'un bon vin chaud en terrasse. L'été, profite-en pour faire des randonnées et pousser ensuite jusqu'à Nice t'amuser sur la French Riviera toute la nuit avec tes potes. Et si tu es en forme, pourquoi
     pas retenter l'évasion vers Isola 2000 !",
