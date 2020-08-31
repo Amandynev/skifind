@@ -28,7 +28,7 @@ puts "create resorts"
 
 tignes = Resort.create!(
     resort_name: "Tignes",
-    resort_address: "Route du Rosset, 73320 Tignes, France",
+    resort_address: "73320 Tignes, france",
     resort_description: "Pistes variées, plein de lieux d'activités, 3 villages au choix pour ton budget, Tignes t'offrira le plaisir de profiter de cette station été comme hiver. Au sein de
     l'espace Killy, ton forfait te permettra d'aller aussi bien sur les pistes de Tignes que celles de Val d'Isère, t'offrant un vaste choix de niveau sur les pistes, mais aussi le plaisir de
     pouvoir te poser prendre un verere à la Folie-Douce. Le soir, fais toi une petite tournée des bars ou un ciné si tu es trop claqué.",
@@ -37,15 +37,17 @@ tignes = Resort.create!(
     budget: "Modéré, la passion et la raison",
     photo_asset: "Tignes.jpg",
     altitude: "2100 m",
-    slopes_title: "total de pistes:",
+    slopes_title: "Total de pistes:",
     slopes_green: "8",
     slopes_blue: "36",
     slopes_red: "22",
     slopes_black: "16",
     opening_time: "28/11/20 au 02/05/21",
-    kids_garden: "2 jardins d'enfant",
+    kids_garden: "2 Jardin d'enfants",
     snowpark: "2 snowparks",
     free_carpark: "payant",
+    mountains: "Savoie"
+    resort_website:"https://www.tignes.net/"
     )
 
 file = URI.open("https://www.tignes.net/uploads/media/page_block/0001/73/06fcfba68b24b6cab24cf3e56e6f43101530e418.jpeg")
@@ -67,15 +69,17 @@ vars = Resort.create!(
     budget: "Modéré, la passion et la raison",
     photo_asset: "vars.jpg",
     altitude: "2350 m",
-    slopes_title: "total de pistes:",
+    slopes_title: "Total de pistes:",
     slopes_green: "11",
     slopes_blue: "45",
     slopes_red: "38",
     slopes_black: "10",
     opening_time: "05/12/20 au 18/04/21",
-    kids_garden: "2 jardins d'enfant",
+    kids_garden: "2 Jardin d'enfants",
     snowpark: "4 snowparks",
     free_carpark: "payant",
+    mountains: "Hautes-Alpes"
+    resort_website:"https://www.vars.com/"
   )
 file = URI.open("https://skipass.fr/p/resorts/774/header-vars-de20c-1.jpg")
 vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -95,15 +99,18 @@ courchevel = Resort.create!(
     budget: "Illimité, c'est les vacances",
     photo_asset: "courchevel.jpg",
     altitude: "1850 m",
-    slopes_title: "total de pistes:",
+    slopes_title: "Total de pistes:",
     slopes_green: "21",
     slopes_blue: "41",
     slopes_red: "36",
     slopes_black: "11",
     opening_time: "05/12/20 au 25/04/21",
-    kids_garden: "2 jardins d'enfant",
+    kids_garden: "2 Jardin d'enfants",
     snowpark: "2 snowparks",
     free_carpark: "payant",
+    mountains: "Savoie"
+    resort_website:"https://www.courchevel.com/fr"
+
   )
 file = URI.open("http://www.aaarentcars.fr/sites/default/files/styles/image_article/public/field/image/courchevel_1.jpg?itok=kzON8vZQ")
 courchevel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -123,15 +130,17 @@ combloux = Resort.create!(
     budget: "Modeste, je veux faire des économies",
     photo_asset: "combloux.jpg",
     altitude: "1220 m",
-    slopes_title: "total de pistes:",
+    slopes_title: "Total de pistes:",
     slopes_green: "13",
     slopes_blue: "18",
     slopes_red: "30",
     slopes_black: "8",
     opening_time: "20/12/20 au 28/03/21",
-    kids_garden: "1 jardin",
+    kids_garden: "1 Jardin d'enfants",
     snowpark: "1 snowpark",
     free_carpark: "gratuit",
+    mountains: "Haute-Savoie"
+    resort_website:"https://ete.combloux.com/"
   )
 file = URI.open("https://ete.combloux.com/images/cache/ed34c785dd1eb0fc718ddf07cec782a4_w1400_h800_cp.jpg")
 combloux.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -142,7 +151,7 @@ combloux.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'i
 
 avoriaz = Resort.create!(
     resort_name: "Avoriaz",
-    resort_address: "1 Place de l'Église, 74110 Morzine, France",
+    resort_address: "44 prom. du festival, 74110 Morzine, France",
     resort_description: "Un domaine sympa et enneigé, qui t'offrira de belles possibilités de ski l'hiver avec tes potes. Pense bien à avoir un bon niveau car le domaine est sympa pour dévaler les pistes en ski
     ou en snow. Si tu viens à Avoriaz à une autre période de l'année, pas de problème, tu auras la possiblité de t'amuser parmi toutes les activités offertes au sein de la station, du matin au soir, surtout le soir.",
     visitor_name: "#",
@@ -150,15 +159,17 @@ avoriaz = Resort.create!(
     budget: "Illimité, c'est les vacances",
     photo_asset: "avoriaz.jpg",
     altitude: "1800 m",
-    slopes_title: "total de pistes:",
+    slopes_title: "Total de pistes:",
     slopes_green: "7",
     slopes_blue: "25",
     slopes_red: "13",
     slopes_black: "6",
     opening_time: "21/12/20 au 17/04/21",
-    kids_garden: "2 jardins",
+    kids_garden: "2 Jardin d'enfantsj",
     snowpark: "2 snowparks",
     free_carpark: "payant",
+    mountains: "Haute-Savoie"
+    resort_website:"https://www.avoriaz.com/"
   )
 file = URI.open("https://media-exp1.licdn.com/dms/image/C561BAQE_olXWJNwAfA/company-background_10000/0?e=1598626800&v=beta&t=9zx0TT9Cd0hfVCVi-GHuDMv2mzz_v4Qv5pTLWYd561U")
 avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -178,15 +189,17 @@ isola = Resort.create!(
     budget: "Modéré, la passion et la raison",
     photo_asset: "isola.jpg",
     altitude: "1800 m",
-    slopes_title: "total de pistes:",
+    slopes_title: "Total de pistes:",
     slopes_green: "7",
     slopes_blue: "22",
     slopes_red: "13",
     slopes_black: "3",
     opening_time: "Du 28/11/20 au 21/03/21",
-    kids_garden: "1 jardin d'enfant",
+    kids_garden: "1 Jardin d'enfants",
     snowpark: "1 snowpark",
     free_carpark: "gratuit",
+    mountains: "Alpes-Maritimes"
+    resort_website:"https://www.isola2000.com/"
   )
 file = URI.open("https://img6.custompublish.com/getfile.php/4274581.1046.qnbiwbwmmjql7q/468x0/6152431_4274581.jpg")
 isola.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -206,15 +219,17 @@ bolquere = Resort.create!(
     budget: "Modeste, je veux faire des économies",
     photo_asset: "bolquere.jpg",
     altitude: "1700 m",
-    slopes_title: "total de pistes:",
+    slopes_title: "Total de pistes:",
     slopes_green: "15",
     slopes_blue: "9",
     slopes_red: "8",
     slopes_black: "9",
     opening_time: "29/11/20 au 28/03/21",
-    kids_garden: "1 jardin d'enfant",
+    kids_garden: "1 Jardin d'enfants",
     snowpark: "1 snowpark",
     free_carpark: "payant",
+    mountains: "Pyrénées-Orientales"
+    resort_website:"http://www.pyrenees2000.com/fr/"
   )
 file = URI.open("https://img2.onthesnow.com/image/gg/33/1_334855.jpg")
 bolquere.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -226,7 +241,7 @@ bolquere.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'i
 puyvalador = Resort.create!(
     resort_name: "Puyvalador",
     resort_address: "7 Rue des Trois Fontaines, 66210 Puyvalador, France",
-    resort_description: "soleil, ciel bleu et air pur t'offriront un super moment une fois sur place. Profite-en pour skier ou snowboarder sur les pistes prévues à cet effet.
+    resort_description: "Soleil, ciel bleu et air pur t'offriront un super moment une fois sur place. Profite-en pour skier ou snowboarder sur les pistes prévues à cet effet.
     En fin de journée, sors la luge pout t'amuser avec tes enfants. L'été, viens t'amuser à tester toutes les activités proposées par la station. Et sinon viens juste nous
     dire bonjour entre 2 balades ;)",
     visitor_name: "#",
@@ -234,15 +249,17 @@ puyvalador = Resort.create!(
     budget: "Modéré, la passion et la raison",
     photo_asset: "puyvalador.jpg",
     altitude: "1400 m",
-    slopes_title: "total de pistes:",
+    slopes_title: "Total de pistes:",
     slopes_green: "14",
     slopes_blue: "9",
     slopes_red: "14",
     slopes_black: "8",
     opening_time: "12/12/20 au 21/03/21",
-    kids_garden: "1 jard'in d'enfant",
+    kids_garden: "1 Jardin d'enfants",
     snowpark: "1 snowpark",
     free_carpark: "gratuit",
+    mountains: "Pyrénées-Orientales"
+    resort_website:"https://www.puyvalador-ski.fr/"
   )
 file = URI.open("https://img6.onthesnow.com/image/gg/35/1_358547.jpg")
 puyvalador.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -253,7 +270,7 @@ puyvalador.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 
 
 
 besse = Resort.create!(
-    resort_name: "Besse",
+    resort_name: "Super-Besse",
     resort_address: "2 Place de la Mairie, 63610 Besse-et-Saint-Anastaise, France",
     resort_description: "Au pied du puy de Sancy, tu pourras prendre le temps de te détendre au ski ou au ski tranquillement en couple pour te ressourcer. Si le ski n'est pas pour toi,
     viens juste te détendre dans un spa ou une balade au choix dans cet environnement de qualité. Pense aussi à te loger: ça tombe bien, Besse a tout ce qu'il faut pour t'accuillir dans
@@ -263,7 +280,7 @@ besse = Resort.create!(
     budget: "Illimité, c'est les vacances",
     photo_asset: "besse.jpg",
     altitude: "1350 m",
-    slopes_title: "total de pistes:",
+    slopes_title: "Total de pistes:",
     slopes_green: "5",
     slopes_blue: "9",
     slopes_red: "9",
@@ -272,6 +289,8 @@ besse = Resort.create!(
     kids_garden: "1 jardin",
     snowpark: "1 snowpark",
     free_carpark: "payant",
+    mountains: "Massif central"
+    resort_website:"https://www.sancy.com/destination/toutes-les-communes/superbesse/"
   )
 file = URI.open("https://img6.onthesnow.com/image/xl/52/station_de_ski_besse_super_524975.jpg")
 besse.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -292,7 +311,7 @@ chalmazel = Resort.create!(
     budget: "Modéré, la passion et la raison",
     photo_asset: "chalmazel.jpg",
     altitude: "1230 m",
-    slopes_title: "total de pistes:",
+    slopes_title: "Total de pistes:",
     slopes_green: "10",
     slopes_blue: "14",
     slopes_red: "15",
@@ -301,6 +320,8 @@ chalmazel = Resort.create!(
     kids_garden: "1 jardin",
     snowpark: "pas de snwopark",
     free_carpark: "payant",
+    mountains: "La loire"
+    resort_website:"https://www.loire.fr/jcms/dlw_1111340/accueil"
   )
 file = URI.open("https://esf.chalmazel.net/local/cache-gd2/84/78d957a496a87d5afd9611bf0fcb9a.jpg?1508403688")
 chalmazel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -321,7 +342,7 @@ morbier = Resort.create!(
     budget: "Modéré, la passion et la raison",
     photo_asset: "morbier.jpg",
     altitude: "1000 m",
-    slopes_title: "total de pistes:",
+    slopes_title: "Total de pistes:",
     slopes_green: "2",
     slopes_blue: "1",
     slopes_red: "1",
@@ -330,6 +351,8 @@ morbier = Resort.create!(
     kids_garden: "1 jardin",
     snowpark: "non",
     free_carpark: "payant",
+    mountains: "Le Jura"
+    resort_website:"http://www.morbier.fr/"
   )
 file = URI.open("http://haut-jura.com/images/lesmarais2_-_J.CARROT.JPG")
 morbier.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -350,7 +373,7 @@ metabief = Resort.create!(
     budget: "Modeste, je veux faire des économies",
     photo_asset: "metabief.jpg",
     altitude: "1150 m",
-    slopes_title: "total de pistes:",
+    slopes_title: "Total de pistes:",
     slopes_green: "9",
     slopes_blue: "12",
     slopes_red: "11",
@@ -359,6 +382,8 @@ metabief = Resort.create!(
     kids_garden: "1 jardin",
     snowpark: "1 snowpark",
     free_carpark: "payant",
+    mountains: "Le Jura"
+    resort_website:"hhttps://www.tourisme-metabief.com/"
   )
 file = URI.open("https://img6.onthesnow.com/image/xl/46/remontees_mecaniques_metabief_466145.jpg")
 metabief.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -372,7 +397,7 @@ file = URI.open('https://images.unsplash.com/photo-1579755209948-20d5b46be7be?ix
     activity_name: "Nuit insolite dans un Igloo",
     activity_description: "Quoi de plus insolite qu'une nuit dans un igloo ?\n
     Venez vivre cette expérience hors norme...",
-    resort_id: tignes.id,
+    resort_id: courchevel.id,
   )
   activity_igloo.save!
   activity_igloo.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
@@ -402,7 +427,7 @@ activity_degustation = Activity.new(
 activity_name: "Dégustation de vins et fromages",
 activity_description: "Découvrez le patrimoine gastronomique d'une région! \n
 Dégustez en famille, entre amis ou en couple de bons vins et fromages locaux...",
-resort_id: tignes.id,
+resort_id: morbier.id,
 )
 activity_degustation.save!
 activity_degustation.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
