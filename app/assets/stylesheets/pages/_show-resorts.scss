@@ -3,9 +3,19 @@
   font-size: 20px;
   padding: 20px;
 }
+.pictogramme {
+  background-color: #FCFCFC;
+  font-weight: bold;
+}
 
-.pictogramme-right{
-  position:relative
+
+
+.slopes{
+  position:relative;
+}
+
+body{
+  background-color:white;
 }
 
 .circle-green{
@@ -24,23 +34,14 @@
   padding: 20px;
 }
 
-.slopes-title {
-  position:relative;
-}
-.slopes-colors{
-  position:absolute;
-  left: 98px;
-
-}
-
 .localisation-show {
-  font-size: 14px;
-  line-height: 1.4;
-  opacity: .7;
-  margin-bottom: 0;
-  margin-top: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  opacity: .9;
+  margin-bottom: 20px;
+  margin-top: 20px;
   position:absolute;
-  top: 50px;
+  bottom: 130px;
   right: 30px;
 
 }
@@ -53,11 +54,19 @@
   color: #02245C;
 }
 
+.slopes-title {
+  position:relative;
+}
+.slopes-colors{
+  position:absolute;
+  left: 80px;
+
+}
+
 .photo-caroussel{
 height: 400px;
 width: 100vw;
 }
-
 
 .container-show{
   margin: 0 auto;
