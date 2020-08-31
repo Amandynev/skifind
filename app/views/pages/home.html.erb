@@ -1,30 +1,38 @@
-<div class="banner-home d-flex justify-content-center align-items-center flex-column">
-  <div class="title">
-    <h1>Trouve ta station idéale selon tes envies !</h1>
+<%= form_tag resorts_path, method: :get do %>
+  <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Trouve une station"
+  %>
+  <%= submit_tag "Rechercher", class: "buton-primary" %>
+<% end %>
+  <div class="banner-home d-flex justify-content-center align-items-center flex-column">
+    <div class="title">
+      <h1>Trouve ta station idéale selon tes envies !</h1>
+    </div>
+      <%= link_to ('<i class="fas fa-robot">  Parle avec moi</i>').html_safe, new_preference_path, class: "buton-primary" %>
   </div>
-    <%= link_to ('<i class="fas fa-robot">  Parle avec moi</i>').html_safe, new_preference_path, class: "buton-primary" %>
-</div>
 
-<div class="container-fluid d-flex flex-column mt-4">
-  <h2>Les 8 bonnes raisons pour partir au Ski</h2>
-    <div class="row">
-      <% @activities.each do |activity|  %>
-        <div class="col-sm-12 col-md-6 col-lg-3">
-          <div class="card m-2 card-activity">
-            <div class="inner">
-              <%= cl_image_tag activity.photo.key, class: "card-img-top" %>
-            </div>
-            <div class="card-body d-flex flex-column">
-              <h5 class="card-title" style="text-align: center;"> <%= activity.activity_name %> </h5>
-              <p class="card-text"> 
-                <%= activity.activity_description %>
-              </p>
-              <div class="d-flex justify-content-end flex-column" style="height: 100%">
-                <%= link_to "Explore", resort_path(activity.resort), class: "buton-explore align-self-end" %>
+  <div class="container-fluid d-flex flex-column mt-4">
+    <h2>Les 8 bonnes raisons pour partir au Ski</h2>
+      <div class="row">
+        <% @activities.each do |activity|  %>
+          <div class="col-sm-12 col-md-6 col-lg-3">
+            <div class="card m-2 card-activity">
+              <div class="inner">
+                <%= cl_image_tag activity.photo.key, class: "card-img-top" %>
+              </div>
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title" style="text-align: center;"> <%= activity.activity_name %> </h5>
+                <p class="card-text"> 
+                  <%= activity.activity_description %>
+                </p>
+                <div class="d-flex justify-content-end flex-column" style="height: 100%">
+                  <%= link_to "Explore", resort_path(activity.resort), class: "buton-explore align-self-end" %>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      <% end %>
-    </div>
-</div>
+        <% end %>
+      </div>
+  </div>

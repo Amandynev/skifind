@@ -3,7 +3,12 @@ class ResortsController < ApplicationController
     before_action :set_resort, only: [ :show ]
 
     def index
-        @resorts = Resort.all
+        if params[:query].present?
+            sql_query = "resort_name @@ :query OR resort_description @@ :query"
+            @resorts = Resort.where(sql_query, query: "%#{params[:query]}%")
+        else
+            @resorts = Resort.all
+        end
     end
 
     def show
