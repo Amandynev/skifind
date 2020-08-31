@@ -1,4 +1,6 @@
 class Preference < ApplicationRecord
+  belongs_to :matchable, polymorphic: true, optional: true
+
   ROOMMATE = {
     "family" => "En famille",
     "friend" => "Entre potes",
@@ -26,7 +28,7 @@ class Preference < ApplicationRecord
   }
 
   ACCOMMODATION = {
-    "Apartment" => "Appart, avec un coin cuisine",
+    "apartment" => "Appart, avec un coin cuisine",
     "house" => "Chalet, du typique",
     "hotel" => "Hôtel de luxe",
     "igloo" => "De l'insolite"
@@ -41,14 +43,14 @@ class Preference < ApplicationRecord
 
   NIGHT_ACTIVITIES = {
     "sleep" => "Du repos pour être en forme sur les pistes",
-    "pub" => "La tournée des bars",
+    "cinema" => "Un ciné",
     "restaurant" => "Un resto",
-    "cinema" => "Un ciné"
+    "pub" => "La tournée des bars"
   }
 
   EXPECTATIONS = {
     "tracks" => "Beaucoup de pistes de ski",
-    "Snow" => "Une station enneigée",
+    "snow" => "Une station enneigée",
     "food" => "De bons restaurants",
     "night" => "Un lieu vivant la nuit",
     "forest" => "Une forêt pour se balader",
@@ -61,6 +63,11 @@ class Preference < ApplicationRecord
     "far" => "Je suis prêt à me déplacer pour ma station idéale"
   }
 
-    belongs_to :user
-end
 
+  # def score(other_preference)
+  #   # Calcul
+  #   # 35 points au total
+
+  #   return (1 - (20 / 35)) * 100
+  # end
+end

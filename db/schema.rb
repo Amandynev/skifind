@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_31_072750) do
+ActiveRecord::Schema.define(version: 2020_08_31_091138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,12 +55,13 @@ ActiveRecord::Schema.define(version: 2020_08_31_072750) do
     t.string "spot"
     t.string "night_activities"
     t.string "expectations"
-    t.string "geocation"
+    t.boolean "geocation"
     t.string "kilometers"
+    t.string "matchable_type", null: false
+    t.bigint "matchable_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "user_id", null: false
-    t.index ["user_id"], name: "index_preferences_on_user_id"
+    t.index ["matchable_type", "matchable_id"], name: "index_preferences_on_matchable_type_and_matchable_id"
   end
 
   create_table "resorts", force: :cascade do |t|
@@ -70,16 +71,6 @@ ActiveRecord::Schema.define(version: 2020_08_31_072750) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "visitor_name"
-    t.string "roommate"
-    t.string "budget"
-    t.string "day_activities"
-    t.string "biological_clock"
-    t.string "accommodation"
-    t.string "spot"
-    t.string "night_activities"
-    t.string "expectations"
-    t.string "geocation"
-    t.string "kilometers"
     t.float "latitude"
     t.float "longitude"
     t.string "photo_asset"
@@ -111,5 +102,4 @@ ActiveRecord::Schema.define(version: 2020_08_31_072750) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "activities", "resorts"
-  add_foreign_key "preferences", "users"
 end
