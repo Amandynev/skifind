@@ -10,7 +10,7 @@ class User < ApplicationRecord
   # def top_resorts
   #   Resort.all.joins(:preference)
   #         .map { |resort| [resort, preference.score(resort.preference)] }
-  #         # trier Desc
+  #         .sort_by
   #         # 3 premier
   # end
 end
