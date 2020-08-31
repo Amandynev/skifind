@@ -3,7 +3,7 @@
 }
 
 .container-title-index{
-  margin:10px;
+  margin: 10px;
   width: 100vh;
 }
 
@@ -22,4 +22,52 @@ a{
 
 .info-resort-description{
   font-size: 14px;
+}
+
+/* ------- George's index --------- */
+
+.card{
+  height: 650px;
+  width: 300px;;
+}
+
+.card-choose1{
+  margin: 15px;
+  transition-duration: 1s;
+}
+
+.card-choose2{
+  margin: 15px;
+  transition-duration: 2s;
+}
+
+.card-choose3{
+  margin: 15px;
+  transition-duration: 3s;
+}
+
+.container-title{
+  color: #02245C;
+}
+
+.container h5 {
+  text-align: center;
+  color: #02245C;
+}
+
+.container .logo {
+  width: 160px;
+  height: 160px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+}
+
+.green-tick{
+  color: rgb(1, 255, 1);
+}
+
+.red-cross{
+  color: #e61937;
 }
