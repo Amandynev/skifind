@@ -7,10 +7,11 @@ class User < ApplicationRecord
 
   has_one :preference, as: :matchable# Can be changed to has_many..
 
-  # def top_resorts
-  #   Resort.all.joins(:preference)
-  #         .map { |resort| [resort, preference.score(resort.preference)] }
-  #         .sort_by
-  #         # 3 premier
-  # end
+  def top_resorts
+    Resort.all.joins(:preference)
+          .map { |resort| [resort, self.preference.score(resort.preference)] }
+          .sort_by
+          .first(3)
+          # 3 premier
+  end
 end
