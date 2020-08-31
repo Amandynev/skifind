@@ -4,8 +4,8 @@
   padding: 20px;
 }
 
-.pictogramme-right{
-  position:relative
+.slopes{
+  position:relative;
 }
 
 .circle-green{
@@ -24,15 +24,6 @@
   padding: 20px;
 }
 
-.slopes-title {
-  position:relative;
-}
-.slopes-colors{
-  position:absolute;
-  left: 98px;
-
-}
-
 .localisation-show {
   font-size: 14px;
   line-height: 1.4;
@@ -40,8 +31,8 @@
   margin-bottom: 0;
   margin-top: 8px;
   position:absolute;
-  top: 50px;
-  right: 30px;
+  bottom: 50px;
+  left: 30px;
 
 }
 
@@ -53,11 +44,19 @@
   color: #02245C;
 }
 
+.slopes-title {
+  position:relative;
+}
+.slopes-colors{
+  position:absolute;
+  left: 80px;
+
+}
+
 .photo-caroussel{
 height: 400px;
 width: 100vw;
 }
-
 
 .container-show{
   margin: 0 auto;
