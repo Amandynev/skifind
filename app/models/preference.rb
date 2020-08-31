@@ -69,7 +69,7 @@ class Preference < ApplicationRecord
     sum = 0
 
 
-    scoring =
+
     roommate_score = score_criterion(self.roommate, other_preference.roommate, ROOMMATE)
     budget_score = score_criterion(self.budget, other_preference.budget, BUDGET)
     day_activities_score = score_criterion(self.day_activities, other_preference.day_activities, DAY_ACTIVITIES)
@@ -84,7 +84,7 @@ class Preference < ApplicationRecord
 
     @preference_score = roommate_score + budget_score + day_activities_score + biological_score + accommodation_score + night_activities_score + expectations_score + kilometers_score
 
-    return (@preference_score / 35) * 100
+    return (1 - (@preference_score / 35)) * 100
 
   end
 
