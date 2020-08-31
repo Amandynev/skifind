@@ -1,12 +1,20 @@
+.container-navbar {
+  position: absolute;
+}
+
 .navbar-lewagon {
-  position: relative;
-  justify-content: space-between;
-  background-color: white;
-  position: sticky;
+  position: absolute;
+  justify-content: flex-end;
+  background-color: transparent;
+  width: 100vw;
   top: 0;
+  z-index: 9999;
 }
 
 .navbar-lewagon .navbar-collapse {
+  position: absolute;
+  right: 20px;
+  top: 30px;
   flex-grow: 0;
 }
 
@@ -14,13 +22,10 @@
   width: 40px;
 }
 
-.logo-skifind {
+.logo {
   position: absolute;
-  color: white;
-  font-size: 100px;
-}
-
-.logo-toutschuss {
-  position: absolute;
-  top:30px;
+  width: 200px;
+  left: 30px;
+  top: 10px;
+  z-index: 9999;
 }
