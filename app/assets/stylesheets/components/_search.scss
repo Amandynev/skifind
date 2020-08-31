@@ -1,0 +1,29 @@
+.search {
+  position: absolute;
+  width: 30%;
+  top: 30px;
+}
+
+.search-form{
+  display: flex;
+}
+
+.form-control-search {
+  border-radius: 50px 0 0 50px;
+  border-color: white;
+
+}
+
+.btn-search {
+  border: none;
+  background-color: white;
+  border-radius: 0 50px 50px 0;
+}
+
+@media(max-width: 620px) {
+  .search {
+    top: 130px;
+    width: 40%;
+  }
+}
+
