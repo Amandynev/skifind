@@ -12,14 +12,14 @@
 }
 
 
-.card-product img {
+.card-product .img-resort {
   height: 210px ;
-  width: 280px;
+  width: 350px;
   padding-left:5px;
 }
 
 .card-product:after{
-  content: 'Check out';
+  content: "Plus d'infos";
   font-family: "Nunito", "Helvetica", "sans-serif";
   font-size: 16px;
   color:#02245C;
@@ -55,7 +55,7 @@
   margin-bottom: 0;
   margin-top: 8px;
   position:absolute;
-  top: 20px;
+  top: 25px;
   right: 30px;
 
 }

@@ -1,3 +1,4 @@
+<div class="container-show">
 <!-----------------------title ------------------------->
 <div class="resort-title mt-3">
   <h3><%= @resort.resort_name %></h3>
@@ -22,7 +23,7 @@
   </a>
 </div>
 
-<div class="container-show">
+
   <!-----------------------card descritpion ------------------------->
   <div class="container-show d-flex">
     <%= render 'shared/map' %>
@@ -34,7 +35,7 @@
           <a class="buton-primary" target="_blank" href="https://www.tignes.net/">Site officiel</a>
           <%= link_to "Toutes les stations", resorts_path, class: "buton-primary" %>
         </div>
-        <div class="pictogramme d-flex  mt-4">
+        <div class="pictogramme d-flex mt-4">
           <div class="pictogramme-left">
             <div class="altitude d-flex align-items-center">
               <i class="fas fa-mountain pictogramme-color"></i><span><%= @resort.altitude %></span>

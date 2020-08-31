@@ -18,7 +18,7 @@ rails db:drop db:create db:migrate db:seed
 
 ## Heroku
 
-[Lien Heroku](staging-skifind.herokuapp.com/)
+[Lien Heroku](https//www.skifind.herokuapp.com/)
 
 
 ## Links
