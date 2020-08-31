@@ -3,8 +3,8 @@ class Preference < ApplicationRecord
 
   ROOMMATE = {
     "family" => "En famille",
-    "friend" => "Entre potes",
-    "couple" => "En couple"
+    "couple" => "En couple",
+    "friend" => "Entre potes"
   }
 
   BUDGET = {
@@ -15,15 +15,15 @@ class Preference < ApplicationRecord
 
   DAY_ACTIVITIES = {
     "ski" => "Ski, ski, ski !",
-    "stroll" => "Balades en raquettes",
+    "Unusual" => "Activités insolites",
     "sledge" => "luge",
+    "stroll" => "Balades en raquettes",
     "spa" => "Spa",
-    "Unusual" => "Activités insolites"
   }
 
   BIOLOGICAL_CLOCK = {
-    "cool" => "Tranquille, je fais les choses à mon rythme",
     "early" => "Lève tôt pour en profiter au maximum",
+    "cool" => "Tranquille, je fais les choses à mon rythme",
     "party" => "Soirées après-ski"
   }
 
@@ -37,8 +37,8 @@ class Preference < ApplicationRecord
   SPOT = {
     "calm" => "Au calme, juste la nature et moi",
     "no-time" => "En bas de la piste, pas de perte de temps !",
+    "shops" => "A proximité des commerces",
     "alcohool" => "Près des bars et de la boite de nuit",
-    "shops" => "A proximité des commerces"
   }
 
   NIGHT_ACTIVITIES = {
@@ -49,10 +49,10 @@ class Preference < ApplicationRecord
   }
 
   EXPECTATIONS = {
-    "tracks" => "Beaucoup de pistes de ski",
     "snow" => "Une station enneigée",
-    "food" => "De bons restaurants",
+    "tracks" => "Beaucoup de pistes de ski",
     "night" => "Un lieu vivant la nuit",
+    "food" => "De bons restaurants",
     "forest" => "Une forêt pour se balader",
     "act-family" => "Des activités pour toute la famille"
   }
@@ -64,10 +64,37 @@ class Preference < ApplicationRecord
   }
 
 
-  # def score(other_preference)
+  def score(other_preference)
   #   # Calcul
+    sum = 0
+
+
+
+    roommate_score = score_criterion(self.roommate, other_preference.roommate, ROOMMATE)
+    budget_score = score_criterion(self.budget, other_preference.budget, BUDGET)
+    day_activities_score = score_criterion(self.day_activities, other_preference.day_activities, DAY_ACTIVITIES)
+    biological_score = score_criterion(self.biological_clock, other_preference.biological_clock, BIOLOGICAL_CLOCK)
+    accommodation_score = score_criterion(self.accommodation, other_preference.accommodation, ACCOMMODATION)
+    spot_score = score_criterion(self.spot, other_preference.spot, SPOT)
+    night_activities_score = score_criterion(self.night_activities, other_preference.night_activities, NIGHT_ACTIVITIES)
+    expectations_score = score_criterion(self.expectations, other_preference.expectations, EXPECTATIONS)
+    kilometers_score = score_criterion(self.kilometers, other_preference.kilometers, KILOMETERS)
   #   # 35 points au total
 
-  #   return (1 - (20 / 35)) * 100
-  # end
+
+    @preference_score = roommate_score + budget_score + day_activities_score + biological_score + accommodation_score + night_activities_score + expectations_score + kilometers_score
+
+    return ((1 - (@preference_score / 35.0)) * 100).round
+
+  end
+
+  def score_criterion(user_criterion, resort_criterion, criteria)
+    elements = criteria.keys # ["family", "couple", "friend"]
+    user_index = elements.find_index(user_criterion) # 0
+    resort_index = elements.find_index(resort_criterion) # 2
+
+    # on mesure l'écart entre la préférence du user et la préférence du resort
+    # pour cela, on prend la taille des préferences et on retire l'écart entre les préferences comparées
+    score = elements.size - (user_index - resort_index).abs
+  end
 end
