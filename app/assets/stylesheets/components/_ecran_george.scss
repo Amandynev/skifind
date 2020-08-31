@@ -4,8 +4,10 @@
   background-size: cover;
   background-position: center;
   width: 100vw;
-  height: calc(100vh - 50px);
+  height: 100vh;
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .btn-georges:hover {
@@ -14,15 +16,19 @@
 }
 
 .ecran-interface-george {
-  position: absolute;
-  right: 110px;
-  bottom: 60px;
-  width: 30%;
-  height: 90%;
+  width: 30% ;
+  height: 85%;
   background-color: rgba(255,255,255,0.6);
   border: 2px solid white;
   border-radius: 15px;
   overflow: scroll;
+  position: relative;
+  margin-top: 100px;
+  /*position: absolute;
+  right: 600px;
+  bottom: 30px;
+  width: 30%;
+  height: 80%;*/
 }
 
 .ecran-interface-george2 {

@@ -72,8 +72,7 @@
 
           <div id="biological_clock" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div class="border-radius-10px bg-white p-2 m-2" >
-                Tu es plutôt...
+              <div id="biological_clock-question" class="border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::BIOLOGICAL_CLOCK.each do |key, value|%>
@@ -91,8 +90,7 @@
 
           <div id="accommodation" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div class="border-radius-10px bg-white p-2 m-2" >
-                Ton logement idéal...
+              <div id="accommodation-question" class="border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::ACCOMMODATION.each do |key, value|%>
@@ -110,8 +108,7 @@
 
           <div id="spot" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div class="border-radius-10px bg-white p-2 m-2" >
-                Ton coin idéal...
+              <div id="spot-question" class="border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::SPOT.each do |key, value|%>
@@ -129,8 +126,7 @@
 
           <div id="night_activities" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div class="border-radius-10px bg-white p-2 m-2" >
-                Ta soirée idéale...
+              <div id="night_activities-question" class="border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::NIGHT_ACTIVITIES.each do |key, value|%>
@@ -148,8 +144,7 @@
 
           <div id="expectations" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div class="border-radius-10px bg-white p-2 m-2" >
-                Pour toi les vacances au ski c'est...
+              <div id="expectations-question" class="border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::EXPECTATIONS.each do |key, value|%>
@@ -167,8 +162,7 @@
 
           <div id="kilometers" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div class="border-radius-10px bg-white p-2 m-2" >
-                Combien de km es-tu prêt à faire ?
+              <div id="kilometers-question" class="border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::KILOMETERS.each do |key, value|%>
@@ -186,8 +180,8 @@
 
           <div id="geocation" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div class="border-radius-10px bg-white p-2 m-2" >
-                Veux-tu être géolocalisé afin de profiter à 100% de notre service personnalisé?
+              <div id="geocation-question" class="border-radius-10px bg-white p-2 m-2" >
+
               </div>
             </div>
             <div id="geocation-true" class="d-flex justify-content-end">
@@ -206,9 +200,7 @@
 
           <div id="remerciement" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div class="border-radius-10px bg-white p-2 m-2" >
-                Merci !! C'était sympa d'apprendre à te connaitre.<br>
-                Valide pour voir ma séléction :)
+              <div id="remerciement-question" class="border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
           </div>
