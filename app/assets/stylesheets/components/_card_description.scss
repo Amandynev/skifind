@@ -1,6 +1,4 @@
 .card-description {
-    display: flex;
-    align-items: center;
     height: 580px;
     width: 90vw;
     position: relative;
@@ -11,11 +9,10 @@
     border-radius: 3px;
     background-color: white;
 
-
 }
 
 .description{
-
+  padding-top: 30px;
   font-size: 16px;
 }
 
