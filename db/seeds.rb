@@ -216,6 +216,7 @@ avoriaz = Resort.create!(
     # resort_website:"https://www.avoriaz.com/",
   )
 
+
 a_preference = Preference.create(
   roommate: "friend",
   budget: "moderate",
@@ -232,6 +233,7 @@ a_preference = Preference.create(
   # avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
   # file = URI.open("https://avoriaz.evolution2.com/wp-content/uploads/2017/09/avoriaz-ete-1900x700.jpg")
   # avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+
 file = URI.open("http://media.sit.savoie-mont-blanc.com/original/75641/2-6272576.jpg")
 avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
@@ -539,7 +541,8 @@ file = URI.open('https://images.unsplash.com/photo-1579755209948-20d5b46be7be?ix
     activity_name: "Nuit insolite dans un Igloo",
     activity_description: "Quoi de plus insolite qu'une nuit dans un igloo ?\n
     Venez vivre cette expérience hors norme...",
-    resort_id: courchevel.id,
+    resort_id: avoriaz.id,
+
   )
   activity_igloo.save!
   activity_igloo.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
@@ -549,7 +552,8 @@ activity_balade = Activity.new(
 activity_name: "Balades inoubliables",
 activity_description: "Besoin de vous ressourcer dans un cadre naturel exceptionnel?\n
 Explorez les forêts enneigés en raquettes...",
-resort_id: avoriaz.id,
+resort_id: vars.id,
+
 )
 activity_balade.save!
 activity_balade.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
@@ -580,7 +584,9 @@ activity_spa = Activity.new(
 activity_name: "Profitez d'un Spa",
 activity_description: "Envie de vous détendre et récupérer au maximum?\n
 Piscine, jacuzzi, sauna ou hammam vous attendent...",
-resort_id: combloux.id,
+
+resort_id: courchevel.id,
+
 )
 activity_spa.save!
 activity_spa.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
@@ -600,7 +606,7 @@ activity_vtt = Activity.new(
 activity_name: "Faites du VTT sur neige",
 activity_description: "Les vrais roulent en VTT sur la neige! \n
 Ranger votre vélo en hiver, c'est trop facile.. Venez vous éclater dans la neige!",
-resort_id: tignes.id,
+resort_id: bolquere.id,
 )
 activity_vtt.save!
 activity_vtt.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
@@ -610,7 +616,9 @@ activity_luge = Activity.new(
 activity_name: "Divertissez vous en famille",
 activity_description: "Dévalez les pistes de luge en famille, entre amis ou en couple..\n
 Fous rires et amusement garantis!",
+
 resort_id: bolquere.id,
+
 )
 activity_luge.save!
 activity_luge.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
