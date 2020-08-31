@@ -46,8 +46,8 @@ tignes = Resort.create!(
     kids_garden: "2 Jardin d'enfants",
     snowpark: "2 snowparks",
     free_carpark: "payant",
-    mountains: "Savoie"
-    resort_website:"https://www.tignes.net/"
+    mountains: "Savoie",
+    resort_website:"https://www.tignes.net/",
     )
 
 file = URI.open("https://www.tignes.net/uploads/media/page_block/0001/73/06fcfba68b24b6cab24cf3e56e6f43101530e418.jpeg")
@@ -78,8 +78,8 @@ vars = Resort.create!(
     kids_garden: "2 Jardin d'enfants",
     snowpark: "4 snowparks",
     free_carpark: "payant",
-    mountains: "Hautes-Alpes"
-    resort_website:"https://www.vars.com/"
+    mountains: "Hautes-Alpes",
+    resort_website:"https://www.vars.com/",
   )
 file = URI.open("https://skipass.fr/p/resorts/774/header-vars-de20c-1.jpg")
 vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -108,8 +108,8 @@ courchevel = Resort.create!(
     kids_garden: "2 Jardin d'enfants",
     snowpark: "2 snowparks",
     free_carpark: "payant",
-    mountains: "Savoie"
-    resort_website:"https://www.courchevel.com/fr"
+    mountains: "Savoie",
+    resort_website:"https://www.courchevel.com/fr",
 
   )
 file = URI.open("http://www.aaarentcars.fr/sites/default/files/styles/image_article/public/field/image/courchevel_1.jpg?itok=kzON8vZQ")
@@ -139,8 +139,8 @@ combloux = Resort.create!(
     kids_garden: "1 Jardin d'enfants",
     snowpark: "1 snowpark",
     free_carpark: "gratuit",
-    mountains: "Haute-Savoie"
-    resort_website:"https://ete.combloux.com/"
+    mountains: "Haute-Savoie",
+    resort_website:"https://ete.combloux.com/",
   )
 file = URI.open("https://ete.combloux.com/images/cache/ed34c785dd1eb0fc718ddf07cec782a4_w1400_h800_cp.jpg")
 combloux.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -168,8 +168,8 @@ avoriaz = Resort.create!(
     kids_garden: "2 Jardin d'enfantsj",
     snowpark: "2 snowparks",
     free_carpark: "payant",
-    mountains: "Haute-Savoie"
-    resort_website:"https://www.avoriaz.com/"
+    mountains: "Haute-Savoie",
+    resort_website:"https://www.avoriaz.com/",
   )
 file = URI.open("https://media-exp1.licdn.com/dms/image/C561BAQE_olXWJNwAfA/company-background_10000/0?e=1598626800&v=beta&t=9zx0TT9Cd0hfVCVi-GHuDMv2mzz_v4Qv5pTLWYd561U")
 avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -198,8 +198,8 @@ isola = Resort.create!(
     kids_garden: "1 Jardin d'enfants",
     snowpark: "1 snowpark",
     free_carpark: "gratuit",
-    mountains: "Alpes-Maritimes"
-    resort_website:"https://www.isola2000.com/"
+    mountains: "Alpes-Maritimes",
+    resort_website:"https://www.isola2000.com/",
   )
 file = URI.open("https://img6.custompublish.com/getfile.php/4274581.1046.qnbiwbwmmjql7q/468x0/6152431_4274581.jpg")
 isola.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -228,8 +228,8 @@ bolquere = Resort.create!(
     kids_garden: "1 Jardin d'enfants",
     snowpark: "1 snowpark",
     free_carpark: "payant",
-    mountains: "Pyrénées-Orientales"
-    resort_website:"http://www.pyrenees2000.com/fr/"
+    mountains: "Pyrénées-Orientales",
+    resort_website:"http://www.pyrenees2000.com/fr/",
   )
 file = URI.open("https://img2.onthesnow.com/image/gg/33/1_334855.jpg")
 bolquere.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -258,8 +258,8 @@ puyvalador = Resort.create!(
     kids_garden: "1 Jardin d'enfants",
     snowpark: "1 snowpark",
     free_carpark: "gratuit",
-    mountains: "Pyrénées-Orientales"
-    resort_website:"https://www.puyvalador-ski.fr/"
+    mountains: "Pyrénées-Orientales",
+    resort_website:"https://www.puyvalador-ski.fr/",
   )
 file = URI.open("https://img6.onthesnow.com/image/gg/35/1_358547.jpg")
 puyvalador.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -289,8 +289,8 @@ besse = Resort.create!(
     kids_garden: "1 jardin",
     snowpark: "1 snowpark",
     free_carpark: "payant",
-    mountains: "Massif central"
-    resort_website:"https://www.sancy.com/destination/toutes-les-communes/superbesse/"
+    mountains: "Massif central",
+    resort_website:"https://www.sancy.com/destination/toutes-les-communes/superbesse/",
   )
 file = URI.open("https://img6.onthesnow.com/image/xl/52/station_de_ski_besse_super_524975.jpg")
 besse.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -320,8 +320,8 @@ chalmazel = Resort.create!(
     kids_garden: "1 jardin",
     snowpark: "pas de snwopark",
     free_carpark: "payant",
-    mountains: "La loire"
-    resort_website:"https://www.loire.fr/jcms/dlw_1111340/accueil"
+    mountains: "La loire",
+    resort_website:"https://www.loire.fr/jcms/dlw_1111340/accueil",
   )
 file = URI.open("https://esf.chalmazel.net/local/cache-gd2/84/78d957a496a87d5afd9611bf0fcb9a.jpg?1508403688")
 chalmazel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -351,8 +351,8 @@ morbier = Resort.create!(
     kids_garden: "1 jardin",
     snowpark: "non",
     free_carpark: "payant",
-    mountains: "Le Jura"
-    resort_website:"http://www.morbier.fr/"
+    mountains: "Le Jura",
+    resort_website:"http://www.morbier.fr/",
   )
 file = URI.open("http://haut-jura.com/images/lesmarais2_-_J.CARROT.JPG")
 morbier.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -382,8 +382,8 @@ metabief = Resort.create!(
     kids_garden: "1 jardin",
     snowpark: "1 snowpark",
     free_carpark: "payant",
-    mountains: "Le Jura"
-    resort_website:"hhttps://www.tourisme-metabief.com/"
+    mountains: "Le Jura",
+    resort_website:"hhttps://www.tourisme-metabief.com/",
   )
 file = URI.open("https://img6.onthesnow.com/image/xl/46/remontees_mecaniques_metabief_466145.jpg")
 metabief.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
