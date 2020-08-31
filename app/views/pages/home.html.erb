@@ -7,7 +7,7 @@
   </div>
 
   <div class="container-fluid d-flex flex-column mt-4">
-    <h2>Les 8 bonnes raisons pour partir au Ski</h2>
+    <h2>Les 8 bonnes <span class="word">raisons pour partir au Ski</span></h2>
       <div class="row">
         <% @activities.each do |activity|  %>
           <div class="col-sm-12 col-md-6 col-lg-3">
@@ -16,7 +16,7 @@
                 <%= cl_image_tag activity.photo.key, class: "card-img-top" %>
               </div>
               <div class="card-body d-flex flex-column">
-                <h5 class="card-title" style="text-align: center;"> <%= activity.activity_name %> </h5>
+                <h4 class="card-title" style="text-align: center;"> <%= activity.activity_name %> </h5>
                 <p class="card-text">
                   <%= activity.activity_description %>
                 </p>
@@ -29,22 +29,27 @@
         <% end %>
       </div>
       <div class="container-fluid d-flex flex-column mt-4">
-        <h2>Pourquoi SkiFind c'est génial?</h2>
+        <h2>Pourquoi SkiFind <span class="word">c'est génial ?</span> </h2>
           <div class="row">
-              <div class="gratuit">
-                <h5 class="card-title"><i class="fas fa-hand-holding-usd"></i></h5>
-                <h6 class="card-subtitle mb-2 text-muted">SkiFind est 100% gratuit</h6>
-                <p class="card-text">Notre service de comparateur de station de ski est gratuit et ça le restera toujours! </p>
+              <div class="col-sm gratuit mt-12">
+                <h5 class="card-skifind"><i class="fas fa-hand-holding-usd"></i></h5>
+                <h6 class="card-subtitle mb-2 text-muted">SkiFind est 100% gratuit
+                </h6>
+                <p class="card-text">Notre service de comparateur de station de ski est gratuit et ça le restera toujours! 
+                </p>
               </div>
-              <div class="perso">
-                <h5 class="card-title"><i class="far fa-star"></i></h5>
-                <h6 class="card-subtitle mb-2 text-muted">SkiFind vous offre un service personnalisé</h6>
-                <p class="card-text">Besoin d'inspiration pour trouver ta station idéale ? SkiFind déniche les destinations qui vous correspondent!</p>
+              <div class=" col-sm perso mt-12">
+                <h5 class="card-skifind"><i class="far fa-star"></i></h5>
+                <h6 class="card-subtitle mb-2 text-muted">SkiFind vous offre un service personnalisé
+                </h6>
+                <p class="card-text">Besoin d'inspiration pour trouver ta station idéale ? SkiFind déniche les destinations qui vous correspondent!
+                </p>
               </div>
-            <div class="rapide">
-              <h5 class="card-title"><i class="far fa-clock"></i></h5>
-                <h6 class="card-subtitle mb-2 text-muted">SkiFind vous fait gagner du temps</h6>
-                <p class="card-text">Comparer n'est pas un travail d'humain. En déléguant le travail de recherche à Georges, vous économisez des heures!
+            <div class="col-sm rapide mt-12">
+              <h5 class="card-skifind"><i class="far fa-clock"></i></h5>
+                <h6 class="card-subtitle mb-2 text-muted">SkiFind vous fait gagner du temps
+                </h6>
+                <p class="card-text">Comparer n'est pas un travail d'humain. Déléguez le travail de recherche à Georges!
                 </p>
             </div>     
           </div>
