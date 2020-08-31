@@ -47,7 +47,7 @@ tignes = Resort.create!(
     snowpark: "2 snowparks",
     free_carpark: "payant",
     mountains: "Savoie",
-    resort_website:"https://www.tignes.net/",
+    # resort_website:"https://www.tignes.net/",
     )
 
 file = URI.open("https://www.tignes.net/uploads/media/page_block/0001/73/06fcfba68b24b6cab24cf3e56e6f43101530e418.jpeg")
@@ -79,7 +79,7 @@ vars = Resort.create!(
     snowpark: "4 snowparks",
     free_carpark: "payant",
     mountains: "Hautes-Alpes",
-    resort_website:"https://www.vars.com/",
+    # resort_website:"https://www.vars.com/",
   )
 file = URI.open("https://skipass.fr/p/resorts/774/header-vars-de20c-1.jpg")
 vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -109,7 +109,7 @@ courchevel = Resort.create!(
     snowpark: "2 snowparks",
     free_carpark: "payant",
     mountains: "Savoie",
-    resort_website:"https://www.courchevel.com/fr",
+    # resort_website:"https://www.courchevel.com/fr",
 
   )
 file = URI.open("http://www.aaarentcars.fr/sites/default/files/styles/image_article/public/field/image/courchevel_1.jpg?itok=kzON8vZQ")
@@ -140,7 +140,7 @@ combloux = Resort.create!(
     snowpark: "1 snowpark",
     free_carpark: "gratuit",
     mountains: "Haute-Savoie",
-    resort_website:"https://ete.combloux.com/",
+    # resort_website:"https://ete.combloux.com/",
   )
 file = URI.open("https://ete.combloux.com/images/cache/ed34c785dd1eb0fc718ddf07cec782a4_w1400_h800_cp.jpg")
 combloux.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -169,7 +169,7 @@ avoriaz = Resort.create!(
     snowpark: "2 snowparks",
     free_carpark: "payant",
     mountains: "Haute-Savoie",
-    resort_website:"https://www.avoriaz.com/",
+    # resort_website:"https://www.avoriaz.com/",
   )
 file = URI.open("https://media-exp1.licdn.com/dms/image/C561BAQE_olXWJNwAfA/company-background_10000/0?e=1598626800&v=beta&t=9zx0TT9Cd0hfVCVi-GHuDMv2mzz_v4Qv5pTLWYd561U")
 avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -199,7 +199,7 @@ isola = Resort.create!(
     snowpark: "1 snowpark",
     free_carpark: "gratuit",
     mountains: "Alpes-Maritimes",
-    resort_website:"https://www.isola2000.com/",
+    # resort_website:"https://www.isola2000.com/",
   )
 file = URI.open("https://img6.custompublish.com/getfile.php/4274581.1046.qnbiwbwmmjql7q/468x0/6152431_4274581.jpg")
 isola.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -229,7 +229,7 @@ bolquere = Resort.create!(
     snowpark: "1 snowpark",
     free_carpark: "payant",
     mountains: "Pyrénées-Orientales",
-    resort_website:"http://www.pyrenees2000.com/fr/",
+    # resort_website:"http://www.pyrenees2000.com/fr/",
   )
 file = URI.open("https://img2.onthesnow.com/image/gg/33/1_334855.jpg")
 bolquere.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -259,7 +259,7 @@ puyvalador = Resort.create!(
     snowpark: "1 snowpark",
     free_carpark: "gratuit",
     mountains: "Pyrénées-Orientales",
-    resort_website:"https://www.puyvalador-ski.fr/",
+    # resort_website:"https://www.puyvalador-ski.fr/",
   )
 file = URI.open("https://img6.onthesnow.com/image/gg/35/1_358547.jpg")
 puyvalador.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -290,7 +290,7 @@ besse = Resort.create!(
     snowpark: "1 snowpark",
     free_carpark: "payant",
     mountains: "Massif central",
-    resort_website:"https://www.sancy.com/destination/toutes-les-communes/superbesse/",
+    # resort_website:"https://www.sancy.com/destination/toutes-les-communes/superbesse/",
   )
 file = URI.open("https://img6.onthesnow.com/image/xl/52/station_de_ski_besse_super_524975.jpg")
 besse.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -321,7 +321,7 @@ chalmazel = Resort.create!(
     snowpark: "pas de snwopark",
     free_carpark: "payant",
     mountains: "La loire",
-    resort_website:"https://www.loire.fr/jcms/dlw_1111340/accueil",
+    # resort_website:"https://www.loire.fr/jcms/dlw_1111340/accueil",
   )
 file = URI.open("https://esf.chalmazel.net/local/cache-gd2/84/78d957a496a87d5afd9611bf0fcb9a.jpg?1508403688")
 chalmazel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -352,7 +352,7 @@ morbier = Resort.create!(
     snowpark: "non",
     free_carpark: "payant",
     mountains: "Le Jura",
-    resort_website:"http://www.morbier.fr/",
+    # resort_website:"http://www.morbier.fr/",
   )
 file = URI.open("http://haut-jura.com/images/lesmarais2_-_J.CARROT.JPG")
 morbier.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -383,7 +383,7 @@ metabief = Resort.create!(
     snowpark: "1 snowpark",
     free_carpark: "payant",
     mountains: "Le Jura",
-    resort_website:"hhttps://www.tourisme-metabief.com/",
+    # resort_website:"hhttps://www.tourisme-metabief.com/",
   )
 file = URI.open("https://img6.onthesnow.com/image/xl/46/remontees_mecaniques_metabief_466145.jpg")
 metabief.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
@@ -407,7 +407,7 @@ activity_balade = Activity.new(
 activity_name: "Balades inoubliables",
 activity_description: "Besoin de vous ressourcer dans un cadre naturel exceptionnel?\n
 Explorez les forêts enneigés en raquettes...",
-resort_id: tignes.id,
+resort_id: avoriaz.id,
 )
 activity_balade.save!
 activity_balade.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
@@ -438,7 +438,7 @@ activity_spa = Activity.new(
 activity_name: "Profitez d'un Spa",
 activity_description: "Envie de vous détendre et récupérer au maximum?\n
 Piscine, jacuzzi, sauna ou hammam vous attendent...",
-resort_id: tignes.id,
+resort_id: combloux.id,
 )
 activity_spa.save!
 activity_spa.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
@@ -468,7 +468,7 @@ activity_luge = Activity.new(
 activity_name: "Divertissez vous en famille",
 activity_description: "Dévalez les pistes de luge en famille, entre amis ou en couple..\n
 Fous rires et amusement garantis!",
-resort_id: tignes.id,
+resort_id: bolquere.id,
 )
 activity_luge.save!
 activity_luge.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
