@@ -27,7 +27,7 @@ import "bootstrap";
 import { initMapbox } from '../plugins/init_mapbox';
 import { initGeorges } from '../plugins/georges';
 import { mouseover } from '../channels/mouseover';
-
+import { initSweetalert } from '../plugins/init_sweetalert';
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -45,4 +45,11 @@ document.addEventListener('turbolinks:load', () => {
 
   mouseover();
 
+  initSweetalert('#submit-georges', {
+    title: "Merci pour ta confiance !",
+    text: "Je cherche ta station idéale",
+    icon: "success",
+    timer: 4000,
+  });
 })
+

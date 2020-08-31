@@ -4,7 +4,7 @@
 
 .navbar-lewagon {
   position: absolute;
-  justify-content: flex-end;
+  justify-content: center;
   background-color: transparent;
   width: 100vw;
   top: 0;
@@ -13,7 +13,7 @@
 
 .navbar-lewagon .navbar-collapse {
   position: absolute;
-  right: 20px;
+  right: 30px;
   top: 30px;
   flex-grow: 0;
 }
@@ -22,10 +22,24 @@
   width: 40px;
 }
 
+
+
 .logo {
   position: absolute;
   width: 200px;
   left: 30px;
-  top: 10px;
+  top: 0px;
   z-index: 9999;
+}
+
+@media(max-width: 620px) {
+  .logo {
+    left: 25vw;
+    top: 0px;
+  }
+  .navbar-toggler{
+    position: absolute;
+    right: 30px;
+    top: 30px;
+  }
 }

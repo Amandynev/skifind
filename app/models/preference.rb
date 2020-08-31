@@ -63,12 +63,9 @@ class Preference < ApplicationRecord
     "far" => "Je suis prêt à me déplacer pour ma station idéale"
   }
 
-
   def score(other_preference)
   #   # Calcul
     sum = 0
-
-    #preference_score =
 
     roommate_score = score_criterion(self.roommate, other_preference.roommate, ROOMMATE)
     budget_score = score_criterion(self.budget, other_preference.budget, BUDGET)
@@ -83,7 +80,7 @@ class Preference < ApplicationRecord
 
     @preference_score = roommate_score + budget_score + day_activities_score + biological_score + accommodation_score + night_activities_score + expectations_score + kilometers_score
 
-    return (1 - (@preference_score / 35)) * 100
+    return ((1 - (@preference_score / 35.0)) * 100).round
   end
 
   def score_criterion(user_criterion, resort_criterion, criteria)
