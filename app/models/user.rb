@@ -4,4 +4,13 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   has_one_attached :photo
+
+  has_one :preference, as: :matchable# Can be changed to has_many..
+
+  # def top_resorts
+  #   Resort.all.joins(:preference)
+  #         .map { |resort| [resort, preference.score(resort.preference)] }
+  #         # trier Desc
+  #         # 3 premier
+  # end
 end

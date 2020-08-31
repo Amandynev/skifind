@@ -7,7 +7,7 @@ class PreferencesController < ApplicationController
 
   def create
     @preference = Preference.new(preference_params)
-    @preference.user = current_user
+    @preference.matchable = current_user
     if @preference.save
       redirect_to resorts_path, notice: 'preference was successfully created.'
     else
