@@ -1,5 +1,10 @@
 .card-activity {
   height: 32rem;
+  border: 1px solid rgba(80, 137, 145, 0.4);
+}
+
+.card-activity:hover {
+  border: 1px solid rgba(80, 137, 145, 1);
 }
 
 //Cards_home_page
@@ -17,6 +22,6 @@
 .title h1 {
   color: white;
   font-size: 32px;
-  text-shadow: #02245C 1px 0 10px;
+  text-shadow: #02245C 1px 0 7px;
 
 }

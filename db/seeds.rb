@@ -160,8 +160,8 @@ avoriaz = Resort.create!(
     snowpark: "2 snowparks",
     free_carpark: "payant",
   )
-file = URI.open("https://media-exp1.licdn.com/dms/image/C561BAQE_olXWJNwAfA/company-background_10000/0?e=1598626800&v=beta&t=9zx0TT9Cd0hfVCVi-GHuDMv2mzz_v4Qv5pTLWYd561U")
-avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+# file = URI.open("https://media-exp1.licdn.com/dms/image/C561BAQE_olXWJNwAfA/company-background_10000/0?e=1598626800&v=beta&t=9zx0TT9Cd0hfVCVi-GHuDMv2mzz_v4Qv5pTLWYd561U")
+# avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 # file = URI.open("https://avoriaz.evolution2.com/wp-content/uploads/2017/09/avoriaz-ete-1900x700.jpg")
 # avoriaz.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 file = URI.open("http://media.sit.savoie-mont-blanc.com/original/75641/2-6272576.jpg")
