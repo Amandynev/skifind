@@ -84,7 +84,7 @@ class Preference < ApplicationRecord
 
     @preference_score = roommate_score + budget_score + day_activities_score + biological_score + accommodation_score + night_activities_score + expectations_score + kilometers_score
 
-    return (1 - (@preference_score / 35)) * 100
+    return ((1 - (@preference_score / 35.0)) * 100).round
 
   end
 
