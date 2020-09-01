@@ -26,10 +26,10 @@ class ResortsController < ApplicationController
         infoWindow: render_to_string(partial: "info_window", locals: { resort: @resort })
       }]
 
-      @loc = [
+      @loc = current_user ? [
         { lat: current_user.preference.latitude, lng: current_user.preference.longitude },
         { lat: @resort.latitude, lng: @resort.longitude }
-      ]
+      ] : nil
 
     end
 
