@@ -47,8 +47,6 @@ body{
 }
 
 .resort-title{
-  display: flex;
-  justify-content: center;
   padding-bottom: 20px;
   font-weight: bold;
   color: #02245C;
@@ -64,8 +62,9 @@ body{
 }
 
 .photo-caroussel{
-height: 400px;
+height: 100vh;
 width: 100vw;
+background-size: cover;
 }
 
 .container-show{
