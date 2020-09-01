@@ -2,10 +2,12 @@
 
 
 <!-----------------------carousel ------------------------->
+<div id="resort-show" data-loc="<%= @loc.to_json %>"></div>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-     <div class="carousel-inner">
-    <div class="carousel-caption">
+     <div class="carousel-inner ">
+    <div class="carousel-caption ">
       <h1 class="resort-title mt-3"><%= @resort.resort_name %></h1>
+      <p class="massif-show"> <%= @resort.mountains %> </p>
     </div>
     <% @resort.landscapes.each_with_index do |photo, index| %>
        <div class="carousel-item <%= 'active' if index == 0 %>">
@@ -87,6 +89,11 @@
           </div>
         </div>
         <p class="localisation-show"> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.resort_address %></p>
+
+        <% if current_user and current_user.preference.latitude %>
+          <p> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.distance(current_user.preference) %> km</p>
+        <% end %>
+
     </div>
   </div>
 </div>

@@ -196,7 +196,8 @@
           </div>
 
           <%= f.input :geocation, label: false, as: :boolean, input_html: { class: 'd-none' }%>
-
+          <%= f.input :longitude, as: :hidden %>
+          <%= f.input :latitude, as: :hidden %>
           <div id="remerciement" class="d-none">
             <div class="d-flex justify-content-start" >
               <div id="remerciement-question" class="border-radius-10px bg-white p-2 m-2" >
