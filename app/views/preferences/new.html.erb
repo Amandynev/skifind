@@ -1,7 +1,6 @@
 <div id="georges" class="container-georges">
   <div class="ecran-interface-george">
-    <div class="ecran-interface-george2">
-      <div>
+      <div class="spacer"></div>
         <%= simple_form_for @preference do |f| %>
 
           <div id="name">
@@ -22,7 +21,7 @@
               </div>
             </div>
             <% Preference::ROOMMATE.each do |key, value|%>
-              <div class="d-flex justify-content-end ">
+              <div class="d-flex justify-content-end">
                 <div class="btn-georges roommate border-radius-10px bg-blue mw-50 p-2 m-2"
                      data-roommate="<%= key %>"
                     style="cursor: pointer;">
@@ -40,7 +39,7 @@
               </div>
             </div>
             <% Preference::BUDGET.each do |key, value|%>
-              <div class="d-flex justify-content-end">
+              <div id="budget-answer" class="d-none d-flex justify-content-end">
                 <div class="btn-georges budget border-radius-10px bg-blue mw-50 p-2 m-2"
                      data-budget="<%= key %>"
                      style="cursor: pointer;">
@@ -205,9 +204,8 @@
               </div>
             </div>
           </div>
-          <%= f.submit "Valider", id: "submit-georges", class: "bouton-primary d-none" %>
+          <%= f.submit "Valider", id: "submit-georges", class: "buton-primary d-none" %>
         <% end %>
       </div>
-    </div>
-  </div>
+
 </div>

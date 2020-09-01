@@ -87,10 +87,18 @@ const initGeorges = () => {
     if (event.key === "Enter") {
       roommateIdElement.classList.remove("d-none");
       loadDynamicBannerText("Tu as prévu de partir:", "roommate-question");
-
+      roommateIdElement.scrollIntoView({behavior: 'smooth', block: 'end'});
     }
   })
-
+   // const divs = document.querySelectorAll('#budget > div')
+      // divs => [div, div, div, div]
+      // 1. retirer le 1er element du tableau
+      // 2. parcourir le tableau pour chaque element ajouter la class "d-none" (optionnel, si mis dans l'html)
+      // 3. on crée une variable (let) duration = 1000
+      // 4. parcourir le tableau de div et setTimeOut(element.classList.remove('d-none'), duration)
+      // 5. à chaque itération j'ajoute 500 ms à duration
+  let duration = 800;
+  let opacity = 100;
   const roommates = document.querySelectorAll('.roommate');
   roommates.forEach(function(roommate) {
     roommate.addEventListener('click',  function(){
@@ -99,7 +107,18 @@ const initGeorges = () => {
       roommates.forEach(element => element.classList.add("d-none"));
       roommate.classList.remove("d-none");
       loadDynamicBannerText("Quel est ton budget ?", "budget-question");
-      budgetIdElement.classList.remove("d-none");
+      setTimeout(function(){
+        budgetIdElement.classList.remove("d-none");
+        budgetIdElement.scrollIntoView({behavior: 'smooth', block: 'end'});
+      }, duration);
+    function fadeOut() {
+    opacity--;
+    div.style.opacity = opacity/100;
+    if (opacity > 0){
+        setTimeout(fadeOut,speed);
+    }
+}
+fadeOut();
     });
   });
 
@@ -110,7 +129,10 @@ const initGeorges = () => {
       budgets.forEach(element => element.classList.add("d-none"));
       budget.classList.remove("d-none");
       loadDynamicBannerText("Ta journée idéale :", "day_activities-question");
+      setTimeout(function(){
+      day_activitiesIdElement.scrollIntoView({behavior: 'smooth', block: 'end'});
       day_activitiesIdElement.classList.remove("d-none");
+      }, duration);
     });
   });
 
@@ -121,7 +143,10 @@ const initGeorges = () => {
       day_activities.forEach(element => element.classList.add("d-none"));
       day_activitie.classList.remove("d-none");
       loadDynamicBannerText("Tu es plutôt...", "biological_clock-question");
+      setTimeout(function(){
       biological_clockIdElement.classList.remove("d-none");
+      biological_clockIdElement.scrollIntoView({behavior: 'smooth', block: 'end'});
+      }, duration);
     });
   });
 
@@ -132,7 +157,10 @@ const initGeorges = () => {
       biological_clocks.forEach(element => element.classList.add("d-none"));
       biological_clock.classList.remove("d-none");
       loadDynamicBannerText("Ton logement idéal...", "accommodation-question");
+      setTimeout(function(){
       accommodationIdElement.classList.remove("d-none");
+      accommodationIdElement.scrollIntoView({behavior: 'smooth', block: 'end'});
+      }, duration);
     });
   });
 
@@ -143,7 +171,10 @@ const initGeorges = () => {
       accommodations.forEach(element => element.classList.add("d-none"));
       accommodation.classList.remove("d-none");
       loadDynamicBannerText("Ton coin idéal...", "spot-question");
+      setTimeout(function(){
       spotIdElement.classList.remove("d-none");
+      spotIdElement.scrollIntoView({behavior: 'smooth', block: 'end'});
+      }, duration);
     });
   });
 
@@ -192,7 +223,6 @@ const initGeorges = () => {
   });
 
   const geocationTrue = document.getElementById('geocation-true');
-  const geocationFalse = document.getElementById('geocation-false');
   geocationTrue.addEventListener('click', function check() {
     document.getElementById("preference_geocation").checked = true;
 
@@ -213,6 +243,8 @@ const initGeorges = () => {
 
     // submitForm
   });
+
+  const geocationFalse = document.getElementById('geocation-false');
   geocationFalse.addEventListener('click', function check() {
     document.getElementById("preference_geocation").checked = false;
     remerciementIdElement.classList.remove("d-none");

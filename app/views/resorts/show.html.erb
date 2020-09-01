@@ -89,15 +89,32 @@
           </div>
         </div>
         <p class="localisation-show"> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.resort_address %></p>
+
         <% if current_user and current_user.preference.latitude %>
           <p> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.distance(current_user.preference) %> km</p>
         <% end %>
+
     </div>
   </div>
 </div>
-
-
-
-
-
-
+    <div class="container mt-5">   
+      <div class="row">
+        <% @resort.activities.each do |activity|  %>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="card-activity">
+              <div class="inner">
+                <%= cl_image_tag activity.photo.key, class: "card-img-top" %>
+              </div>
+              <div class="card-body d-flex flex-column justify-content-between">
+                <h4 class="card-title" style="text-align: center;"> <%= activity.activity_name %> </h5>
+                <p class="card-text">
+                  <%= activity.activity_description %>
+                </p>
+                <div class="d-flex justify-content-end flex-column" style="height: 100%;">
+                </div>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+    </div>

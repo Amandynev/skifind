@@ -47,6 +47,7 @@ document.addEventListener('turbolinks:load', () => {
   initSweetalert('#submit-georges', {
     title: "Merci pour ta confiance !",
     text: "Je cherche ta station idéale",
+    buttons: false,
     icon: "success",
     timer: 4000,
   });
