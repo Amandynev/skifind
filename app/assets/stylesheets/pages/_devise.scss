@@ -10,12 +10,50 @@
 }
 
 .devise {
-  text-align: center;
   width: 30%;
   height: 60%;
   z-index: 999;
   margin-top: 130px;
+h2 {
+  color: white;
+  font-size: 42px;
+  text-shadow: #02245C 1px 1px 3px;
+  margin: 12px;
+}
 
+label {
+  font-size: 16px;
+  text-align: left;
+  background-color:#02245C;
+  opacity: 0.8;
+  padding: 5px;
+  border-radius: 5px;
+  color: white;
+}
+
+input.btn {
+  color: white;
+  padding: 8px 24px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(15deg, #02245C 0%, #011028 74%);
+  transition: background 0.3s ease;
+  border: 0.7px solid #011028;
+  text-decoration: none;
+}
+
+input.btn:hover {
+  background: linear-gradient( #033FA0, #02245C);
+  text-decoration: none;
+  color: white;
+}
+
+a {
+  color: #99AFFF;
+}
+a:hover {
+  color: #335FFF;
+} 
 }
 
 .form-inputs {
