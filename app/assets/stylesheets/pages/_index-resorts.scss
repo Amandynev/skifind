@@ -28,7 +28,7 @@ a{
 
 .card{
   height: 650px;
-  width: 300px;;
+  width: 300px;
 }
 
 .card-choose1{
@@ -55,14 +55,13 @@ a{
   color: #02245C;
 }
 
-.container .logo {
-  width: 160px;
-  height: 160px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px;
-  position: initial;
+.logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  padding: 15px;
+  position: absolute;
+  margin-left: -25px;
 }
 
 .green-tick{
@@ -71,5 +70,13 @@ a{
 
 .red-cross{
   color: #e61937;
+}
+
+.photo {
+width: 280px;
+height: 160px;
+position: relative;
+margin-top: -10px;
+margin-left: -5px;
 }
 
