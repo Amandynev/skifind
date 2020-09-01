@@ -5,7 +5,6 @@
   background-position: center;
   width: 100vw;
   height: 100vh;
-  position: relative;
   display: flex;
   justify-content: center;
 }
@@ -16,7 +15,7 @@
 }
 
 .ecran-interface-george {
-  width: 30% ;
+  width: 450px ;
   height: 85%;
   background-color: rgba(255,255,255,0.6);
   border: 2px solid white;
@@ -24,11 +23,10 @@
   overflow: scroll;
   position: relative;
   margin-top: 100px;
-  /*position: absolute;
-  right: 600px;
-  bottom: 30px;
-  width: 30%;
-  height: 80%;*/
+}
+
+.spacer{
+  height: 60vh;
 }
 
 .ecran-interface-george2 {
@@ -37,38 +35,33 @@
   bottom:   8px;
 }
 
+
 @media(max-width: 1440px) {
   .ecran-interface-george {
-    right: 50px;
-    bottom: 20px;
-    width: 40%;
 
   }
 }
 
 @media(max-width: 1200px) {
   .ecran-interface-george {
-    right: 20px;
-    bottom: 20px;
-    width: 40%;
+
+
   }
 }
 
 @media(max-width: 900px) {
   .ecran-interface-george {
-    right: 20px;
-    bottom: 20px;
-    width: 40%;
+
+
 
   }
 }
 
 @media(max-width: 620px) {
   .ecran-interface-george {
-    right: 5%;
-    width: 90%;
+    height: 75%;
     bottom: 10px;
-    height: 90%;
+    margin-top: 150px;
   }
 }
 

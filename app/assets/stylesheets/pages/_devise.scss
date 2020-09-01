@@ -1,0 +1,39 @@
+.container-devise {
+  background-image: asset-url('background-georges.jpg');
+  width: 100vw;
+  height: 100vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+}
+
+.devise {
+  text-align: center;
+  width: 30%;
+  height: 60%;
+  z-index: 999;
+  margin-top: 130px;
+
+}
+
+.form-inputs {
+  margin: 10px;
+}
+
+
+@media(max-width: 650px) {
+  .devise {
+    width: 70%;
+    margin-top: 200px;
+  }
+}
+
+
+@media(max-width: 900px) {
+  .devise {
+    width: 50%;
+    margin-top: 200px;
+  }
+}
