@@ -7,14 +7,13 @@
   width:               100vw;
   height:              100vh;
   background-attachment: fixed;
-  background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+
   }
 
 .container-fluid h2 {
-    color: #011028;
-    margin-bottom: 16px;
+  color: #011028;
+  margin-bottom: 16px;
 
 }
 
@@ -41,9 +40,9 @@
 }
 
 .buton-explore:hover {
-background: linear-gradient(#033FA0, #02245C);
-text-decoration: none;
-color: white;
+  background: linear-gradient(#033FA0, #02245C);
+  text-decoration: none;
+  color: white;
 
 }
 
