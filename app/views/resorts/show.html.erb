@@ -1,17 +1,20 @@
-<div class="container-show">
-<!-----------------------title ------------------------->
-<div class="resort-title mt-3">
-  <h3><%= @resort.resort_name %></h3>
-</div>
+
+
 
 <!-----------------------carousel ------------------------->
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-  <div class="carousel-inner">
+     <div class="carousel-inner">
+    <div class="carousel-caption">
+      <h1 class="resort-title mt-3"><%= @resort.resort_name %></h1>
+    </div>
     <% @resort.landscapes.each_with_index do |photo, index| %>
        <div class="carousel-item <%= 'active' if index == 0 %>">
-          <%= cl_image_tag photo.key, class: "photo-caroussel", crop: :fill %>
+         <div class="photo-caroussel" style="background-image: url('<%= cl_image_path photo.key %>');"></div>
        </div>
     <% end %>
+    <!-- <div class="resort-title mt-3">
+          <h3><%= @resort.resort_name %></h3>
+          </div> -->
   </div>
   <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -22,7 +25,9 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
+<!-----------------------title ------------------------->
 
+<div class="container-show">
   <!-----------------------card descritpion ------------------------->
   <div class="container-show d-flex">
     <%= render 'shared/map' %>

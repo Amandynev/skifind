@@ -65,26 +65,34 @@ class Preference < ApplicationRecord
 
   def score(other_preference)
   #   # Calcul
-    roommate_score = score_criterion(self.roommate, other_preference.roommate, ROOMMATE)
-    budget_score = score_criterion(self.budget, other_preference.budget, BUDGET)
-    day_activities_score = score_criterion(self.day_activities, other_preference.day_activities, DAY_ACTIVITIES)
-    biological_score = score_criterion(self.biological_clock, other_preference.biological_clock, BIOLOGICAL_CLOCK)
-    accommodation_score = score_criterion(self.accommodation, other_preference.accommodation, ACCOMMODATION)
-    spot_score = score_criterion(self.spot, other_preference.spot, SPOT)
-    night_activities_score = score_criterion(self.night_activities, other_preference.night_activities, NIGHT_ACTIVITIES)
-    expectations_score = score_criterion(self.expectations, other_preference.expectations, EXPECTATIONS)
-    kilometers_score = score_criterion(self.kilometers, other_preference.kilometers, KILOMETERS)
+    @preference_score = [
+      score_criterion(self.roommate, other_preference.roommate, ROOMMATE),
+      score_criterion(self.budget, other_preference.budget, BUDGET),
+      score_criterion(self.day_activities, other_preference.day_activities, DAY_ACTIVITIES),
+      score_criterion(self.biological_clock, other_preference.biological_clock, BIOLOGICAL_CLOCK),
+      score_criterion(self.accommodation, other_preference.accommodation, ACCOMMODATION),
+      score_criterion(self.spot, other_preference.spot, SPOT),
+      score_criterion(self.night_activities, other_preference.night_activities, NIGHT_ACTIVITIES),
+      score_criterion(self.expectations, other_preference.expectations, EXPECTATIONS),
+      score_criterion(self.kilometers, other_preference.kilometers, KILOMETERS)
+    ].sum
 
-    @preference_score = roommate_score + budget_score + day_activities_score + biological_score + accommodation_score + night_activities_score + expectations_score + kilometers_score
-     return ((1 - (@preference_score / 35.0)) * 100).round
+    return ((@preference_score / 35.0) * 100).round
   end
 
   def score_criterion(user_criterion, resort_criterion, criteria)
     elements = criteria.keys # ["family", "couple", "friend"]
     user_index = elements.find_index(user_criterion) # 0
     resort_index = elements.find_index(resort_criterion) # 2
+    p elements
+    p user_index
+    p resort_index
     # on mesure l'écart entre la préférence du user et la préférence du resort
     # pour cela, on prend la taille des préferences et on retire l'écart entre les préferences comparées
-    score = elements.size - (user_index - resort_index).abs
+    if user_index and resort_index
+      score = elements.size - (user_index - resort_index).abs
+    else
+      score = 1 # ... remove
+    end
   end
 end

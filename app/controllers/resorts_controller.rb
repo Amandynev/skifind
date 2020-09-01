@@ -7,7 +7,10 @@ class ResortsController < ApplicationController
             sql_query = "resort_name @@ :query OR resort_description @@ :query"
             @resorts = Resort.where(sql_query, query: "%#{params[:query]}%")
         else
-            @resorts = Resort.all
+          # Ici on va trier les resorts en fonction des préférences
+
+          # On récupère la préférence du user (preference)
+          @resorts = current_user.top_resorts  # [[#<Resort....>, 67], [......]
         end
     end
 
