@@ -13,17 +13,29 @@ const initMapbox = () => {
     });
     const markers = JSON.parse(mapElement.dataset.markers);
     markers.forEach((marker) => {
-      const popup = new mapboxgl.Popup().setHTML(marker.infoWindow); // add this
+      const popup = new mapboxgl.Popup().setHTML(marker.infoWindow);
 
       new mapboxgl.Marker()
         .setLngLat([ marker.lng, marker.lat ])
-        .setPopup(popup) // add this
+        .setPopup(popup)
         .addTo(map);
     });
     const bounds = new mapboxgl.LngLatBounds();
     markers.forEach(marker => bounds.extend([ marker.lng, marker.lat ]));
     map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
+
+    const loc = JSON.parse(document.getElementById('resort-show').dataset.loc);
+
+    const url = `https://api.mapbox.com/directions-matrix/v1/mapbox/driving/${loc[0].lat},${loc[0].lng};${loc[1].lat},${loc[1].lng}?approaches=curb;curb&annotations=duration,distance&access_token=${mapElement.dataset.mapboxApiKey}`
+    console.log(url);
+    fetch(url)
+    .then(response => response.json())
+    .then((data) => {
+      console.log(data);
+    });
+
   }
+
 };
 
 export { initMapbox };

@@ -2,6 +2,7 @@
 
 
 <!-----------------------carousel ------------------------->
+<div id="resort-show" data-loc="<%= @loc.to_json %>"></div>
 <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
      <div class="carousel-inner ">
     <div class="carousel-caption ">
@@ -88,6 +89,9 @@
           </div>
         </div>
         <p class="localisation-show"> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.resort_address %></p>
+        <% if current_user and current_user.preference.latitude %>
+          <p> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.distance(current_user.preference) %> km</p>
+        <% end %>
     </div>
   </div>
 </div>

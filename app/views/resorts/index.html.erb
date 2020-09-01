@@ -18,7 +18,7 @@
                 <%= image_tag resort[0].photo_asset, alt: "Tignes", width: 200, class: "img-resort" %>
             <div class="card-product-infos">
 
-              <%= resort[1] %>%
+              <%= resort[1] if resort[1] %>%
                 <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort[0].resort_address %></p>
                 <div class="info-resort name mb-5">
                   <h4 class="titre_h4"><%= resort[0].resort_name %></h4>
