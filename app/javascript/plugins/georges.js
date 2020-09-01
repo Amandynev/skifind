@@ -120,6 +120,7 @@ const initGeorges = () => {
       updateFormDayActivities();
       day_activities.forEach(element => element.classList.add("d-none"));
       day_activitie.classList.remove("d-none");
+      loadDynamicBannerText("Tu es plutôt...", "biological_clock-question");
       biological_clockIdElement.classList.remove("d-none");
     });
   });
@@ -130,6 +131,7 @@ const initGeorges = () => {
       updateFormBiologicalClock();
       biological_clocks.forEach(element => element.classList.add("d-none"));
       biological_clock.classList.remove("d-none");
+      loadDynamicBannerText("Ton logement idéal...", "accommodation-question");
       accommodationIdElement.classList.remove("d-none");
     });
   });
@@ -140,6 +142,7 @@ const initGeorges = () => {
       updateFormAccommodation();
       accommodations.forEach(element => element.classList.add("d-none"));
       accommodation.classList.remove("d-none");
+      loadDynamicBannerText("Ton coin idéal...", "spot-question");
       spotIdElement.classList.remove("d-none");
     });
   });
@@ -150,6 +153,7 @@ const initGeorges = () => {
       updateFormSpot();
       spots.forEach(element => element.classList.add("d-none"));
       spot.classList.remove("d-none");
+      loadDynamicBannerText("Ta soirée idéale...", "night_activities-question");
       night_activitiesIdElement.classList.remove("d-none");
     });
   });
@@ -160,6 +164,7 @@ const initGeorges = () => {
       updateFormNightActivities();
       nights_activities.forEach(element => element.classList.add("d-none"));
       night_activities.classList.remove("d-none");
+      loadDynamicBannerText("Pour toi les vacances au ski c'est...", "expectations-question");
       expectationsIdElement.classList.remove("d-none");
     });
   });
@@ -170,6 +175,7 @@ const initGeorges = () => {
       updateFormExpectations();
       expectationss.forEach(element => element.classList.add("d-none"));
       expectations.classList.remove("d-none");
+      loadDynamicBannerText("Combien de km es-tu prêt à faire ?", "kilometers-question");
       kilometersIdElement.classList.remove("d-none");
     });
   });
@@ -180,6 +186,7 @@ const initGeorges = () => {
       updateFormKilometers();
       kilometerss.forEach(element => element.classList.add("d-none"));
       kilometersIdElement.classList.remove("d-none");
+      loadDynamicBannerText("Veux-tu être géolocalisé afin de profiter à 100% de notre service personnalisé?", "geocation-question");
       geocationIdElement.classList.remove("d-none");
     });
   });
@@ -189,6 +196,7 @@ const initGeorges = () => {
   geocationTrue.addEventListener('click', function check() {
     document.getElementById("preference_geocation").checked = true;
     remerciementIdElement.classList.remove("d-none");
+    loadDynamicBannerText("Merci !! C'était sympa d'apprendre à te connaitre.<br> Valide pour voir ma séléction :)", "remerciement-question");
     submitGeorgesIdElement.classList.remove("d-none");
 
     // submitForm
@@ -196,6 +204,7 @@ const initGeorges = () => {
   geocationFalse.addEventListener('click', function check() {
     document.getElementById("preference_geocation").checked = false;
     remerciementIdElement.classList.remove("d-none");
+    loadDynamicBannerText("Merci !! C'était sympa d'apprendre à te connaitre.<br> Valide pour voir ma séléction :)", "remerciement-question");
     submitGeorgesIdElement.classList.remove("d-none");
     // submitForm
   });
