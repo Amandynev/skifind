@@ -22,14 +22,16 @@
   width: 40px;
 }
 
-
-
 .logo {
   position: absolute;
-  width: 200px;
+  size: 50px;
   left: 30px;
   top: 0px;
   z-index: 9999;
+}
+
+.taille-logo {
+  width: 50px;
 }
 
 @media(max-width: 620px) {
