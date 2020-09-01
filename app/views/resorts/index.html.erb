@@ -13,16 +13,18 @@
   <div class="row">
     <div>
       <% @resorts.each do |resort|  %>
-        <%= link_to resort_path(resort), class: 'link-without-style' do %>
+        <%= link_to resort_path(resort[0]), class: 'link-without-style' do %>
           <div class="card-product">
-                <%= image_tag resort.photo_asset, alt: "Tignes", width: 200, class: "img-resort" %>
+                <%= image_tag resort[0].photo_asset, alt: "Tignes", width: 200, class: "img-resort" %>
             <div class="card-product-infos">
-                <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort.resort_address %></p>
+
+              <%= resort[1] %>%
+                <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort[0].resort_address %></p>
                 <div class="info-resort name mb-5">
-                  <h4 class="titre_h4"><%= resort.resort_name %></h4>
+                  <h4 class="titre_h4"><%= resort[0].resort_name %></h4>
                 </div>
                 <div class="info-resort-description">
-                  <p><%=  resort.resort_description%></p>
+                  <p><%=  resort[0].resort_description%></p>
                 </div>
             </div>
           </div>
@@ -33,7 +35,7 @@
   </div>
 </div>
 
-<!------------------------------George's index ------------------------->
+<!------------------------------Georges's index ------------------------->
 
 <div class="container-title d-flex justify-content-center">
   <h3>Voici la meilleure sélection que je t'ai trouvé :</h3>
@@ -45,36 +47,36 @@
       <div class="card">
         <div class="card-choose2">
           <h5 class="card-title">Tignes</h5>
-    
+
               <img class="logo" src="https://www.skipass-tignes.com/media/image/tignesb2c/cms/media/2020-2021/Images/TIGNES_LOGO2020_300px.png">
-              
-               
+
+
                   <p class="d-flex justify-content-between">station amicale<i class="fas fa-check green-tick"></i></p>
-                  
-                 
+
+
                   <p class="d-flex justify-content-between">budget large<i class="fas fa-check green-tick"></i></p>
-                  
-         
+
+
                   <p class="d-flex justify-content-between">nombreuses pistes<i class="fas fa-check green-tick"></i></p>
-          
-    
+
+
                   <p class="d-flex justify-content-between">pour les lève-tôt<i class="fas fa-check green-tick"></i></p>
-             
-       
+
+
                   <p class="d-flex justify-content-between">beaucoup d'appart à louer<i class="fas fa-check green-tick"></i></p>
-         
-           
+
+
                   <p class="d-flex justify-content-between">commerces réguliers<i class="fas fa-times red-cross"></i></p>
-               
+
 
                   <p class="d-flex justify-content-between">ciné présent<i class="fas fa-times red-cross"></i></p>
-            
-         
+
+
                   <p class="d-flex justify-content-between">enneigement<i class="fas fa-times red-cross"></i></p>
-            
-             
+
+
                   <p class="d-flex justify-content-between">en train ?<i class="fas fa-times red-cross"></i></p>
-           
+
               <p class="card-text"></p>
             <div class="site-officiel">
               <a class="buton-primary" target="_blank" href="https://www.tignes.net/">Site officiel</a>
@@ -91,29 +93,29 @@
             <img class="logo" src="https://play-lh.googleusercontent.com/E8SyrxgdMubvOXtvHetgX5fvlodFoyP31WRt1ZrHVeXBqGmgvMzajj2qPx-wzRlSBac=s180-rw">
 
                   <p class="d-flex justify-content-between">station amicale<i class="fas fa-check green-tick"></i></p>
-                  
-                 
+
+
                   <p class="d-flex justify-content-between">budget large<i class="fas fa-check green-tick"></i></p>
-                  
-         
+
+
                   <p class="d-flex justify-content-between">nombreuses pistes<i class="fas fa-check green-tick"></i></p>
-          
-    
+
+
                   <p class="d-flex justify-content-between">pour les lève-tôt<i class="fas fa-check green-tick"></i></p>
-             
-       
+
+
                   <p class="d-flex justify-content-between">beaucoup d'appart à louer<i class="fas fa-check green-tick"></i></p>
-         
-           
+
+
                   <p class="d-flex justify-content-between">commerces réguliers<i class="fas fa-times red-cross"></i></p>
-               
+
 
                   <p class="d-flex justify-content-between">ciné présent<i class="fas fa-times red-cross"></i></p>
-            
-         
+
+
                   <p class="d-flex justify-content-between">enneigement<i class="fas fa-times red-cross"></i></p>
-            
-             
+
+
                   <p class="d-flex justify-content-between">en train ?<i class="fas fa-times red-cross"></i></p>
 
               <p class="card-text"></p>
@@ -132,29 +134,29 @@
             <img class="logo" src="https://monoski-france.com/newsite/wp-content/uploads/2016/06/avoriazlogo.jpg.gif">
 
                   <p class="d-flex justify-content-between">station amicale<i class="fas fa-check green-tick"></i></p>
-                  
-                 
+
+
                   <p class="d-flex justify-content-between">budget large<i class="fas fa-check green-tick"></i></p>
-                  
-         
+
+
                   <p class="d-flex justify-content-between">nombreuses pistes<i class="fas fa-check green-tick"></i></p>
-          
-    
+
+
                   <p class="d-flex justify-content-between">pour les lève-tôt<i class="fas fa-check green-tick"></i></p>
-             
-       
+
+
                   <p class="d-flex justify-content-between">beaucoup d'appart à louer<i class="fas fa-check green-tick"></i></p>
-         
-           
+
+
                   <p class="d-flex justify-content-between">commerces réguliers<i class="fas fa-times red-cross"></i></p>
-               
+
 
                   <p class="d-flex justify-content-between">ciné présent<i class="fas fa-times red-cross"></i></p>
-            
-         
+
+
                   <p class="d-flex justify-content-between">enneigement<i class="fas fa-times red-cross"></i></p>
-            
-             
+
+
                   <p class="d-flex justify-content-between">en train ?<i class="fas fa-times red-cross"></i></p>
 
               <p class="card-text"></p>

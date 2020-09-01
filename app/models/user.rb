@@ -9,9 +9,10 @@ class User < ApplicationRecord
 
   def top_resorts
     Resort.all.joins(:preference)
-          .map { |resort| [resort, self.preference.score(resort.preference)] }
-          .sort_by
+          .map { |resort| [resort, preference.score(resort.preference)] } # [[#<Resort....>, 67], [......]
+          .sort_by { |pair| - pair[1] } # Sorting DESC
           .first(3)
-          # 3 premier
+
+    # [ { resort: resort, score: 54 }, {....}, ......]      suggestion
   end
 end

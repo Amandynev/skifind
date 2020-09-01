@@ -1,6 +1,11 @@
 .card-activity {
-  height: 32rem;
   border: 1px solid rgba(80, 137, 145, 0.4);
+  border-radius: 3px;
+  margin-bottom: 24px;
+}
+
+.card-body {
+  min-height: 16rem;
 }
 
 .card-activity:hover {
@@ -16,7 +21,7 @@
 
 .card-skifind {
   color:#E19451;
-  font-size: 50px;
+  font-size: 56px;
   text-align: center;
 }
 
