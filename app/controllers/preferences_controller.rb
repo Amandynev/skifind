@@ -1,5 +1,5 @@
 class PreferencesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:new, :create]
+  skip_before_action :authenticate_user!, only: [:new]
 
   def new
     @preference = Preference.new
