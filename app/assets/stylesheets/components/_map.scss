@@ -5,6 +5,19 @@
 .mapboxgl-popup-content {
   text-align: center;
   font-family: 'Open Sans', sans-serif;
+
+  .resort-name-window{
+  font-style: italic;
+  color:#02245C;
+  }
+
+  .text-window{
+  font-weight: lighter;
+  }
+
+  .distance{
+    color:#02245C;
+  }
 }
 
 #map {
@@ -13,3 +26,5 @@
   margin-bottom: 8px;
 
 }
+
+

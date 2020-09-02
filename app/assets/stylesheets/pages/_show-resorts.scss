@@ -9,11 +9,14 @@
 }
 
 .massif-show{
-  font-size: 40px;
-  padding-bottom: 10px;
-  padding-right: 500px;
+  font-size: 20px;
   font-weight: bold;
   color: #02245C;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
 }
 
 .resort-title{
@@ -21,7 +24,7 @@
   padding-bottom: 30px;
   font-weight: bold;
   color: #02245C;
-  // position: absolute;
+  position: relative;
   // top: 50vh;
   // left: 30vw;
   // z-index: 9999;
@@ -62,15 +65,7 @@ body{
   right: 30px;
 
 }
-.massif-show{
-  font-size: 20px;
-  font-weight: bold;
-  opacity: .9;
-  position:absolute;
-  bottom: 100px;
-  right: 30px;
 
-}
 .slopes-title {
   position:relative;
 }
