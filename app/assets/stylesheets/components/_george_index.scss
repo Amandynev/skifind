@@ -1,0 +1,16 @@
+.card{
+    height: 500px;
+    width: 300px;
+    border-radius: 10px;
+    border: 1px solid rgba(80, 137, 145, 0.4);
+  }
+  
+  .card:hover {
+    border: 1px solid rgba(80, 137, 145, 1);
+  }
+
+  .green-tick{
+    color: rgb(1, 255, 1);
+  }
+  
+  

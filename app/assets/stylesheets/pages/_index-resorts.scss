@@ -42,26 +42,11 @@ a{
 
 /* ------- Georges's index --------- */
 
-.card{
-  height: 500px;
-  width: 300px;
-  border-radius: 10px;
-  border: 1px solid rgba(80, 137, 145, 0.4);
-}
-
-.card:hover {
-  border: 1px solid rgba(80, 137, 145, 1);
-}
-
 .card-choose {
   margin: 15px;
 }
 
-.container-title{
-  color: #02245C;
-}
-
-.container h5 {
+.george_h5 {
   text-align: center;
   color: #02245C;
   margin-top: 10px;
@@ -76,10 +61,6 @@ a{
   position: absolute;
   margin-left: -25px;
 
-}
-
-.green-tick{
-  color: rgb(1, 255, 1);
 }
 
 .photo {
@@ -100,6 +81,14 @@ border-top-right-radius: 5px;
 
 .localisation {
   color: white;
+  font-size: 14px;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 4px;
+  position:absolute;
+  top: 25px;
+  right: 30px;
 }
 
 

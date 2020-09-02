@@ -21,7 +21,7 @@
               <%= link_to resort_path(resort), class: 'link-without-style' do %>
                 <%= image_tag resort[0].photo_asset, alt: "Tignes", class: "photo" %>
                 <%= image_tag resort[0].resort_name.downcase + '-logo.png', class: 'logo' %>
-                <h5><%= resort[0].resort_name %></h5>
+                <h5 class="george_h5"><%= resort[0].resort_name %></h5>
 
                 <div class="answer">
                    <%= resort[1] %>%
