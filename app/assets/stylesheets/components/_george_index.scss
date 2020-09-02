@@ -1,5 +1,5 @@
 .card{
-    height: 500px;
+    height: 700px;
     width: 300px;
     border-radius: 10px;
     border: 1px solid rgba(80, 137, 145, 0.4);
@@ -13,4 +13,11 @@
     color: rgb(1, 255, 1);
   }
   
-  
+  .banner-george{
+    background-image: asset-url('background_index_georges.jpg');
+    background-size:     cover;
+    background-position: center;
+    width:               100vw;
+    height:              100vh;
+    background-repeat: no-repeat;
+  }

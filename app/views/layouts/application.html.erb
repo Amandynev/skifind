@@ -3,9 +3,10 @@
   <head>
     <title> SkiFind | France's Best Ski Resort Comparator</title>
     <meta name="description" content="Find quickly your ski resort in France with Skifind.">
-
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+
+    
 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -18,5 +19,6 @@
     <%= render 'shared/flashes' %>
 
     <%= yield %>
+
   </body>
 </html>
