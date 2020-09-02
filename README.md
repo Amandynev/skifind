@@ -7,6 +7,8 @@ Comparateur de stations de ski. Parles avec George afin de determiner ta station
 - Version de ruby: ruby 2.6.6p146
 - Version de rails: Rails 6.0.3.2
 
+
+
 ```
 git clone git@github.com:Amandynev/skifind.git
 cd skifind
