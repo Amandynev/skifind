@@ -61,3 +61,15 @@
 :-ms-input-placeholder {
   font-style: italic;
 }
+:-ms-input-placeholder {  
+  font-style: italic; 
+}
+
+.avatar {
+    background-size: cover;
+    box-shadow: 1px 1px 2px #F6F8FF;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-top: -10px;
+}
