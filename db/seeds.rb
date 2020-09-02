@@ -446,8 +446,8 @@ cha_preference = Preference.create(
 
 file = URI.open("https://esf.chalmazel.net/local/cache-gd2/84/78d957a496a87d5afd9611bf0fcb9a.jpg?1508403688")
 chalmazel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
-file = URI.open("https://prod20181119031003542900000001.s3.eu-west-1.amazonaws.com/LARGE/94401-94958.jpeg")
-chalmazel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+# file = URI.open("https://prod20181119031003542900000001.s3.eu-west-1.amazonaws.com/LARGE/94401-94958.jpeg")
+# chalmazel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 file = URI.open("https://cdn-s-www.leprogres.fr/images/0D9051BC-0F29-4698-873F-796860F2BE07/NW_detail/title-1454004277.jpg")
 chalmazel.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 

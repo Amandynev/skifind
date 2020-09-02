@@ -1,5 +1,5 @@
-<!-------------------------
 
+<!--
 <div class="container-title-index ">
   <div class="row">
     <div class="index-infos">
@@ -14,74 +14,66 @@
 <div class="container d-flex justify-content-center">
   <div class="row">
     <div>
-      <% @resorts.each do |resort|  %>
-        <%= link_to resort_path(resort[0]), class: 'link-without-style' do %>
+      <%# @resorts.each do |resort|  %>
+        <%#= link_to resort_path(resort[0]), class: 'link-without-style' do %>
           <div class="card-product">
-                <%= image_tag resort[0].photo_asset, alt: "Tignes", width: 200, class: "img-resort" %>
+                <%#= image_tag resort[0].photo_asset, alt: "Tignes", width: 200, class: "img-resort" %>
             <div class="card-product-infos">
 
-              <%= resort[1] if resort[1] %>%
-                <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort[0].resort_address %></p>
+              <%#= resort[1] if resort[1] %>%
+                <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%# resort[0].resort_address %></p>
                 <div class="info-resort name mb-5">
-                  <h4 class="titre_h4"><%= resort[0].resort_name %></h4>
+                  <h4 class="titre_h4"><%#= resort[0].resort_name %></h4>
                 </div>
                 <div class="info-resort-description">
-                  <p><%=  resort[0].resort_description%></p>
+                  <p><%#=  resort[0].resort_description%></p>
                 </div>
             </div>
           </div>
-        <% end %>
+        <%# end %>
 
-      <% end %>
+      <%# end %>
     </div>
   </div>
 </div>
 
------------------------>
-
+-->
 
 <!------------------------------Georges's index ------------------------->
 
 <div class="banner-home d-flex justify-content-center align-items-center flex-column">
- 
-<div class="container-title-index ">
-  <div class="row">
-    <div class="index-infos">
-      <h2 class="title-index">Voici la meilleure sélection que je t'ai trouvé :</h2>
-        
-     <!--- <p>Retrouve toutes les stations disponibles!</br>
-        Parcours skifind afin de trouver <strong>TA</strong> station préférée. </br>
-        Mais si tu veux allier envies et skis, n'hésites pas à parler avec George!</p> ------>
+  <div class="container-title-index ">
+    <div class="row">
+      <div class="index-infos">
+        <h2 class="title-index">Voici la meilleure sélection que je t'ai trouvé :</h2>
+      </div>
     </div>
   </div>
-</div>
 
-<div class="container d-flex justify-content-center">
-  <div class="row">
-    <% @resorts.each do |resort| %>
-      <div class="col-12 col-lg-4">
-      
-        <div class="card">
-          <div class="card-choose" >
-                                    <%= link_to resort_path(resort), class: 'link-without-style' do %>
-            <%= image_tag resort[0].photo_asset, alt: "Tignes", class: "photo" %>
-            <%= image_tag resort[0].resort_name.downcase + '-logo.png', class: 'logo' %>
-            <h5><%= resort[0].resort_name %></h5>
-               
-              <div class="answer">
-                 <%= resort[1] %>%
-              </div>
-            <% resort[0].preference.attributes.except("id", "latitude", "longitude", "visitor_name", "matchable_type", "matchable_id", "created_at", "updated_at", "spot", "biological_clock", "kilometers", "geocation").each do |k,v| %>
 
-              <p class="d-flex justify-content-between"><%= v %><i class="fas fa-check green-tick"></i></p>
-        <% end %>
-            <% end %>
+  <div class="container d-flex justify-content-center">
+    <div class="row">
+      <% @resorts.each do |resort| %>
+        <div class="col-12 col-lg-4">
+          <div class="card">
+            <div class="card-choose" >
+              <%= link_to resort_path(resort), class: 'link-without-style' do %>
+                <%= image_tag resort[0].photo_asset, alt: "Tignes", class: "photo" %>
+                <%= image_tag resort[0].resort_name.downcase + '-logo.png', class: 'logo' %>
+                <h5><%= resort[0].resort_name %></h5>
+
+                <div class="answer">
+                   <%= resort[1] %>%
+                </div>
+                <% resort[0].preference.attributes.except("id", "latitude", "longitude", "visitor_name", "matchable_type", "matchable_id", "created_at", "updated_at", "spot", "biological_clock", "kilometers", "geocation").each do |k,v| %>
+                  <p class="d-flex justify-content-between"><%= v %><i class="fas fa-check green-tick"></i></p>
+                <% end %>
+              <% end %>
+            </div>
           </div>
-        </div>       
-      <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort[0].mountains %></p>
-      </div>
-    <% end %>  
+          <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort[0].mountains %></p>
+        </div>
+      <% end %>
+    </div>
   </div>
-</div> 
-                                     
 </div>

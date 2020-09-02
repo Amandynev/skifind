@@ -4,9 +4,11 @@ class ResortsController < ApplicationController
 
     def index
         if params[:query].present?
-            sql_query = "resort_name @@ :query OR resort_description @@ :query"
-            @resorts = Resort.where(sql_query, query: "%#{params[:query]}%")
-                             .map { |resort| [resort, nil]}
+          sql_query = "resort_name @@ :query OR resort_description @@ :query"
+          @resorts = Resort.where(sql_query, query: "%#{params[:query]}%")
+                           .map { |resort| [resort, nil]}
+
+          raise
         else
           # Ici on va trier les resorts en fonction des préférences
 
