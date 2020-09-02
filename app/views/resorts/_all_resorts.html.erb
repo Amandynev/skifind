@@ -1,37 +1,42 @@
 <% if params[:query].present? %>
 
-<div class="container-title-index ">
-  <div class="row">
-    <div class="index-infos">
-      <h1 class="title-index">Vos stations françaises</h1>
-      <p>Retrouve toutes les stations disponibles!</br>
-        Parcours skifind afin de trouver <strong>TA</strong> station préférée. </br>
-        Mais si tu veux allier envies et skis, n'hésites pas à parler avec George!</p>
-    </div>
-  </div>
-</div>
+<div class="banner-index-all d-flex justify-content-center  flex-column">
 
-  <div class="container d-flex justify-content-center">
+  <div class="container-title-index-all ">
     <div class="row">
-      <div>
-        <% @resorts.each do |resort|  %>
-          <%= link_to resort_path(resort), class: 'link-without-style' do %>
-            <div class="card-product">
-              <%= image_tag resort[0].photo_asset, alt: "Tignes", width: 200, class: "img-resort" %>
-              <div class="card-product-infos">
-                <%= resort[1] %>
-                  <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort[0].resort_address %></p>
-                  <div class="info-resort name mb-5">
-                    <h4 class="titre_h4"><%= resort[0].resort_name %></h4>
-                  </div>
-                  <div class="info-resort-description">
-                    <p><%=  resort[0].resort_description%></p>
-                  </div>
-              </div>
-            </div>
-          <% end %>
-        <% end %>
+      <div class="index-infos-all">
+        <h1 class="title-index-all">Vos stations françaises</h1>
+        <p>Retrouve toutes les stations disponibles!</br>
+          Parcours skifind afin de trouver <strong>TA</strong> station préférée. </br>
+          Mais si tu veux allier envies et skis, n'hésites pas à parler avec George!</p>
       </div>
     </div>
   </div>
-<% end %>
+
+    <div class="container d-flex justify-content-center">
+      <div class="row">
+        <div>
+          <% @resorts.each do |resort|  %>
+            <%= link_to resort_path(resort), class: 'link-without-style' do %>
+              <div class="card-product">
+                <%= image_tag resort[0].photo_asset, alt: "Tignes", width: 200, class: "img-resort" %>
+                <div class="card-product-infos">
+                  <%= resort[1] %>
+                    <p class="localisation-all"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort[0].resort_address %></p>
+                    <div class="info-resort name mb-5">
+                      <h3 class="localisation-mountains"> <%= resort[0].mountains %> </h3>
+                      <h4 class="titre_h4"><%= resort[0].resort_name %></h4>
+                    </div>
+                    <div class="info-resort-description">
+                      <p><%=  resort[0].resort_description%></p>
+                    </div>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+
+</div>

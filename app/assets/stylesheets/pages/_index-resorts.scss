@@ -2,19 +2,23 @@
   color: #02245C;
 }
 
-.container-title-index{
+.container-title-index-all{
   margin: 10px;
   width: 100vh;
 }
 
-.title-index {
+.title-index-all{
   color: #02245C;
-  padding-top: 50px;
+
 }
 
-.index-infos{
+.index-infos-all{
     width: 800px;
     margin: 80px 60px 40px 60px;
+    color: white;
+     text-shadow: -1px 0 #02245C, 0 1px #02245C, 1px 0 #02245C, 0 -1px #02245C;
+
+
   }
 
 a{
@@ -24,6 +28,17 @@ a{
 .info-resort-description{
   font-size: 14px;
 }
+
+
+.banner-index-all{
+  background-image:    asset-url('background_all_resorts.jpg');
+  background-size:     cover;
+  background-position: center;
+  width:               100vw;
+  height:              100vh;
+  background-repeat: no-repeat;
+}
+
 
 /* ------- Georges's index --------- */
 
@@ -75,3 +90,15 @@ border-top-right-radius: 5px;
   top: 25px;
   right: 30px;
 }
+
+
+.title-index{
+  color: #02245C;
+  padding-top: 50px;
+}
+
+.index-infos{
+    width: 800px;
+    margin: 80px 60px 40px 60px;
+  }
+
