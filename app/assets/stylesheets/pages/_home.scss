@@ -1,15 +1,23 @@
 // Specific CSS for your home-page
 
+
+
+
 .banner-home{
   background-image:    asset-url('Background-home0.jpg');
   background-size:     cover;
   background-position: center;
   width:               100vw;
   height:              100vh;
-  background-attachment: fixed;
   background-repeat: no-repeat;
 
+}
+@media(min-width: 621px) {
+  .banner-home {
+    background-attachment: fixed;
   }
+}
+
 
 .container-fluid h2 {
     color: #011028;

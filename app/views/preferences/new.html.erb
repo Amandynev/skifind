@@ -9,7 +9,7 @@
               </div>
             </div>
             <div class="d-flex justify-content-end ">
-              <div class="border-radius-10px border-radius-10px mw-50 p-2 m-2">
+              <div class="border-radius-10px text-white border-radius-10px mw-50 p-2 m-2">
                 <%= f.input :visitor_name, placeholder: "Name", label: false %>
               </div>
             </div>
@@ -22,7 +22,7 @@
             </div>
             <% Preference::ROOMMATE.each do |key, value|%>
               <div class="d-flex justify-content-end">
-                <div class="btn-georges roommate border-radius-10px bg-blue mw-50 p-2 m-2"
+                <div class="btn-georges roommate text-white border-radius-10px bg-blue mw-50 p-2 m-2"
                      data-roommate="<%= key %>"
                     style="cursor: pointer;">
                  <%= value %>

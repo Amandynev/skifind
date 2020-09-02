@@ -11,34 +11,9 @@
   </div>
 </div>
 
-<div class="container d-flex justify-content-center">
-  <div class="row">
-    <div>
-      <% @resorts.each do |resort|  %>
-        <%= link_to resort_path(resort[0]), class: 'link-without-style' do %>
-          <div class="card-product">
-                <%= image_tag resort[0].photo_asset, alt: "Tignes", width: 200, class: "img-resort" %>
-            <div class="card-product-infos">
 
-              <%= resort[1] if resort[1] %>%
-                <p class="localisation"><i class="fas fa-map-marked-alt icon-color"></i> <%= resort[0].resort_address %></p>
-                <div class="info-resort name mb-5">
-                  <h4 class="titre_h4"><%= resort[0].resort_name %></h4>
-                </div>
-                <div class="info-resort-description">
-                  <p><%=  resort[0].resort_description%></p>
-                </div>
-            </div>
-          </div>
-        <% end %>
-
-      <% end %>
-    </div>
-  </div>
-</div>
-
------------------------>
-
+<%= render 'all_resorts'  %>
+<%= render 'georges_resorts'  %>
 
 <!------------------------------Georges's index ------------------------->
 

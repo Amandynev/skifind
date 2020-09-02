@@ -87,7 +87,7 @@ const initGeorges = () => {
     if (event.key === "Enter") {
       roommateIdElement.classList.remove("d-none");
       loadDynamicBannerText("Tu as prévu de partir:", "roommate-question");
-      roommateIdElement.scrollIntoView({behavior: 'smooth', block: 'end'});
+      roommateIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
     }
   })
    // const divs = document.querySelectorAll('#budget > div')
@@ -97,28 +97,21 @@ const initGeorges = () => {
       // 3. on crée une variable (let) duration = 1000
       // 4. parcourir le tableau de div et setTimeOut(element.classList.remove('d-none'), duration)
       // 5. à chaque itération j'ajoute 500 ms à duration
-  let duration = 800;
-  let opacity = 100;
+  let duration = 100;
   const roommates = document.querySelectorAll('.roommate');
   roommates.forEach(function(roommate) {
     roommate.addEventListener('click',  function(){
       updateFormRoommate();
       //fillInPerferenceRoomateForm
-      roommates.forEach(element => element.classList.add("d-none"));
+
+      roommates.forEach((element) => element.classList.add("d-none"));
       roommate.classList.remove("d-none");
+
       loadDynamicBannerText("Quel est ton budget ?", "budget-question");
       setTimeout(function(){
         budgetIdElement.classList.remove("d-none");
-        budgetIdElement.scrollIntoView({behavior: 'smooth', block: 'end'});
+        budgetIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
       }, duration);
-    function fadeOut() {
-    opacity--;
-    div.style.opacity = opacity/100;
-    if (opacity > 0){
-        setTimeout(fadeOut,speed);
-    }
-}
-fadeOut();
     });
   });
 
@@ -130,8 +123,8 @@ fadeOut();
       budget.classList.remove("d-none");
       loadDynamicBannerText("Ta journée idéale :", "day_activities-question");
       setTimeout(function(){
-      day_activitiesIdElement.scrollIntoView({behavior: 'smooth', block: 'end'});
       day_activitiesIdElement.classList.remove("d-none");
+      day_activitiesIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
       }, duration);
     });
   });
@@ -145,7 +138,7 @@ fadeOut();
       loadDynamicBannerText("Tu es plutôt...", "biological_clock-question");
       setTimeout(function(){
       biological_clockIdElement.classList.remove("d-none");
-      biological_clockIdElement.scrollIntoView({behavior: 'smooth', block: 'end'});
+      biological_clockIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
       }, duration);
     });
   });
@@ -159,7 +152,7 @@ fadeOut();
       loadDynamicBannerText("Ton logement idéal...", "accommodation-question");
       setTimeout(function(){
       accommodationIdElement.classList.remove("d-none");
-      accommodationIdElement.scrollIntoView({behavior: 'smooth', block: 'end'});
+      accommodationIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
       }, duration);
     });
   });
@@ -173,7 +166,7 @@ fadeOut();
       loadDynamicBannerText("Ton coin idéal...", "spot-question");
       setTimeout(function(){
       spotIdElement.classList.remove("d-none");
-      spotIdElement.scrollIntoView({behavior: 'smooth', block: 'end'});
+      spotIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
       }, duration);
     });
   });
@@ -185,7 +178,10 @@ fadeOut();
       spots.forEach(element => element.classList.add("d-none"));
       spot.classList.remove("d-none");
       loadDynamicBannerText("Ta soirée idéale...", "night_activities-question");
+      setTimeout(function(){
       night_activitiesIdElement.classList.remove("d-none");
+       spotIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+      }, duration);
     });
   });
 
@@ -195,8 +191,10 @@ fadeOut();
       updateFormNightActivities();
       nights_activities.forEach(element => element.classList.add("d-none"));
       night_activities.classList.remove("d-none");
-      loadDynamicBannerText("Pour toi les vacances au ski c'est...", "expectations-question");
+      setTimeout(function(){
       expectationsIdElement.classList.remove("d-none");
+      loadDynamicBannerText("Pour toi les vacances au ski c'est...", "expectations-question");
+      }, duration);
     });
   });
 
@@ -206,8 +204,10 @@ fadeOut();
       updateFormExpectations();
       expectationss.forEach(element => element.classList.add("d-none"));
       expectations.classList.remove("d-none");
-      loadDynamicBannerText("Combien de km es-tu prêt à faire ?", "kilometers-question");
+      setTimeout(function(){
       kilometersIdElement.classList.remove("d-none");
+      loadDynamicBannerText("Combien de km es-tu prêt à faire ?", "kilometers-question");
+      }, duration);
     });
   });
 
@@ -217,8 +217,10 @@ fadeOut();
       updateFormKilometers();
       kilometerss.forEach(element => element.classList.add("d-none"));
       kilometersIdElement.classList.remove("d-none");
-      loadDynamicBannerText("Veux-tu être géolocalisé afin de profiter à 100% de notre service personnalisé?", "geocation-question");
+      setTimeout(function(){
       geocationIdElement.classList.remove("d-none");
+      loadDynamicBannerText("Veux-tu être géolocalisé afin de profiter à 100% de notre service personnalisé?", "geocation-question");
+      }, duration);
     });
   });
 
@@ -238,9 +240,10 @@ fadeOut();
 
 
     remerciementIdElement.classList.remove("d-none");
+    setTimeout(function(){
     loadDynamicBannerText("Merci !! C'était sympa d'apprendre à te connaitre.<br> Valide pour voir ma séléction :)", "remerciement-question");
     submitGeorgesIdElement.classList.remove("d-none");
-
+    }, duration);
     // submitForm
   });
 
@@ -248,8 +251,10 @@ fadeOut();
   geocationFalse.addEventListener('click', function check() {
     document.getElementById("preference_geocation").checked = false;
     remerciementIdElement.classList.remove("d-none");
+    setTimeout(function(){
     loadDynamicBannerText("Merci !! C'était sympa d'apprendre à te connaitre.<br> Valide pour voir ma séléction :)", "remerciement-question");
     submitGeorgesIdElement.classList.remove("d-none");
+    }, duration);
     // submitForm
   });
 };
