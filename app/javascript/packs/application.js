@@ -27,6 +27,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { initGeorges } from '../plugins/georges';
 import { mouseover } from '../channels/mouseover';
 import { initSweetalert } from '../plugins/init_sweetalert';
+import { initCharts } from '../plugins/init_charts'
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 
@@ -51,5 +52,8 @@ document.addEventListener('turbolinks:load', () => {
     icon: "success",
     timer: 4000,
   });
+  
+  initCharts();
+
 })
 
