@@ -6,6 +6,7 @@ class ResortsController < ApplicationController
         if params[:query].present?
             sql_query = "resort_name @@ :query OR resort_description @@ :query"
             @resorts = Resort.where(sql_query, query: "%#{params[:query]}%")
+                             .map { |resort| [resort, nil]}
         else
           # Ici on va trier les resorts en fonction des préférences
 
@@ -15,14 +16,21 @@ class ResortsController < ApplicationController
     end
 
     def show
-        @resort = Resort.new
-        @resort = Resort.find(params[:id])
-        @activity = Activity.new
-        @markers = [{
+      @resort = Resort.new
+      @resort = Resort.find(params[:id])
+      @activity = Activity.new
+
+      @markers = [{
         lat: @resort.latitude,
         lng: @resort.longitude,
         infoWindow: render_to_string(partial: "info_window", locals: { resort: @resort })
       }]
+
+      @loc = current_user and current_user.preference ? [
+        { lat: current_user.preference.latitude, lng: current_user.preference.longitude },
+        { lat: @resort.latitude, lng: @resort.longitude }
+      ] : nil
+
     end
 
     def set_resort

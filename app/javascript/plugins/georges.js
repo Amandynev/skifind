@@ -227,6 +227,18 @@ const initGeorges = () => {
   const geocationTrue = document.getElementById('geocation-true');
   geocationTrue.addEventListener('click', function check() {
     document.getElementById("preference_geocation").checked = true;
+
+    // ask browser geoloc
+    navigator.geolocation.getCurrentPosition(function(position) {
+      document.getElementById('preference_longitude').value = position.coords.longitude;
+      document.getElementById('preference_latitude').value = position.coords.latitude;
+
+
+    });
+
+
+
+
     remerciementIdElement.classList.remove("d-none");
     setTimeout(function(){
     loadDynamicBannerText("Merci !! C'était sympa d'apprendre à te connaitre.<br> Valide pour voir ma séléction :)", "remerciement-question");

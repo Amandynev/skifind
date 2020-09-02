@@ -9,6 +9,7 @@
 
 .title-index {
   color: #02245C;
+  padding-top: 50px;
 }
 
 .index-infos{
@@ -27,23 +28,18 @@ a{
 /* ------- Georges's index --------- */
 
 .card{
-  height: 650px;
-  width: 300px;;
+  height: 500px;
+  width: 300px;
+  border-radius: 10px;
+  border: 1px solid rgba(80, 137, 145, 0.4);
 }
 
-.card-choose1{
-  margin: 15px;
-  transition-duration: 1s;
+.card:hover {
+  border: 1px solid rgba(80, 137, 145, 1);
 }
 
-.card-choose2{
+.card-choose {
   margin: 15px;
-  transition-duration: 2s;
-}
-
-.card-choose3{
-  margin: 15px;
-  transition-duration: 3s;
 }
 
 .container-title{
@@ -53,23 +49,40 @@ a{
 .container h5 {
   text-align: center;
   color: #02245C;
+  margin-top: 10px;
+  font-size: 24px;
 }
 
-.container .logo {
-  width: 160px;
-  height: 160px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 15px;
-  position: initial;
+.logo {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  padding: 15px;
+  position: absolute;
+  margin-left: -25px;
+
 }
 
 .green-tick{
   color: rgb(1, 255, 1);
 }
 
-.red-cross{
-  color: #e61937;
+.photo {
+width: 280px;
+height: 160px;
+position: relative;
+margin-top: -8px;
+margin-left: -6px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
 }
 
+.answer {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.localisation {
+  color: white;
+}

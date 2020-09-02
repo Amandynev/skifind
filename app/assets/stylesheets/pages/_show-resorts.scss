@@ -8,7 +8,27 @@
   font-weight: bold;
 }
 
+.massif-show{
+  font-size: 20px;
+  font-weight: bold;
+  color: #02245C;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
 
+.resort-title{
+  font-size: 60px;
+  padding-bottom: 30px;
+  font-weight: bold;
+  color: #02245C;
+  position: relative;
+  // top: 50vh;
+  // left: 30vw;
+  // z-index: 9999;
+}
 
 .slopes{
   position:relative;
@@ -46,19 +66,12 @@ body{
 
 }
 
-.resort-title{
-  padding-bottom: 20px;
-  font-weight: bold;
-  color: #02245C;
-}
-
 .slopes-title {
   position:relative;
 }
 .slopes-colors{
   position:absolute;
   left: 80px;
-
 }
 
 .photo-caroussel{
