@@ -84,9 +84,9 @@
         <div class="description">
           <%= @resort.resort_description %>
           <div class="site-officiel">
-           
+
             <%= link_to "Site officiel", @resort.resort_website, class: "buton-primary", target: "_blank"  %>
-            <%= link_to "Toutes les stations", resorts_path, class: "buton-primary" %>
+            <%= link_to "Mes résultats", resorts_path, class: "buton-primary" %>
           </div>
         </div>
         <p class="localisation-show"> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.resort_address %></p>
