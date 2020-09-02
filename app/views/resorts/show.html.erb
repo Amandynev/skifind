@@ -80,7 +80,6 @@
 
         </div>
 
-
         <div class="description">
           <%= @resort.resort_description %>
           <div class="site-officiel">
@@ -90,9 +89,11 @@
         </div>
         <p class="localisation-show"> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.resort_address %></p>
 
+  <div class="itinerary">
         <% if current_user and current_user.preference and current_user.preference.latitude %>
-          <p> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.distance(current_user.preference) %> km</p>
+          <p> <%= @resort.distance(current_user.preference) %> km</p>
         <% end %>
+  </div>
 
     </div>
   </div>
