@@ -8,7 +8,6 @@ class ResortsController < ApplicationController
           @resorts = Resort.where(sql_query, query: "%#{params[:query]}%")
                            .map { |resort| [resort, nil]}
 
-          raise
         else
           # Ici on va trier les resorts en fonction des préférences
 
