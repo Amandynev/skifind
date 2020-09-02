@@ -1,10 +1,11 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand navbar-light navbar-lewagon">
   <%= link_to root_path, class: "logo" do %>
    <%= image_tag("LOGO_SKIFIND_200.png", height: '150px') %>
   <% end %>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
-    </button>
+      </button>
+
     <div class="search">
       <%= form_tag resorts_path, method: :get, class: "search-form" do %>
         <%= text_field_tag :query,
