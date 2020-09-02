@@ -2,6 +2,11 @@
 <p><%= resort.resort_address %></p> -->
 <div class="itinerary">
         <% if current_user and current_user.preference and current_user.preference.latitude %>
-          <p> <%= @resort.distance(current_user.preference) %> km</p>
+          <h6 class="text-window">Vous êtes à </h6>
+          <h2 class="distance"> <%= @resort.distance(current_user.preference) %> km</h2>
+          <h6 class="text-window"> de votre station idéale : </h6>
+          <h6 class="resort-name-window"> <%= resort.resort_name %> </h6>
+
+
         <% end %>
   </div>
