@@ -34,6 +34,7 @@ const initMapbox = () => {
     .then(response => response.json())
     .then((data) => {
       console.log(data);
+      // innertext + afficher la duration
     });
 
   }
