@@ -28,7 +28,7 @@ import { initGeorges } from '../plugins/georges';
 import { mouseover } from '../channels/mouseover';
 import { initSweetalert } from '../plugins/init_sweetalert';
 import { updateQueryPlaceholder } from '../plugins/update_query_placeholder';
-import { initCharts } from '../plugins/init_charts'
+import { initCharts } from '../plugins/init_charts';
 
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
@@ -56,7 +56,7 @@ document.addEventListener('turbolinks:load', () => {
   });
 
   updateQueryPlaceholder();
-  
+
   initCharts();
 })
 
