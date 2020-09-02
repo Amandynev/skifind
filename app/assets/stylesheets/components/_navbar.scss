@@ -4,17 +4,17 @@
 
 .navbar-lewagon {
   position: absolute;
-  justify-content: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background-color: transparent;
   width: 100vw;
   top: 0;
+  height: 100px;
   z-index: 9999;
 }
 
 .navbar-lewagon .navbar-collapse {
-  position: absolute;
-  right: 30px;
-  top: 30px;
   flex-grow: 0;
 }
 
@@ -22,11 +22,12 @@
   width: 40px;
 }
 
-.logo {
-  position: absolute;
-  size: 50px;
-  left: 30px;
-  top: 0px;
+.logo-skifind {
+  /*position: absolute;*/
+  /*size: 50px;*/
+  /*left: 30px;*/
+  /*top: 0px;*/
+  max-width: 55.42px;
   z-index: 9999;
 }
 
@@ -35,9 +36,11 @@
 }
 
 @media(max-width: 620px) {
-  .logo {
-    left: 25vw;
-    top: 0px;
+  .logo-skifind {
+    /*left: 25vw;*/
+    left: 15px;
+    top: 15px;
+    height: 50px;
   }
   .navbar-toggler{
     position: absolute;
@@ -53,8 +56,20 @@
   font-style: italic;
 }
 ::-moz-placeholder {
-  font-style: italic;  
+  font-style: italic;
 }
-:-ms-input-placeholder {  
-  font-style: italic; 
+:-ms-input-placeholder {
+  font-style: italic;
+}
+:-ms-input-placeholder {
+  font-style: italic;
+}
+
+.avatar {
+    background-size: cover;
+    box-shadow: 1px 1px 2px #F6F8FF;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin-top: -10px;
 }
