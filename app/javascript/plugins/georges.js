@@ -216,7 +216,7 @@ const initGeorges = () => {
     kilometers.addEventListener('click', function(){
       updateFormKilometers();
       kilometerss.forEach(element => element.classList.add("d-none"));
-      kilometersIdElement.classList.remove("d-none");
+      kilometers.classList.remove("d-none");
       setTimeout(function(){
       geocationIdElement.classList.remove("d-none");
       loadDynamicBannerText("Veux-tu être géolocalisé afin de profiter à 100% de notre service personnalisé?", "geocation-question");

@@ -1,15 +1,16 @@
 <div id="georges" class="container-georges">
   <div class="ecran-interface-george">
-      <div class="spacer"></div>
+      <div class="spacer">
+      </div>
         <%= simple_form_for @preference do |f| %>
 
           <div id="name">
             <div class="d-flex justify-content-start" >
-              <div id="name-question" class="border-radius-10px bg-white p-2 m-2" >
+              <div id="name-question" class="btn-georges-question border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <div class="d-flex justify-content-end ">
-              <div class="border-radius-10px text-white border-radius-10px mw-50 p-2 m-2">
+              <div class="border-radius-10px border-radius-10px mw-50 p-2 m-2">
                 <%= f.input :visitor_name, placeholder: "Name", label: false %>
               </div>
             </div>
@@ -17,12 +18,12 @@
 
           <div id="roommate" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div id="roommate-question"class="border-radius-10px bg-white p-2 m-2" >
+              <div id="roommate-question"class="btn-georges-question border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::ROOMMATE.each do |key, value|%>
               <div class="d-flex justify-content-end">
-                <div class="btn-georges roommate text-white border-radius-10px bg-blue mw-50 p-2 m-2"
+                <div class="btn-georges roommate border-radius-10px bg-blue mw-50 p-2 m-2"
                      data-roommate="<%= key %>"
                     style="cursor: pointer;">
                  <%= value %>
@@ -35,7 +36,7 @@
 
           <div id="budget" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div  id="budget-question" class="border-radius-10px bg-white p-2 m-2" >
+              <div  id="budget-question" class="btn-georges-question border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::BUDGET.each do |key, value|%>
@@ -53,7 +54,7 @@
 
           <div id="day_activities" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div id="day_activities-question" class="border-radius-10px bg-white p-2 m-2" >
+              <div id="day_activities-question" class="btn-georges-question border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::DAY_ACTIVITIES.each do |key, value|%>
@@ -71,7 +72,7 @@
 
           <div id="biological_clock" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div id="biological_clock-question" class="border-radius-10px bg-white p-2 m-2" >
+              <div id="biological_clock-question" class="btn-georges-question border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::BIOLOGICAL_CLOCK.each do |key, value|%>
@@ -89,7 +90,7 @@
 
           <div id="accommodation" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div id="accommodation-question" class="border-radius-10px bg-white p-2 m-2" >
+              <div id="accommodation-question" class="btn-georges-question border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::ACCOMMODATION.each do |key, value|%>
@@ -107,7 +108,7 @@
 
           <div id="spot" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div id="spot-question" class="border-radius-10px bg-white p-2 m-2" >
+              <div id="spot-question" class="btn-georges-question border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::SPOT.each do |key, value|%>
@@ -125,7 +126,7 @@
 
           <div id="night_activities" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div id="night_activities-question" class="border-radius-10px bg-white p-2 m-2" >
+              <div id="night_activities-question" class="btn-georges-question border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::NIGHT_ACTIVITIES.each do |key, value|%>
@@ -143,7 +144,7 @@
 
           <div id="expectations" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div id="expectations-question" class="border-radius-10px bg-white p-2 m-2" >
+              <div id="expectations-question" class="btn-georges-question border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::EXPECTATIONS.each do |key, value|%>
@@ -161,7 +162,7 @@
 
           <div id="kilometers" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div id="kilometers-question" class="border-radius-10px bg-white p-2 m-2" >
+              <div id="kilometers-question" class="btn-georges-question border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
             <% Preference::KILOMETERS.each do |key, value|%>
@@ -179,7 +180,7 @@
 
           <div id="geocation" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div id="geocation-question" class="border-radius-10px bg-white p-2 m-2" >
+              <div id="geocation-question" class="btn-georges-question border-radius-10px bg-white p-2 m-2" >
 
               </div>
             </div>
@@ -200,12 +201,12 @@
           <%= f.input :latitude, as: :hidden %>
           <div id="remerciement" class="d-none">
             <div class="d-flex justify-content-start" >
-              <div id="remerciement-question" class="border-radius-10px bg-white p-2 m-2" >
+              <div id="remerciement-question" class="btn-georges-question border-radius-10px bg-white p-2 m-2" >
               </div>
             </div>
           </div>
           <%= f.submit "Valider", id: "submit-georges", class: "buton-primary d-none" %>
         <% end %>
-      </div>
-
+  </div>
 </div>
+
