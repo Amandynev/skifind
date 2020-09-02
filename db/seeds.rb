@@ -46,7 +46,7 @@ tignes = Resort.create!(
   snowpark: "2 snowparks",
   free_carpark: "payant",
   mountains: "Savoie",
-  # resort_website:"https://www.tignes.net/",
+  resort_website:"https://www.tignes.net/",
 )
 
 t_preference = Preference.create(
@@ -70,6 +70,7 @@ file = URI.open("https://cdm0lfbn.cloudimg.io/v7/_origin_/image_uploader/photos/
 
 tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
+
 vars = Resort.create!(
     resort_name: "Vars",
     resort_address: "3 rue dominique, 05560 Vars, France",
@@ -89,7 +90,7 @@ vars = Resort.create!(
     snowpark: "4 snowparks",
     free_carpark: "payant",
     mountains: "Hautes-Alpes",
-    # resort_website:"https://www.vars.com/",
+    resort_website:"https://www.vars.com/",
   )
 
 v_preference = Preference.create(
@@ -131,7 +132,7 @@ courchevel = Resort.create!(
     snowpark: "2 snowparks",
     free_carpark: "payant",
     mountains: "Savoie",
-    # resort_website:"https://www.courchevel.com/fr",
+    resort_website:"https://www.courchevel.com/fr",
   )
 
 co_preference = Preference.create(
@@ -173,7 +174,7 @@ combloux = Resort.create!(
     snowpark: "1 snowpark",
     free_carpark: "gratuit",
     mountains: "Haute-Savoie",
-    # resort_website:"https://ete.combloux.com/",
+    resort_website:"https://ete.combloux.com/",
   )
 
 c_preference = Preference.create(
@@ -214,7 +215,7 @@ avoriaz = Resort.create!(
     snowpark: "2 snowparks",
     free_carpark: "payant",
     mountains: "Haute-Savoie",
-    # resort_website:"https://www.avoriaz.com/",
+    resort_website:"https://www.avoriaz.com/",
   )
 
 
@@ -257,7 +258,7 @@ isola = Resort.create!(
     snowpark: "1 snowpark",
     free_carpark: "gratuit",
     mountains: "Alpes-Maritimes",
-    # resort_website:"https://www.isola2000.com/",
+    resort_website:"https://www.isola2000.com/",
   )
 
 i_preference = Preference.create(
@@ -299,7 +300,7 @@ bolquere = Resort.create!(
     snowpark: "1 snowpark",
     free_carpark: "payant",
     mountains: "Pyrénées-Orientales",
-    # resort_website:"http://www.pyrenees2000.com/fr/",
+    resort_website:"http://www.pyrenees2000.com/fr/",
   )
 
 b_preference = Preference.create(
@@ -341,7 +342,7 @@ puyvalador = Resort.create!(
     snowpark: "1 snowpark",
     free_carpark: "gratuit",
     mountains: "Pyrénées-Orientales",
-    # resort_website:"https://www.puyvalador-ski.fr/",
+    resort_website:"https://www.puyvalador-ski.fr/",
   )
 
 
@@ -385,7 +386,7 @@ besse = Resort.create!(
     snowpark: "1 snowpark",
     free_carpark: "payant",
     mountains: "Massif central",
-    # resort_website:"https://www.sancy.com/destination/toutes-les-communes/superbesse/",
+    resort_website:"https://www.sancy.com/destination/toutes-les-communes/superbesse/",
   )
 
 b_preference = Preference.create(
@@ -428,7 +429,7 @@ chalmazel = Resort.create!(
     snowpark: "pas de snwopark",
     free_carpark: "payant",
     mountains: "La loire",
-    # resort_website:"https://www.loire.fr/jcms/dlw_1111340/accueil",
+    resort_website:"https://www.loire.fr/jcms/dlw_1111340/accueil",
   )
 
 cha_preference = Preference.create(
@@ -471,7 +472,7 @@ morbier = Resort.create!(
     snowpark: "non",
     free_carpark: "payant",
     mountains: "Le Jura",
-    # resort_website:"http://www.morbier.fr/",
+    resort_website:"http://www.morbier.fr/",
   )
 
 mor_preference = Preference.create(
@@ -514,7 +515,7 @@ metabief = Resort.create!(
     snowpark: "1 snowpark",
     free_carpark: "payant",
     mountains: "Le Jura",
-    # resort_website:"hhttps://www.tourisme-metabief.com/",
+    resort_website:"hhttps://www.tourisme-metabief.com/",
   )
 
 met_preference = Preference.create(
