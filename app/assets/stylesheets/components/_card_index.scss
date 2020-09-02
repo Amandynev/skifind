@@ -2,13 +2,13 @@
   overflow: hidden;
   height: 220px;
   width: 93vw;
-  background: white;
   display: flex;
   align-items: center;
   position: relative;
-  border: 1px solid #02245C;
   transition: .3s;
   margin-bottom: 10px;
+  background-color: rgba(255,255,255,0.9);
+  border: 2px solid white;
 }
 
 
@@ -27,7 +27,7 @@
   justify-content: center;
   display: flex;
   align-items: center;
-  background: white;
+  background-color: white;
   top: 20px;
   bottom: 20px;
   opacity: 0;
@@ -48,7 +48,7 @@
 
 }
 
-.localisation {
+.localisation-all {
   font-size: 14px;
   line-height: 1.4;
   opacity: .7;
@@ -57,6 +57,22 @@
   position:absolute;
   top: 25px;
   right: 30px;
+
+
+}
+
+.localisation-mountains {
+  font-size: 16px;
+  font-weight:bold;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+  position:absolute;
+  top: 50px;
+  right: 80px;
+  color: #02245C;
+
 
 }
 
@@ -77,7 +93,7 @@
   width: 70vw;
 }
 
-.localisation {
+.localisation-all {
   font-size: 5px;
   line-height: 1.4;
   opacity: .7;
