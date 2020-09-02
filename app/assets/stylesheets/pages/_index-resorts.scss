@@ -9,6 +9,7 @@
 
 .title-index {
   color: #02245C;
+  padding-top: 150px;
 }
 
 .index-infos{
@@ -37,19 +38,8 @@ a{
   border: 1px solid rgba(80, 137, 145, 1);
 }
 
-.card-choose1{
+.card-choose {
   margin: 15px;
-  transition-duration: 1s;
-}
-
-.card-choose2{
-  margin: 15px;
-  transition-duration: 2s;
-}
-
-.card-choose3{
-  margin: 15px;
-  transition-duration: 3s;
 }
 
 .container-title{
@@ -75,10 +65,6 @@ a{
 
 .green-tick{
   color: rgb(1, 255, 1);
-}
-
-.red-cross{
-  color: #e61937;
 }
 
 .photo {
