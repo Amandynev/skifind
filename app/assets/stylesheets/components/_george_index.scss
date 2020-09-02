@@ -13,4 +13,11 @@
     color: rgb(1, 255, 1);
   }
   
-  
+  .banner-george{
+    background-image: asset-url('background_index_georges.jpg');
+    background-size:     cover;
+    background-position: center;
+    width:               100vw;
+    height:              100vh;
+    background-repeat: no-repeat;
+  }
