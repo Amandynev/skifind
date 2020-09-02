@@ -37,6 +37,10 @@ import { initSweetalert } from '../plugins/init_sweetalert';
 
 document.addEventListener('turbolinks:load', () => {
 
+  document.querySelector('.container-georges').height = window.innerHeight
+
+  console.log(window.innerHeight);
+
   const georgesElement = document.getElementById('georges');
   initMapbox();
   if (georgesElement) {
