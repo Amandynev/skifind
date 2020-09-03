@@ -180,7 +180,7 @@ const initGeorges = () => {
       loadDynamicBannerText("Ta soirée idéale...", "night_activities-question");
       setTimeout(function(){
       night_activitiesIdElement.classList.remove("d-none");
-       spotIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+      night_activitiesIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
       }, duration);
     });
   });
@@ -191,9 +191,10 @@ const initGeorges = () => {
       updateFormNightActivities();
       nights_activities.forEach(element => element.classList.add("d-none"));
       night_activities.classList.remove("d-none");
+      loadDynamicBannerText("Pour toi les vacances au ski c'est...", "expectations-question");
       setTimeout(function(){
       expectationsIdElement.classList.remove("d-none");
-      loadDynamicBannerText("Pour toi les vacances au ski c'est...", "expectations-question");
+      expectationsIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
       }, duration);
     });
   });
@@ -204,9 +205,10 @@ const initGeorges = () => {
       updateFormExpectations();
       expectationss.forEach(element => element.classList.add("d-none"));
       expectations.classList.remove("d-none");
+      loadDynamicBannerText("Combien de km es-tu prêt à faire ?", "kilometers-question");
       setTimeout(function(){
       kilometersIdElement.classList.remove("d-none");
-      loadDynamicBannerText("Combien de km es-tu prêt à faire ?", "kilometers-question");
+      kilometersIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
       }, duration);
     });
   });
@@ -216,10 +218,11 @@ const initGeorges = () => {
     kilometers.addEventListener('click', function(){
       updateFormKilometers();
       kilometerss.forEach(element => element.classList.add("d-none"));
-      kilometersIdElement.classList.remove("d-none");
+      kilometers.classList.remove("d-none");
+      loadDynamicBannerText("Veux-tu être géolocalisé afin de profiter à 100% de notre service personnalisé?", "geocation-question");
       setTimeout(function(){
       geocationIdElement.classList.remove("d-none");
-      loadDynamicBannerText("Veux-tu être géolocalisé afin de profiter à 100% de notre service personnalisé?", "geocation-question");
+      geocationIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
       }, duration);
     });
   });
@@ -228,6 +231,7 @@ const initGeorges = () => {
   geocationTrue.addEventListener('click', function check() {
     document.getElementById("preference_geocation").checked = true;
     console.log('is trying to geoloc...')
+
     // ask browser geoloc
 
 
@@ -239,13 +243,11 @@ const initGeorges = () => {
 
     });
 
-
-
-
     remerciementIdElement.classList.remove("d-none");
-    setTimeout(function(){
     loadDynamicBannerText("Merci !! C'était sympa d'apprendre à te connaitre.<br> Valide pour voir ma séléction :)", "remerciement-question");
+    setTimeout(function(){
     submitGeorgesIdElement.classList.remove("d-none");
+    submitGeorgesIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
     }, duration);
     // submitForm
   });
@@ -254,10 +256,12 @@ const initGeorges = () => {
   geocationFalse.addEventListener('click', function check() {
     document.getElementById("preference_geocation").checked = false;
     remerciementIdElement.classList.remove("d-none");
-    setTimeout(function(){
     loadDynamicBannerText("Merci !! C'était sympa d'apprendre à te connaitre.<br> Valide pour voir ma séléction :)", "remerciement-question");
+    setTimeout(function(){
     submitGeorgesIdElement.classList.remove("d-none");
+    submitGeorgesIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
     }, duration);
+
     // submitForm
   });
 };
