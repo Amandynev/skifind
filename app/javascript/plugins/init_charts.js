@@ -30,6 +30,9 @@ const initCharts = () => {
                 // Configuration options go here
                 options: { legend: { display: false }}
             });
+
+            chartElement.style.width = '96px';
+            chartElement.style.height = '96px';
         })
 
 
