@@ -30,16 +30,16 @@ const initMapbox = () => {
     map.fitBounds(bounds, { padding: 70, maxZoom: 15 });
 
 
-    const loc = JSON.parse(document.getElementById('resort-show').dataset.loc);
+    // const loc = JSON.parse(document.getElementById('resort-show').dataset.loc);
 
-    const url = `https://api.mapbox.com/directions-matrix/v1/mapbox/driving/${loc[0].lat},${loc[0].lng};${loc[1].lat},${loc[1].lng}?approaches=curb;curb&annotations=duration,distance&access_token=${mapElement.dataset.mapboxApiKey}`
-    console.log(url);
-    fetch(url)
-    .then(response => response.json())
-    .then((data) => {
-      console.log(data);
-      // innertext + afficher la duration
-    });
+    // const url = `https://api.mapbox.com/directions-matrix/v1/mapbox/driving/${loc[0].lat},${loc[0].lng};${loc[1].lat},${loc[1].lng}?approaches=curb;curb&annotations=duration,distance&access_token=${mapElement.dataset.mapboxApiKey}`
+    // console.log(url);
+    // fetch(url)
+    // .then(response => response.json())
+    // .then((data) => {
+    //   console.log(data);
+    //   // innertext + afficher la duration
+    // });
 
   }
 
