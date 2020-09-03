@@ -7,7 +7,9 @@
      <div class="carousel-inner ">
     <div class="carousel-caption ">
       <h1 class="resort-title mt-3"><%= @resort.resort_name %></h1>
-      <p class="massif-show"> <%= @resort.mountains %> </p>
+      <div class="massif-position">
+        <p class="massif-show"> <%= @resort.mountains %> </p>
+      </div>
     </div>
     <% @resort.landscapes.each_with_index do |photo, index| %>
        <div class="carousel-item <%= 'active' if index == 0 %>">
@@ -81,7 +83,9 @@
       </div>
 
     </div>
-
+    <div class="localisation-show">
+       <p class="localisation-show"> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.resort_address %></p>
+      </div>
         <%= render 'shared/map' %>
 
 
