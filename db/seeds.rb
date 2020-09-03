@@ -105,11 +105,11 @@ v_preference = Preference.create(
   matchable: vars
 )
 
+file = URI.open("https://www.cgh-residences.com/photos/stations/sliders/vars-2_287.jpg")
+vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 file = URI.open("https://images.unsplash.com/photo-1516659336300-f95a2a0c5d74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")
 vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 file = URI.open("https://www.vars.com/thumbnail/detail/uploads/photos/7/4/7/0/chalet-ecuelle.jpeg?v=1531302683")
-vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
-file = URI.open("https://www.cgh-residences.com/photos/stations/sliders/vars-2_287.jpg")
 vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
 courchevel = Resort.create!(
