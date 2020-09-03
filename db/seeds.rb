@@ -62,12 +62,11 @@ t_preference = Preference.create(
   matchable: tignes
 )
 
+file = URI.open("https://images.unsplash.com/photo-1551524559-8af4e6624178?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1226&q=80")
+tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://images.unsplash.com/photo-1532124957326-34c5605398?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1267&q=80")
+tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 file = URI.open("https://www.tignes.net/uploads/media/page_block/0001/73/06fcfba68b24b6cab24cf3e56e6f43101530e418.jpeg")
-tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
-file = URI.open("https://img2.onthesnow.com/image/xl/97/tignes_resort_france_97081.jpg")
-tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
-file = URI.open("https://cdm0lfbn.cloudimg.io/v7/_origin_/image_uploader/photos/86/original/tignes-le-lavachet-tignes-le-lac--lavachet.jpg?p=large")
-
 tignes.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
 
@@ -106,11 +105,11 @@ v_preference = Preference.create(
   matchable: vars
 )
 
-file = URI.open("https://skipass.fr/p/resorts/774/header-vars-de20c-1.jpg")
+file = URI.open("https://www.cgh-residences.com/photos/stations/sliders/vars-2_287.jpg")
+vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
+file = URI.open("https://images.unsplash.com/photo-1516659336300-f95a2a0c5d74?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80")
 vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 file = URI.open("https://www.vars.com/thumbnail/detail/uploads/photos/7/4/7/0/chalet-ecuelle.jpeg?v=1531302683")
-vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
-file = URI.open("https://www.cgh-residences.com/photos/stations/sliders/vars-2_287.jpg")
 vars.landscapes.attach(io: file, filename: 'landscape.jpg', content_type: 'image/png')
 
 courchevel = Resort.create!(

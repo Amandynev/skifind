@@ -31,7 +31,7 @@
 .massif-show{
   font-size: 20px;
   font-weight: bold;
-  color: white;
+  color: #011028;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -45,7 +45,7 @@
 .resort-title{
   font-size: 60px;
   font-weight: bold;
-  color: white;
+  color: #011028;
   margin-left: auto;
   margin-right: auto;
   left: 0;
@@ -72,8 +72,8 @@ body{
   margin-bottom: 20px;
   margin-top: 20px;
   position:absolute;
-  top: 5px;
-  right: 150px;
+  top: 55px;
+  right: 130px;
   z-index: 9999;
 }
 
@@ -89,6 +89,7 @@ body{
 height: 100vh;
 width: 100vw;
 background-size: cover;
+background-position: center;
 }
 
 .container-show{
