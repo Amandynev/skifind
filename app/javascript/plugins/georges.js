@@ -65,6 +65,23 @@ const loadDynamicBannerText = (text, id) => {
   });
 }
 
+const displayQuestion = (questionElement) => setTimeout(() => questionElement.classList.remove('invisible'), 100);
+
+const displayResponses = (responseElements) => {
+  let d = 1200;
+
+  for (const response of responseElements) {
+    setTimeout(() => {
+      response.classList.remove('invisible');
+      response.classList.add('d-flex');
+      response.classList.add('justify-content-end')
+    }, d);
+    d += 500;
+  }
+}
+
+const scrollTo = (element) => element.scrollIntoView({behavior: 'smooth', block: 'end'});
+
 const initGeorges = () => {
   preventDefaultSubmitOnEnter();
 
@@ -87,7 +104,21 @@ const initGeorges = () => {
     if (event.key === "Enter") {
       roommateIdElement.classList.remove("d-none");
       loadDynamicBannerText("Tu as prévu de partir:", "roommate-question");
-      roommateIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
+      console.log(roommateIdElement);
+
+      const question = document.querySelector('#roommate-question');
+      const responses = document.querySelectorAll('#roommate-answer');
+
+      const lastResponse = responses[responses.length - 1]
+
+      // add compensation padding
+      lastResponse.style.paddingBottom = '40px';
+
+      console.log(lastResponse);
+      scrollTo(lastResponse)
+      displayQuestion(question);
+
+      displayResponses(responses);
     }
   })
    // const divs = document.querySelectorAll('#budget > div')
@@ -108,10 +139,23 @@ const initGeorges = () => {
       roommate.classList.remove("d-none");
 
       loadDynamicBannerText("Quel est ton budget ?", "budget-question");
-      setTimeout(function(){
-        budgetIdElement.classList.remove("d-none");
-        budgetIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-      }, duration);
+
+      const question = document.querySelector('#budget-question');
+      const responses = document.querySelectorAll('#budget-answer');
+
+      // remove compensation padding
+      const prevResponses = document.querySelectorAll('#roommate-answer');
+      const lastPrevResponse = prevResponses[prevResponses.length - 1];
+      lastPrevResponse.style.paddingBottom = '0px';
+
+      // add compensation padding
+      const lastResponse = responses[responses.length - 1]
+      lastResponse.style.paddingBottom = '44px';
+
+      scrollTo(budgetIdElement);
+      displayQuestion(question);
+      displayResponses(responses);
+
     });
   });
 
@@ -122,10 +166,23 @@ const initGeorges = () => {
       budgets.forEach(element => element.classList.add("d-none"));
       budget.classList.remove("d-none");
       loadDynamicBannerText("Ta journée idéale :", "day_activities-question");
-      setTimeout(function(){
-      day_activitiesIdElement.classList.remove("d-none");
-      day_activitiesIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-      }, duration);
+
+      const question = document.querySelector('#day_activities-question');
+      const responses = document.querySelectorAll('#day_activities-answer');
+
+      // remove compensation padding
+      const prevResponses = document.querySelectorAll('#budget-answer');
+      const lastPrevResponse = prevResponses[prevResponses.length - 1];
+      lastPrevResponse.style.paddingBottom = '0px';
+
+      // add compensation padding
+      const lastResponse = responses[responses.length - 1]
+      lastResponse.style.paddingBottom = '44px';
+
+      scrollTo(day_activitiesIdElement);
+      displayQuestion(question);
+      displayResponses(responses);
+
     });
   });
 
@@ -135,11 +192,24 @@ const initGeorges = () => {
       updateFormDayActivities();
       day_activities.forEach(element => element.classList.add("d-none"));
       day_activitie.classList.remove("d-none");
+
       loadDynamicBannerText("Tu es plutôt...", "biological_clock-question");
-      setTimeout(function(){
-      biological_clockIdElement.classList.remove("d-none");
-      biological_clockIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-      }, duration);
+
+      const question = document.querySelector('#biological_clock-question');
+      const responses = document.querySelectorAll('#biological_clock-answer');
+
+      // remove compensation padding
+      const prevResponses = document.querySelectorAll('#day_activities-answer');
+      const lastPrevResponse = prevResponses[prevResponses.length - 1];
+      lastPrevResponse.style.paddingBottom = '0px';
+
+      // add compensation padding
+      const lastResponse = responses[responses.length - 1]
+      lastResponse.style.paddingBottom = '44px';
+
+      scrollTo(biological_clockIdElement);
+      displayQuestion(question);
+      displayResponses(responses);
     });
   });
 
@@ -150,10 +220,22 @@ const initGeorges = () => {
       biological_clocks.forEach(element => element.classList.add("d-none"));
       biological_clock.classList.remove("d-none");
       loadDynamicBannerText("Ton logement idéal...", "accommodation-question");
-      setTimeout(function(){
-      accommodationIdElement.classList.remove("d-none");
-      accommodationIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-      }, duration);
+
+      const question = document.querySelector('#accommodation-question');
+      const responses = document.querySelectorAll('#accommodation-answer');
+
+      // remove compensation padding
+      const prevResponses = document.querySelectorAll('#biological_clock-answer');
+      const lastPrevResponse = prevResponses[prevResponses.length - 1];
+      lastPrevResponse.style.paddingBottom = '0px';
+
+      // add compensation padding
+      const lastResponse = responses[responses.length - 1]
+      lastResponse.style.paddingBottom = '44px';
+
+      scrollTo(accommodationIdElement);
+      displayQuestion(question);
+      displayResponses(responses);
     });
   });
 
@@ -164,10 +246,22 @@ const initGeorges = () => {
       accommodations.forEach(element => element.classList.add("d-none"));
       accommodation.classList.remove("d-none");
       loadDynamicBannerText("Ton coin idéal...", "spot-question");
-      setTimeout(function(){
-      spotIdElement.classList.remove("d-none");
-      spotIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-      }, duration);
+
+      const question = document.querySelector('#spot-question');
+      const responses = document.querySelectorAll('#spot-answer');
+
+      // remove compensation padding
+      const prevResponses = document.querySelectorAll('#accommodation-answer');
+      const lastPrevResponse = prevResponses[prevResponses.length - 1];
+      lastPrevResponse.style.paddingBottom = '0px';
+
+      // add compensation padding
+      const lastResponse = responses[responses.length - 1]
+      lastResponse.style.paddingBottom = '44px';
+
+      scrollTo(spotIdElement);
+      displayQuestion(question);
+      displayResponses(responses);
     });
   });
 
@@ -178,10 +272,22 @@ const initGeorges = () => {
       spots.forEach(element => element.classList.add("d-none"));
       spot.classList.remove("d-none");
       loadDynamicBannerText("Ta soirée idéale...", "night_activities-question");
-      setTimeout(function(){
-      night_activitiesIdElement.classList.remove("d-none");
-      night_activitiesIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-      }, duration);
+
+      const question = document.querySelector('#night_activities-question');
+      const responses = document.querySelectorAll('#night_activities-answer');
+
+      // remove compensation padding
+      const prevResponses = document.querySelectorAll('#spot-answer');
+      const lastPrevResponse = prevResponses[prevResponses.length - 1];
+      lastPrevResponse.style.paddingBottom = '0px';
+
+      // add compensation padding
+      const lastResponse = responses[responses.length - 1]
+      lastResponse.style.paddingBottom = '44px';
+
+      scrollTo(night_activitiesIdElement);
+      displayQuestion(question);
+      displayResponses(responses);
     });
   });
 
@@ -192,10 +298,23 @@ const initGeorges = () => {
       nights_activities.forEach(element => element.classList.add("d-none"));
       night_activities.classList.remove("d-none");
       loadDynamicBannerText("Pour toi les vacances au ski c'est...", "expectations-question");
-      setTimeout(function(){
-      expectationsIdElement.classList.remove("d-none");
-      expectationsIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-      }, duration);
+
+      const question = document.querySelector('#expectations-question');
+      const responses = document.querySelectorAll('#expectations-answer');
+
+      console.log(responses)
+      // remove compensation padding
+      const prevResponses = document.querySelectorAll('#night_activities-answer');
+      const lastPrevResponse = prevResponses[prevResponses.length - 1];
+      lastPrevResponse.style.paddingBottom = '0px';
+
+      // add compensation padding
+      const lastResponse = responses[responses.length - 1]
+      lastResponse.style.paddingBottom = '44px';
+
+      scrollTo(expectationsIdElement);
+      displayQuestion(question);
+      displayResponses(responses);
     });
   });
 
@@ -206,10 +325,22 @@ const initGeorges = () => {
       expectationss.forEach(element => element.classList.add("d-none"));
       expectations.classList.remove("d-none");
       loadDynamicBannerText("Combien de km es-tu prêt à faire ?", "kilometers-question");
-      setTimeout(function(){
-      kilometersIdElement.classList.remove("d-none");
-      kilometersIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-      }, duration);
+
+      const question = document.querySelector('#kilometers-question');
+      const responses = document.querySelectorAll('#kilometers-answer');
+
+      // remove compensation padding
+      const prevResponses = document.querySelectorAll('#expectations-answer');
+      const lastPrevResponse = prevResponses[prevResponses.length - 1];
+      lastPrevResponse.style.paddingBottom = '0px';
+
+      // add compensation padding
+      const lastResponse = responses[responses.length - 1]
+      lastResponse.style.paddingBottom = '44px';
+
+      scrollTo(kilometersIdElement);
+      displayQuestion(question);
+      displayResponses(responses);
     });
   });
 
@@ -219,21 +350,40 @@ const initGeorges = () => {
       updateFormKilometers();
       kilometerss.forEach(element => element.classList.add("d-none"));
       kilometers.classList.remove("d-none");
-      loadDynamicBannerText("Veux-tu être géolocalisé afin de profiter à 100% de notre service personnalisé?", "geocation-question");
-      setTimeout(function(){
-      geocationIdElement.classList.remove("d-none");
-      geocationIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-      }, duration);
+      loadDynamicBannerText("Veux-tu être géolocalisé pour profiter de notre service ?", "geocation-question");
+
+      const question = document.querySelector('#geocation-question');
+      console.log('geolocquestion', question)
+
+      const response1 = document.getElementById('geocation-true');
+      const response2 = document.getElementById('geocation-false');
+
+      const responses = [response1, response2];
+
+      // remove compensation padding
+      const prevResponses = document.querySelectorAll('#kilometers-answer');
+      const lastPrevResponse = prevResponses[prevResponses.length - 1];
+      lastPrevResponse.style.paddingBottom = '0px';
+
+      // add compensation padding
+      const lastResponse = responses[responses.length - 1]
+      lastResponse.style.paddingBottom = '84px';
+
+      scrollTo(geocationIdElement);
+      displayQuestion(question);
+      displayResponses(responses);
     });
   });
 
   const geocationTrue = document.getElementById('geocation-true');
+
   geocationTrue.addEventListener('click', function check() {
     document.getElementById("preference_geocation").checked = true;
     console.log('is trying to geoloc...')
 
-    // ask browser geoloc
 
+    const lastPrevResponse = document.getElementById('geocation-false');
+    lastPrevResponse.style.paddingBottom = '0px';
 
     navigator.geolocation.getCurrentPosition(function(position) {
       document.getElementById('preference_longitude').value = position.coords.longitude;
@@ -243,25 +393,35 @@ const initGeorges = () => {
 
     });
 
-    remerciementIdElement.classList.remove("d-none");
-    loadDynamicBannerText("Merci !! C'était sympa d'apprendre à te connaitre.<br> Valide pour voir ma séléction :)", "remerciement-question");
-    setTimeout(function(){
-    submitGeorgesIdElement.classList.remove("d-none");
-    submitGeorgesIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-    }, duration);
+    loadDynamicBannerText("Merci !! Valide pour voir ma séléction :)", "remerciement-question");
+
+    document.getElementById('remerciement-question').classList.remove('invisible');
+    const btnSubmit = document.getElementById('submit-georges');
+    btnSubmit.classList.remove('invisible');
+
+    scrollTo(document.getElementById('submit-georges2'));
+
     // submitForm
   });
 
   const geocationFalse = document.getElementById('geocation-false');
+
   geocationFalse.addEventListener('click', function check() {
     document.getElementById("preference_geocation").checked = false;
     remerciementIdElement.classList.remove("d-none");
-    loadDynamicBannerText("Merci !! C'était sympa d'apprendre à te connaitre.<br> Valide pour voir ma séléction :)", "remerciement-question");
-    setTimeout(function(){
-    submitGeorgesIdElement.classList.remove("d-none");
-    submitGeorgesIdElement.scrollIntoView({behavior: 'smooth', block: 'start'});
-    }, duration);
 
+
+    const lastPrevResponse = document.getElementById('geocation-false');
+    lastPrevResponse.style.paddingBottom = '0px';
+
+    loadDynamicBannerText("Merci !! Valide pour voir ma séléction :)", "remerciement-question");
+
+    document.getElementById('remerciement-question').classList.remove('invisible');
+
+    const btnSubmit = document.getElementById('submit-georges').classList.remove('invisible');
+    btnSubmit.classList.remove('invisible');
+
+    scrollTo(document.getElementById('submit-georges2'));
     // submitForm
   });
 };

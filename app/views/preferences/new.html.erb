@@ -4,7 +4,7 @@
       </div>
         <%= simple_form_for @preference do |f| %>
 
-          <div id="name">
+          <div id="name" class="">
             <div class="d-flex justify-content-start" >
               <div id="name-question" class="btn-georges-question bg-white m-2" >
               </div>
@@ -16,13 +16,13 @@
             </div>
           </div>
 
-          <div id="roommate" class="d-none">
+          <div id="roommate" class="">
             <div class="d-flex justify-content-start" >
-              <div id="roommate-question"class="btn-georges-question border-radius-10px bg-white m-2" >
+              <div id="roommate-question"class="invisible btn-georges-question border-radius-10px bg-white m-2" >
               </div>
             </div>
             <% Preference::ROOMMATE.each do |key, value|%>
-              <div class="d-flex justify-content-end">
+              <div id="roommate-answer" class="invisible">
                 <div class="btn-georges roommate border-radius-10px bg-blue mw-50 m-2"
                      data-roommate="<%= key %>"
                     style="cursor: pointer;">
@@ -34,13 +34,13 @@
 
           <%= f.input :roommate, label: false, input_html: { class: 'd-none' } %>
 
-          <div id="budget" class="d-none">
+          <div id="budget" class="">
             <div class="d-flex justify-content-start" >
-              <div  id="budget-question" class="btn-georges-question border-radius-10px bg-white m-2" >
+              <div  id="budget-question" class="invisible btn-georges-question border-radius-10px bg-white m-2" >
               </div>
             </div>
             <% Preference::BUDGET.each do |key, value|%>
-              <div id="budget-answer" class="d-none d-flex justify-content-end">
+              <div id="budget-answer" class="invisible">
                 <div class="btn-georges budget border-radius-10px bg-blue mw-50 m-2"
                      data-budget="<%= key %>"
                      style="cursor: pointer;">
@@ -52,13 +52,13 @@
 
           <%= f.input :budget, label: false, input_html: { class: 'd-none' } %>
 
-          <div id="day_activities" class="d-none">
+          <div id="day_activities" class="">
             <div class="d-flex justify-content-start" >
-              <div id="day_activities-question" class="btn-georges-question border-radius-10px bg-white m-2" >
+              <div id="day_activities-question" class="invisible btn-georges-question border-radius-10px bg-white m-2" >
               </div>
             </div>
             <% Preference::DAY_ACTIVITIES.each do |key, value|%>
-              <div class="d-flex justify-content-end ">
+              <div id="day_activities-answer" class="invisible">
                 <div class="btn-georges day_activities border-radius-10px bg-blue mw-50 m-2"
                    data-day_activities="<%= key %>"
                    style="cursor: pointer;">
@@ -70,13 +70,13 @@
 
           <%= f.input :day_activities, label: false, input_html: { class: 'd-none' } %>
 
-          <div id="biological_clock" class="d-none">
+          <div id="biological_clock" class="">
             <div class="d-flex justify-content-start" >
-              <div id="biological_clock-question" class="btn-georges-question border-radius-10px bg-white m-2" >
+              <div id="biological_clock-question" class="invisible btn-georges-question border-radius-10px bg-white m-2" >
               </div>
             </div>
             <% Preference::BIOLOGICAL_CLOCK.each do |key, value|%>
-              <div class="d-flex justify-content-end ">
+              <div id="biological_clock-answer" class="invisible">
                <div class="btn-georges biological_clock border-radius-10px bg-blue mw-50 m-2"
                      data-biological_clock="<%= key %>"
                      style="cursor: pointer;">
@@ -88,13 +88,13 @@
 
             <%= f.input :biological_clock, label: false, input_html: { class: 'd-none' } %>
 
-          <div id="accommodation" class="d-none">
+          <div id="accommodation" class="">
             <div class="d-flex justify-content-start" >
-              <div id="accommodation-question" class="btn-georges-question border-radius-10px bg-white m-2" >
+              <div id="accommodation-question" class="invisble btn-georges-question border-radius-10px bg-white m-2" >
               </div>
             </div>
             <% Preference::ACCOMMODATION.each do |key, value|%>
-              <div class="d-flex justify-content-end ">
+              <div id="accommodation-answer" class="invisible">
                 <div class="btn-georges accommodation border-radius-10px bg-blue mw-50 m-2"
                      data-accommodation="<%= key %>"
                      style="cursor: pointer;">
@@ -106,13 +106,13 @@
 
           <%= f.input :accommodation, label: false, input_html: { class: 'd-none' } %>
 
-          <div id="spot" class="d-none">
+          <div id="spot" class="">
             <div class="d-flex justify-content-start" >
-              <div id="spot-question" class="btn-georges-question border-radius-10px bg-white m-2" >
+              <div id="spot-question" class="invisible btn-georges-question border-radius-10px bg-white m-2" >
               </div>
             </div>
             <% Preference::SPOT.each do |key, value|%>
-              <div class="d-flex justify-content-end ">
+              <div id="spot-answer" class="invisible">
                 <div class="btn-georges spot border-radius-10px bg-blue mw-50 m-2"
                      data-spot="<%= key %>"
                      style="cursor: pointer;">
@@ -124,13 +124,13 @@
 
           <%= f.input :spot, label: false, input_html: { class: 'd-none' } %>
 
-          <div id="night_activities" class="d-none">
+          <div id="night_activities" class="">
             <div class="d-flex justify-content-start" >
-              <div id="night_activities-question" class="btn-georges-question border-radius-10px bg-white m-2" >
+              <div id="night_activities-question" class="invisible btn-georges-question border-radius-10px bg-white m-2" >
               </div>
             </div>
             <% Preference::NIGHT_ACTIVITIES.each do |key, value|%>
-              <div class="d-flex justify-content-end ">
+              <div id="night_activities-answer" class="invisible">
                 <div class="btn-georges night_activities border-radius-10px bg-blue mw-50 m-2"
                      data-night_activities="<%= key %>"
                      style="cursor: pointer;">
@@ -142,13 +142,13 @@
 
             <%= f.input :night_activities, label: false, input_html: { class: 'd-none' } %>
 
-          <div id="expectations" class="d-none">
+          <div id="expectations" class="">
             <div class="d-flex justify-content-start" >
-              <div id="expectations-question" class="btn-georges-question border-radius-10px bg-white m-2" >
+              <div id="expectations-question" class="invisible btn-georges-question border-radius-10px bg-white m-2" >
               </div>
             </div>
             <% Preference::EXPECTATIONS.each do |key, value|%>
-              <div class="d-flex justify-content-end ">
+              <div id="expectations-answer" class="invisible">
                 <div class="btn-georges expectations border-radius-10px bg-blue mw-50 m-2"
                      data-expectations="<%= key %>"
                      style="cursor: pointer;">
@@ -160,13 +160,13 @@
 
           <%= f.input :expectations, label: false, input_html: { class: 'd-none' } %>
 
-          <div id="kilometers" class="d-none">
+          <div id="kilometers" class="">
             <div class="d-flex justify-content-start" >
-              <div id="kilometers-question" class="btn-georges-question border-radius-10px bg-white m-2" >
+              <div id="kilometers-question" class="invisible btn-georges-question border-radius-10px bg-white m-2" >
               </div>
             </div>
             <% Preference::KILOMETERS.each do |key, value|%>
-              <div class="d-flex justify-content-end">
+              <div id="kilometers-answer" class="invisible">
                 <div class="btn-georges kilometers border-radius-10px bg-blue mw-50 m-2"
                      data-kilometers="<%= key %>"
                      style="cursor: pointer;">
@@ -178,18 +178,17 @@
 
           <%= f.input :kilometers, label: false, input_html: { class: 'd-none' } %>
 
-          <div id="geocation" class="d-none">
+          <div id="geocation" class="">
             <div class="d-flex justify-content-start" >
-              <div id="geocation-question" class="btn-georges-question border-radius-10px bg-white m-2" >
-
+              <div id="geocation-question" class="invisible btn-georges-question border-radius-10px bg-white m-2" >
               </div>
             </div>
-            <div id="geocation-true" class="d-flex justify-content-end">
+            <div id="geocation-true" class="invisible">
               <div class="btn-georges border-radius-10px bg-blue mw-50 m-2">
                 OUI
               </div>
             </div>
-            <div id="geocation-false" class="d-flex justify-content-end geocation">
+            <div id="geocation-false" class="invisible geocation">
               <div class="btn-georges border-radius-10px bg-blue mw-50 m-2">
                 NON
               </div>
@@ -199,13 +198,15 @@
           <%= f.input :geocation, label: false, as: :boolean, input_html: { class: 'd-none' }%>
           <%= f.input :longitude, as: :hidden %>
           <%= f.input :latitude, as: :hidden %>
-          <div id="remerciement" class="d-none">
+          <div id="remerciement" class="">
             <div class="d-flex justify-content-start" >
-              <div id="remerciement-question" class="btn-georges-question border-radius-10px bg-white m-2" >
+              <div id="remerciement-question" class="invisible btn-georges-question border-radius-10px bg-white m-2" >
               </div>
             </div>
           </div>
-          <%= f.submit "Valider", id: "submit-georges", class: "buton-primary d-none" %>
+          <%= f.submit "Valider", id: "submit-georges", class: "buton-primary invisible" %>
+          <br/>
+          <%= f.submit "Valider", id: "submit-georges2", class: "buton-primary invisible" %>
         <% end %>
   </div>
 </div>
