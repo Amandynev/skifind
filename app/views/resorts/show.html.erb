@@ -30,50 +30,61 @@
 
   <!-----------------------card station ------------------------->
 <div class="container-show">
+  <div class="back-cta">
+    <%= link_to "Mes résultats", resorts_path, class: "buton-primary" %>
+
+  </div>
+
+  <!-----------------------card station ------------------------->
   <div class="card-station">
     <div class="card-station-info">
 
       <div class="slopes-pictogramme">
 
         <div class="total-slopes">
-
+          <i class="fas fa-skiing pictogramme-color"></i><span><%= @resort.slopes_title %></span>
         </div>
 
         <div class="green-blue-slopes">
           <div class="green-slopes">
+            <%= @resort.slopes_green %>
           </div>
 
           <div class="blue-slopes">
+            <%= @resort.slopes_blue %>
           </div>
-
         </div>
 
         <div class="red-black-slopes">
           <div class="red-slopes">
+            <%= @resort.slopes_red %>
           </div>
-
           <div class="black-slopes">
+            <%= @resort.slopes_black %>
           </div>
-
         </div>
 
       </div>
 
       <div class="infos-pictogramme">
-          <div class="altitude"></div>
-          <div class="snowpark"></div>
-          <div class="kilometers-slopes"></div>
-
+          <div class="altitude">
+            <i class="fas fa-mountain pictogramme-color"></i><span><%= @resort.altitude %></span>
+          </div>
+          <div class="snowpark">
+             <i class="fas fa-snowboarding pictogramme-color"></i><span><%= @resort.snowpark %></span>
+          </div>
+          <div class="kilometers-slopes">
+            <i class="fas fa-child pictogramme-color"></i><span><%= @resort.kids_garden %></span>
+          </div>
       </div>
 
       <div class="map">
-
+        <%= render 'shared/map' %>
       </div>
-
     </div>
 
     <div class="card-station-cta">
-
+      <%= link_to "Réserve ton séjour", @resort.resort_website, class: "buton-primary", target: "_blank"  %>
     </div>
 
   </div>
