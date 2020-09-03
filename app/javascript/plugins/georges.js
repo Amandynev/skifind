@@ -68,13 +68,15 @@ const loadDynamicBannerText = (text, id) => {
 const displayQuestion = (questionElement) => setTimeout(() => questionElement.classList.remove('invisible'), 100);
 
 const displayResponses = (responseElements) => {
-  let d = 100;
+  let d = 1200;
 
   for (const response of responseElements) {
     setTimeout(() => {
       response.classList.remove('invisible');
       response.classList.add('d-flex');
-      response.classList.add('justify-content-end')
+      response.classList.add('justify-content-end');
+      response.classList.add('answer-smooth');
+
     }, d);
     d += 500;
   }
