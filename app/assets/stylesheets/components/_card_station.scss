@@ -2,40 +2,41 @@
 .container-show{
   margin: 0px auto;
   width: 700px;
+  align-items: center;
 }
 
 .card-station{
-  height: 60vw;
-  width: 90vw;
-  padding-top: 30px;
+  height: 700px;
+  width: 80vw;
+  margin-top: 40px;
   display:grid;
   grid-template-rows: 1fr 1fr;
   position:relative;
-
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 
 }
+
+.size-number{
+  font-size: 40px;
+}
+
+.span-picto{
+  margin-left:10px;
+}
 .card-station-info{
-  height: 90vh;
+  height: 70vh;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   padding: 20px;
-
 }
 
 .card-station-cta{
   display:grid;
   grid-template-columns: 2fr 1fr;
 }
-.button-website{
-  justify-content:center;
-  align-items:center;
-}
 
-.buton-primary{
-
-}
 .slopes-pictogramme{
   display:grid;
   grid-template-columns: 1fr;
@@ -45,24 +46,21 @@
 
 }
 .total-slopes{
-  font-weight: bold;
+
   font-size: 20px;
   display:flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .size-picto{
   width: 64px;
   height: 64px;
 }
-.green-blue-slopes{
-  display:flex;
-  justify-content: space-around;
-}
 
-.red-black-slopes{
+.pair-slopes {
   display:flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .green-slopes{
@@ -120,21 +118,21 @@
   padding-left: 30px;
 }
 .altitude {
-  font-weight: bold;
+
   font-size: 20px;
   display: flex;
   align-items: center;
 }
 
 .snowpark{
-  font-weight: bold;
+
   font-size: 20px;
   display: flex;
   align-items: center;
 }
 
 .kilometers-slopes{
-  font-weight: bold;
+
   font-size: 20px;
   display: flex;
   align-items: center;

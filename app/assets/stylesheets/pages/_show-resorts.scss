@@ -5,11 +5,17 @@
 .description{
   margin-top: 30px;
   margin-bottom: 30px;
+  font-size: 16px;
 }
 
 .title-description{
   margin-bottom: 20px;
   color: #02245C;
+  font-weight: bold;
+}
+
+.text-infos{
+  font-size: 20px;
 }
 
 .pictogramme-color {
@@ -18,7 +24,10 @@
   padding: 20px;
 }
 
+.massif-position{
+  padding-bottom: 250px;
 
+}
 .massif-show{
   font-size: 20px;
   font-weight: bold;
@@ -30,17 +39,20 @@
   top:0;
   bottom: 0;
   text-align: center;
+
 }
 
 .resort-title{
   font-size: 60px;
-  padding-bottom: 30px;
   font-weight: bold;
   color: white;
-  position: relative;
-  // top: 50vh;
-  // left: 30vw;
-  // z-index: 9999;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top:0;
+  bottom: 0;
+  text-align: center;
 }
 
 
@@ -60,8 +72,9 @@ body{
   margin-bottom: 20px;
   margin-top: 20px;
   position:absolute;
-  bottom: 130px;
-  right: 30px;
+  top: 5px;
+  right: 150px;
+  z-index: 9999;
 }
 
 .slopes-title {

@@ -7,7 +7,9 @@
      <div class="carousel-inner ">
     <div class="carousel-caption ">
       <h1 class="resort-title mt-3"><%= @resort.resort_name %></h1>
-      <p class="massif-show"> <%= @resort.mountains %> </p>
+      <div class="massif-position">
+        <p class="massif-show"> <%= @resort.mountains %> </p>
+      </div>
     </div>
     <% @resort.landscapes.each_with_index do |photo, index| %>
        <div class="carousel-item <%= 'active' if index == 0 %>">
@@ -31,7 +33,7 @@
   <!-----------------------card station ------------------------->
 <div class="container-show">
   <div class="back-cta">
-    <%= link_to "Mes résultats", resorts_path, class: "buton-primary" %>
+    <%= link_to "Mes résultats", resorts_path, class: "buton-primary-show link-without-style" %>
 
   </div>
 
@@ -43,11 +45,11 @@
 
         <div class="total-slopes">
 
-            <i class="fas fa-skiing fa-10x pictogramme-color " style="font-size: 34px;"></i><span><%= @resort.slopes_title %> pistes </span>
+            <i class="fas fa-skiing fa-10x pictogramme-color " style="font-size: 34px;"></i><span class="size-number"><%= @resort.slopes_title %> </span><span class="span-picto"> pistes </span>
 
         </div>
 
-        <div class="green-blue-slopes">
+        <div class="pair-slopes">
           <div class="green-slopes">
             <%= @resort.slopes_green %>
           </div>
@@ -57,7 +59,7 @@
           </div>
         </div>
 
-        <div class="red-black-slopes">
+        <div class="pair-slopes">
           <div class="red-slopes">
             <%= @resort.slopes_red %>
           </div>
@@ -70,35 +72,39 @@
 
       <div class="infos-pictogramme">
           <div class="altitude">
-            <i class="fas fa-mountain pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.altitude %></span>
+            <i class="fas fa-mountain pictogramme-color" style="font-size: 34px;"></i><span class="size-number"><%= @resort.altitude.split[0] %></span> <span class="span-picto"> mètres</span>
           </div>
           <div class="snowpark">
-             <i class="fas fa-snowboarding pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.snowpark %></span>
+             <i class="fas fa-snowboarding pictogramme-color" style="font-size: 34px;"></i><span class="size-number"><%= @resort.snowpark.split[0] %></span> <span class="span-picto"> snowparks</span>
           </div>
           <div class="kilometers-slopes">
-            <i class="fas fa-child pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.kids_garden %></span>
+            <i class="fas fa-bacon pictogramme-color" style="font-size: 34px;"></i><span class="size-number"><%= @resort.kids_garden.split[0] %></span><span class="span-picto"> km de pistes</span>
           </div>
       </div>
 
     </div>
-
+    <div class="localisation-show">
+       <p class="localisation-show"> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.resort_address %></p>
+      </div>
         <%= render 'shared/map' %>
 
 
     <div class="card-station-cta">
-      <div class="button-website">
-        <%= link_to "Réserve ton séjour", @resort.resort_website, class: "buton-primary", target: "_blank"  %>
+      <div class="d-flex justify-content-center align-items-center pb-4">
+        <div class="button-website">
+          <%= link_to "Réserve ton séjour", @resort.resort_website, class: "buton-primary-show link-without-style", target: "_blank"  %>
+        </div>
       </div>
+      <div></div>
     </div>
 
   </div>
 
 <div class="description">
 
-
   <div class="title-description">
 
-    <h2> Pourquoi <%= @resort.resort_name %> ? </h2>
+    <h2 lass="title-description-size"> Pourquoi <%= @resort.resort_name %> ? </h2>
 
   </div>
 
@@ -106,10 +112,8 @@
     <%= @resort.resort_description %>
   </div>
 </div>
-
-
-
 </div>
+
    <!-----------------------card activity ------------------------->
 
     <div class="container mt-5">
