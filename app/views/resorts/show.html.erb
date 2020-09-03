@@ -42,7 +42,9 @@
       <div class="slopes-pictogramme">
 
         <div class="total-slopes">
-          <i class="fas fa-skiing pictogramme-color"></i><span><%= @resort.slopes_title %></span>
+
+            <i class="fas fa-skiing fa-10x pictogramme-color " style="font-size: 34px;"></i><span><%= @resort.slopes_title %> pistes </span>
+
         </div>
 
         <div class="green-blue-slopes">
@@ -68,26 +70,45 @@
 
       <div class="infos-pictogramme">
           <div class="altitude">
-            <i class="fas fa-mountain pictogramme-color"></i><span><%= @resort.altitude %></span>
+            <i class="fas fa-mountain pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.altitude %></span>
           </div>
           <div class="snowpark">
-             <i class="fas fa-snowboarding pictogramme-color"></i><span><%= @resort.snowpark %></span>
+             <i class="fas fa-snowboarding pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.snowpark %></span>
           </div>
           <div class="kilometers-slopes">
-            <i class="fas fa-child pictogramme-color"></i><span><%= @resort.kids_garden %></span>
+            <i class="fas fa-child pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.kids_garden %></span>
           </div>
       </div>
 
-      <div class="map">
-        <%= render 'shared/map' %>
-      </div>
     </div>
 
+        <%= render 'shared/map' %>
+
+
     <div class="card-station-cta">
-      <%= link_to "Réserve ton séjour", @resort.resort_website, class: "buton-primary", target: "_blank"  %>
+      <div class="button-website">
+        <%= link_to "Réserve ton séjour", @resort.resort_website, class: "buton-primary", target: "_blank"  %>
+      </div>
     </div>
 
   </div>
+
+<div class="description">
+
+
+  <div class="title-description">
+
+    <h2> Pourquoi <%= @resort.resort_name %> ? </h2>
+
+  </div>
+
+  <div class="text-infos">
+    <%= @resort.resort_description %>
+  </div>
+</div>
+
+
+
 </div>
    <!-----------------------card activity ------------------------->
 
