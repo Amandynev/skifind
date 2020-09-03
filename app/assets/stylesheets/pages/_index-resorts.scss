@@ -16,9 +16,8 @@
     width: 800px;
     margin: 80px 60px 40px 60px;
     color: white;
-     text-shadow: -1px 0 #02245C, 0 1px #02245C, 1px 0 #02245C, 0 -1px #02245C;
-
-
+    text-shadow: -1px 0 #02245C, 0 1px #02245C, 1px 0 #02245C, 0 -1px #02245C;
+    font-weight: bold;
   }
 
 a{
@@ -37,6 +36,12 @@ a{
   width:               100vw;
   height:              100vh;
   background-repeat: no-repeat;
+}
+
+.info-picto-description{
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 

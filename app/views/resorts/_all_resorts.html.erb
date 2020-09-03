@@ -8,7 +8,7 @@
         <h1 class="title-index-all">Vos stations françaises</h1>
         <p>Retrouve toutes les stations disponibles!</br>
           Parcours skifind afin de trouver <strong>TA</strong> station préférée. </br>
-          Mais si tu veux allier envies et skis, n'hésites pas à parler avec George!</p>
+          Mais si tu veux allier envies et ski, n'hésite pas à parler avec Georges!</p>
       </div>
     </div>
   </div>
@@ -27,8 +27,11 @@
                       <h3 class="localisation-mountains"> <%= resort[0].mountains %> </h3>
                       <h4 class="titre_h4"><%= resort[0].resort_name %></h4>
                     </div>
-                    <div class="info-resort-description">
-                      <p><%=  resort[0].resort_description%></p>
+                    <div class="info-picto-description">
+                      <i class="fas fa-skiing pictogramme-color"></i><span> <%=  resort[0].slopes_title%>
+                      <i class="fas fa-mountain pictogramme-color"></i><span><%= resort[0].altitude %></span>
+                      <i class="fas fa-bacon pictogramme-color"></i><span><%= resort[0].kids_garden %></span>
+                      <i class="fas fa-snowboarding pictogramme-color"></i><span><%= resort[0].snowpark %></span>
                     </div>
                 </div>
               </div>
@@ -38,5 +41,4 @@
       </div>
     </div>
   <% end %>
-
 </div>
