@@ -106,7 +106,18 @@
   margin-bottom: 50px;
 }
 
-// #geocation-question {
-//   min-height: 80px;
-// }
+.answer-smooth {
+  animation-name: appear;
+  animation-duration: 2s;
+  animation-play-state: running;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
