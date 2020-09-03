@@ -31,8 +31,8 @@ const initCharts = () => {
                 options: { legend: { display: false }}
             });
 
-            chartElement.style.width = '96px';
-            chartElement.style.height = '96px';
+            chartElement.style.width = '86px';
+            chartElement.style.height = '86px';
         })
 
 
