@@ -543,7 +543,7 @@ file = URI.open('https://images.unsplash.com/photo-1579755209948-20d5b46be7be?ix
     activity_name: "Nuit insolite dans un Igloo",
     activity_description: "Quoi de plus insolite qu'une nuit dans un igloo ?\n
     Venez vivre cette expérience hors norme...",
-    resort_id: avoriaz.id,
+    resort_id: vars.id,
 
   )
   activity_igloo.save!
@@ -587,7 +587,7 @@ activity_name: "Profitez d'un Spa",
 activity_description: "Envie de vous détendre et récupérer au maximum?\n
 Piscine, jacuzzi, sauna ou hammam vous attendent...",
 
-resort_id: courchevel.id,
+resort_id: vars.id,
 
 )
 activity_spa.save!
@@ -624,3 +624,16 @@ resort_id: bolquere.id,
 )
 activity_luge.save!
 activity_luge.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
+
+
+file = URI.open('https://www.esforcieres.com/img/adultes/adultesnow2.jpg')
+activity_learn = Activity.new(
+activity_name: "Débutez le snowboard",
+activity_description: "Suivez les bons conseils d'un moniteur! \n
+Apprendre le snowboard à l'âge adulte c'est possible!",
+
+resort_id: tignes.id,
+
+)
+activity_learn.save!
+activity_learn.photo.attach(io: file, filename: 'activity.png', content_type: 'image/png')
