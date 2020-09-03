@@ -9,12 +9,19 @@
   height: 700px;
   width: 80vw;
   margin-top: 40px;
-  padding-top: 20px;
   display:grid;
   grid-template-rows: 1fr 1fr;
   position:relative;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 
+}
+
+.size-number{
+  font-size: 40px;
+}
+
+.span-picto{
+  margin-left:10px;
 }
 .card-station-info{
   height: 70vh;
@@ -39,10 +46,10 @@
 
 }
 .total-slopes{
-  font-weight: bold;
+
   font-size: 20px;
   display:flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 .size-picto{
@@ -111,21 +118,21 @@
   padding-left: 30px;
 }
 .altitude {
-  font-weight: bold;
+
   font-size: 20px;
   display: flex;
   align-items: center;
 }
 
 .snowpark{
-  font-weight: bold;
+
   font-size: 20px;
   display: flex;
   align-items: center;
 }
 
 .kilometers-slopes{
-  font-weight: bold;
+
   font-size: 20px;
   display: flex;
   align-items: center;

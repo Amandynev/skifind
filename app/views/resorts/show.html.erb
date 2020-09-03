@@ -43,7 +43,7 @@
 
         <div class="total-slopes">
 
-            <i class="fas fa-skiing fa-10x pictogramme-color " style="font-size: 34px;"></i><%= @resort.slopes_title %> <span> pistes </span>
+            <i class="fas fa-skiing fa-10x pictogramme-color " style="font-size: 34px;"></i><span class="size-number"><%= @resort.slopes_title %> </span><span class="span-picto"> pistes </span>
 
         </div>
 
@@ -70,13 +70,13 @@
 
       <div class="infos-pictogramme">
           <div class="altitude">
-            <i class="fas fa-mountain pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.altitude %></span>
+            <i class="fas fa-mountain pictogramme-color" style="font-size: 34px;"></i><span class="size-number"><%= @resort.altitude.split[0] %></span> <span class="span-picto"> mètres</span>
           </div>
           <div class="snowpark">
-             <i class="fas fa-snowboarding pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.snowpark %></span>
+             <i class="fas fa-snowboarding pictogramme-color" style="font-size: 34px;"></i><span class="size-number"><%= @resort.snowpark.split[0] %></span> <span class="span-picto"> snowparks</span>
           </div>
           <div class="kilometers-slopes">
-            <i class="fas fa-bacon pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.kids_garden %></span>
+            <i class="fas fa-bacon pictogramme-color" style="font-size: 34px;"></i><span class="size-number"><%= @resort.kids_garden.split[0] %></span><span class="span-picto"> km de pistes</span>
           </div>
       </div>
 
@@ -86,7 +86,7 @@
 
 
     <div class="card-station-cta">
-      <div class="d-flex justify-content-center align-items-center">
+      <div class="d-flex justify-content-center align-items-center pb-4">
         <div class="button-website">
           <%= link_to "Réserve ton séjour", @resort.resort_website, class: "buton-primary-show link-without-style", target: "_blank"  %>
         </div>
