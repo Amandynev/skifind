@@ -1,21 +1,34 @@
+.back-cta{
+  margin-top: 30px;
+}
+
+.description{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.title-description{
+  margin-bottom: 20px;
+  color: #02245C;
+}
+
 .pictogramme-color {
   color: #02245C;
   font-size: 20px;
   padding: 20px;
 }
-.pictogramme {
-  background-color: #FCFCFC;
-  font-weight: bold;
-}
+
 
 .massif-show{
   font-size: 20px;
   font-weight: bold;
-  color: #02245C;
+  color: white;
   margin-left: auto;
   margin-right: auto;
   left: 0;
   right: 0;
+  top:0;
+  bottom: 0;
   text-align: center;
 }
 
@@ -23,31 +36,17 @@
   font-size: 60px;
   padding-bottom: 30px;
   font-weight: bold;
-  color: #02245C;
+  color: white;
   position: relative;
   // top: 50vh;
   // left: 30vw;
   // z-index: 9999;
 }
 
-.slopes{
-  position:relative;
-}
+
 
 body{
   background-color:white;
-}
-
-.circle-green{
-  color: #09BC8A;
-}
-
-.circle-blue{
-  color: #02245C;
-}
-.circle-red{
-  color: red;
-  opacity: .7;
 }
 
 .pictogramme{
@@ -63,7 +62,6 @@ body{
   position:absolute;
   bottom: 130px;
   right: 30px;
-
 }
 
 .slopes-title {

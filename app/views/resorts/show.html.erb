@@ -27,73 +27,91 @@
     <span class="sr-only">Next</span>
   </a>
 </div>
-<!-----------------------title ------------------------->
 
+  <!-----------------------card station ------------------------->
 <div class="container-show">
+  <div class="back-cta">
+    <%= link_to "Mes résultats", resorts_path, class: "buton-primary" %>
 
-  <!-----------------------card descritpion ------------------------->
-  <div class="container-show d-flex">
-    <%= render 'shared/map' %>
+  </div>
 
-    <div class="card-description" >
-        <div class="pictogramme d-flex justify-content-around mt-4">
+  <!-----------------------card station ------------------------->
+  <div class="card-station">
+    <div class="card-station-info">
 
-          <div class="pictogramme-right border-right pr-5 ">
-            <div class="slopes">
-              <div class="slopes-title d-flex align-items-center">
-                 <i class="fas fa-skiing pictogramme-color"></i><span><%= @resort.slopes_title    %></span>
-              </div>
+      <div class="slopes-pictogramme">
 
-              <div class="slopes-colors d-flex align-items-center">
-                <div class="colors-left flex-column mr-3">
-                   <span><%= @resort.slopes_green %></span><i class="fas fa-circle circle-green d-flex flex-column align-items-center mb-3"></i>
-                   <span><%= @resort.slopes_blue %></span><i class="fas fa-circle circle-blue d-flex flex-column align-items-center mb-3"></i>
-                 </div>
-                 <div class="colors-right flex-column ">
-                   <span><%= @resort.slopes_red %></span><i class="fas fa-circle circle-red d-flex flex-column align-items-center mb-3"></i>
-                   </i><%= @resort.slopes_black %></span><i class="fas fa-circle circle-black d-flex flex-column align-items-center mb-3"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="pictogramme-left border-right pr-5 ">
-            <div class="altitude d-flex align-items-center">
-              <i class="fas fa-mountain pictogramme-color"></i><span><%= @resort.altitude %></span>
-            </div>
-            <div class="opening d-flex align-items-center">
-              <i class="far fa-calendar-alt pictogramme-color"></i><span><%= @resort.opening_time %></span>
-            </div>
-            <div class="free-carpak d-flex align-items-center">
-              <i class="fas fa-parking pictogramme-color"></i><span><%= @resort.free_carpark %></span>
-            </div>
-          </div>
+        <div class="total-slopes">
 
-          <div class="pictogramme-middle ">
-            <div class="kids-garden d-flex align-items-center">
-              <i class="fas fa-child pictogramme-color"></i><span><%= @resort.kids_garden %></span>
-            </div>
-            <div class="snowpark d-flex align-items-center">
-              <i class="fas fa-snowboarding pictogramme-color"></i><span><%= @resort.snowpark %></span>
-            </div>
-          </div>
-
-
+            <i class="fas fa-skiing fa-10x pictogramme-color " style="font-size: 34px;"></i><span><%= @resort.slopes_title %> pistes </span>
 
         </div>
 
-        <div class="description">
-          <%= @resort.resort_description %>
-          <div class="site-officiel">
+        <div class="green-blue-slopes">
+          <div class="green-slopes">
+            <%= @resort.slopes_green %>
+          </div>
 
-            <%= link_to "Site officiel", @resort.resort_website, class: "buton-primary", target: "_blank"  %>
-            <%= link_to "Mes résultats", resorts_path, class: "buton-primary" %>
+          <div class="blue-slopes">
+            <%= @resort.slopes_blue %>
           </div>
         </div>
-        <p class="localisation-show"> <i class="fas fa-map-marked-alt icon-color"></i> <%= @resort.resort_address %></p>
+
+        <div class="red-black-slopes">
+          <div class="red-slopes">
+            <%= @resort.slopes_red %>
+          </div>
+          <div class="black-slopes">
+            <%= @resort.slopes_black %>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="infos-pictogramme">
+          <div class="altitude">
+            <i class="fas fa-mountain pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.altitude %></span>
+          </div>
+          <div class="snowpark">
+             <i class="fas fa-snowboarding pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.snowpark %></span>
+          </div>
+          <div class="kilometers-slopes">
+            <i class="fas fa-child pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.kids_garden %></span>
+          </div>
+      </div>
 
     </div>
+
+        <%= render 'shared/map' %>
+
+
+    <div class="card-station-cta">
+      <div class="button-website">
+        <%= link_to "Réserve ton séjour", @resort.resort_website, class: "buton-primary", target: "_blank"  %>
+      </div>
+    </div>
+
+  </div>
+
+<div class="description">
+
+
+  <div class="title-description">
+
+    <h2> Pourquoi <%= @resort.resort_name %> ? </h2>
+
+  </div>
+
+  <div class="text-infos">
+    <%= @resort.resort_description %>
   </div>
 </div>
+
+
+
+</div>
+   <!-----------------------card activity ------------------------->
+
     <div class="container mt-5">
       <div class="row">
         <% @resort.activities.each do |activity|  %>
