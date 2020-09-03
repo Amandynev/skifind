@@ -28,9 +28,6 @@
 .card-station-cta{
   display:grid;
   grid-template-columns: 2fr 1fr;
-  display:flex;
-  justify-content:center;
-
 }
 
 .slopes-pictogramme{
@@ -52,14 +49,11 @@
   width: 64px;
   height: 64px;
 }
-.green-blue-slopes{
-  display:flex;
-  justify-content: space-around;
-}
 
-.red-black-slopes{
+.pair-slopes {
   display:flex;
   justify-content: space-around;
+  align-items: center;
 }
 
 .green-slopes{

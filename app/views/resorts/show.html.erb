@@ -43,11 +43,11 @@
 
         <div class="total-slopes">
 
-            <i class="fas fa-skiing fa-10x pictogramme-color " style="font-size: 34px;"></i><span><%= @resort.slopes_title %> pistes </span>
+            <i class="fas fa-skiing fa-10x pictogramme-color " style="font-size: 34px;"></i><%= @resort.slopes_title %> <span> pistes </span>
 
         </div>
 
-        <div class="green-blue-slopes">
+        <div class="pair-slopes">
           <div class="green-slopes">
             <%= @resort.slopes_green %>
           </div>
@@ -57,7 +57,7 @@
           </div>
         </div>
 
-        <div class="red-black-slopes">
+        <div class="pair-slopes">
           <div class="red-slopes">
             <%= @resort.slopes_red %>
           </div>
@@ -86,9 +86,12 @@
 
 
     <div class="card-station-cta">
-      <div class="button-website">
-        <%= link_to "Réserve ton séjour", @resort.resort_website, class: "buton-primary-show link-without-style", target: "_blank"  %>
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="button-website">
+          <%= link_to "Réserve ton séjour", @resort.resort_website, class: "buton-primary-show link-without-style", target: "_blank"  %>
+        </div>
       </div>
+      <div></div>
     </div>
 
   </div>
