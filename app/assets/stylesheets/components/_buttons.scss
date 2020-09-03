@@ -1,19 +1,51 @@
 //Button_home_page
 
 .buton-primary {
-    color: white;
-    padding: 10px 40px;
-    border-radius: 4px;
-    font-weight: bold;
-    background: linear-gradient(15deg, #02245C 0%, #011028 74%);
-    transition: background 0.3s ease;
-    border: 0.7px solid #011028;
-    text-decoration: none;
+  color: white;
+  padding: 10px 40px;
+  border-radius: 4px;
+  font-weight: bold;
+  background: linear-gradient(15deg, #02245C 0%, #011028 74%);
+  transition: background 0.3s ease;
+  border: 0.7px solid #011028;
+  text-decoration: none;
+}
+
+.buton-primary:hover {
+  background: white;
+  text-decoration: none;
+  color: white;
+}
+
+.buton-primary-home {
+  color: white;
+  padding: 15px 55px;
+  border-radius: 8px;
+  font-weight: bold;
+  background: linear-gradient(15deg, #3A99DC 0%, #3A90DC 74%);
+  // background:  #3A90DC;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  font-size: 25px;
+
+}
+
+.buton-primary-home:hover {
+  color: black;
+  background: white;
+  box-shadow: 2px 4px 10px white;
+}
+
+@media(max-width: 620px) {
+  .buton-primary-home {
+    padding: 10px 45px;
+    font-size: 20px;
   }
-  
-  .buton-primary:hover {
-    background: linear-gradient( #033FA0, #02245C);
-    text-decoration: none;
-    color: white;
-  }
- 
+}
+
+
+
+
+
+
+
