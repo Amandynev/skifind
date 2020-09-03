@@ -204,7 +204,10 @@
               </div>
             </div>
           </div>
-          <%= f.submit "Valider", id: "submit-georges", class: "buton-primary invisible" %>
+
+          <div class="d-flex justify-content-center">
+            <%= f.submit "Valider", id: "submit-georges", class: "d-flex justify-content-end buton-primary-validate invisible mt-4" %>
+          </div>
           <br/>
           <%= f.submit "Valider", id: "submit-georges2", class: "buton-primary invisible" %>
         <% end %>

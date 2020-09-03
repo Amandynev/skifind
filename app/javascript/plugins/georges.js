@@ -68,7 +68,7 @@ const loadDynamicBannerText = (text, id) => {
 const displayQuestion = (questionElement) => setTimeout(() => questionElement.classList.remove('invisible'), 100);
 
 const displayResponses = (responseElements) => {
-  let d = 1200;
+  let d = 100;
 
   for (const response of responseElements) {
     setTimeout(() => {
@@ -112,7 +112,7 @@ const initGeorges = () => {
       const lastResponse = responses[responses.length - 1]
 
       // add compensation padding
-      lastResponse.style.paddingBottom = '40px';
+      lastResponse.style.paddingBottom = '50px';
 
       console.log(lastResponse);
       scrollTo(lastResponse)
@@ -150,7 +150,7 @@ const initGeorges = () => {
 
       // add compensation padding
       const lastResponse = responses[responses.length - 1]
-      lastResponse.style.paddingBottom = '44px';
+      lastResponse.style.paddingBottom = '54px';
 
       scrollTo(budgetIdElement);
       displayQuestion(question);
@@ -177,7 +177,7 @@ const initGeorges = () => {
 
       // add compensation padding
       const lastResponse = responses[responses.length - 1]
-      lastResponse.style.paddingBottom = '44px';
+      lastResponse.style.paddingBottom = '60px';
 
       scrollTo(day_activitiesIdElement);
       displayQuestion(question);
@@ -205,7 +205,7 @@ const initGeorges = () => {
 
       // add compensation padding
       const lastResponse = responses[responses.length - 1]
-      lastResponse.style.paddingBottom = '44px';
+      lastResponse.style.paddingBottom = '54px';
 
       scrollTo(biological_clockIdElement);
       displayQuestion(question);
@@ -231,7 +231,7 @@ const initGeorges = () => {
 
       // add compensation padding
       const lastResponse = responses[responses.length - 1]
-      lastResponse.style.paddingBottom = '44px';
+      lastResponse.style.paddingBottom = '54px';
 
       scrollTo(accommodationIdElement);
       displayQuestion(question);
@@ -257,7 +257,7 @@ const initGeorges = () => {
 
       // add compensation padding
       const lastResponse = responses[responses.length - 1]
-      lastResponse.style.paddingBottom = '44px';
+      lastResponse.style.paddingBottom = '54px';
 
       scrollTo(spotIdElement);
       displayQuestion(question);
@@ -283,7 +283,7 @@ const initGeorges = () => {
 
       // add compensation padding
       const lastResponse = responses[responses.length - 1]
-      lastResponse.style.paddingBottom = '44px';
+      lastResponse.style.paddingBottom = '54px';
 
       scrollTo(night_activitiesIdElement);
       displayQuestion(question);
@@ -310,7 +310,7 @@ const initGeorges = () => {
 
       // add compensation padding
       const lastResponse = responses[responses.length - 1]
-      lastResponse.style.paddingBottom = '44px';
+      lastResponse.style.paddingBottom = '74px';
 
       scrollTo(expectationsIdElement);
       displayQuestion(question);
@@ -336,7 +336,7 @@ const initGeorges = () => {
 
       // add compensation padding
       const lastResponse = responses[responses.length - 1]
-      lastResponse.style.paddingBottom = '44px';
+      lastResponse.style.paddingBottom = '54px';
 
       scrollTo(kilometersIdElement);
       displayQuestion(question);
@@ -381,6 +381,11 @@ const initGeorges = () => {
     document.getElementById("preference_geocation").checked = true;
     console.log('is trying to geoloc...')
 
+      const falseResponse = document.getElementById('geocation-false');
+      falseResponse.classList.remove('d-flex')
+      falseResponse.classList.add('d-none')
+
+
 
     const lastPrevResponse = document.getElementById('geocation-false');
     lastPrevResponse.style.paddingBottom = '0px';
@@ -408,7 +413,13 @@ const initGeorges = () => {
 
   geocationFalse.addEventListener('click', function check() {
     document.getElementById("preference_geocation").checked = false;
-    remerciementIdElement.classList.remove("d-none");
+
+    const falseResponse = document.getElementById('geocation-true');
+    falseResponse.classList.remove('d-flex');
+    falseResponse.classList.add('d-none');
+
+    document.getElementById('geocation-false').style.paddingBottom = '84px';
+
 
 
     const lastPrevResponse = document.getElementById('geocation-false');

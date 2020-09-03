@@ -54,6 +54,24 @@
   box-shadow: 2px 4px 10px white;
 }
 
+.buton-primary-validate {
+  color: white;
+  padding: 10px 45px;
+  border-radius: 8px;
+  background: linear-gradient(15deg, #3A99DC 0%, #3A90DC 74%);
+  // background:  #3A90DC;
+  transition: background 0.3s ease;
+  text-decoration: none;
+  font-size: 20px;
+  border: none;
+}
+
+.buton-primary-validate:hover {
+  color: black;
+  background: white;
+  box-shadow: 2px 4px 10px white;
+}
+
 @media(max-width: 620px) {
   .buton-primary-home {
     padding: 10px 45px;
