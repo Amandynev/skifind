@@ -31,7 +31,7 @@
   <!-----------------------card station ------------------------->
 <div class="container-show">
   <div class="back-cta">
-    <%= link_to "Mes résultats", resorts_path, class: "buton-primary" %>
+    <%= link_to "Mes résultats", resorts_path, class: "buton-primary-show link-without-style" %>
 
   </div>
 
@@ -76,7 +76,7 @@
              <i class="fas fa-snowboarding pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.snowpark %></span>
           </div>
           <div class="kilometers-slopes">
-            <i class="fas fa-child pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.kids_garden %></span>
+            <i class="fas fa-bacon pictogramme-color" style="font-size: 34px;"></i><span><%= @resort.kids_garden %></span>
           </div>
       </div>
 
@@ -87,7 +87,7 @@
 
     <div class="card-station-cta">
       <div class="button-website">
-        <%= link_to "Réserve ton séjour", @resort.resort_website, class: "buton-primary", target: "_blank"  %>
+        <%= link_to "Réserve ton séjour", @resort.resort_website, class: "buton-primary-show link-without-style", target: "_blank"  %>
       </div>
     </div>
 

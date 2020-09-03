@@ -17,6 +17,12 @@
   color: white;
 }
 
+.buton-primary-show:hover {
+  background: white;
+  text-decoration: none;
+  color: white;
+}
+
 .buton-primary-home {
   color: white;
   padding: 15px 55px;
@@ -28,6 +34,18 @@
   text-decoration: none;
   font-size: 25px;
 
+}
+
+.buton-primary-show {
+  color: white;
+  padding: 15px 45px;
+  border-radius: 8px;
+  font-weight: bold;
+  background: linear-gradient(15deg, #02245C 0%, #011028 74%);
+  transition: background 0.3s ease;
+  border: 0.7px solid #011028;
+  text-decoration: none;
+  font-size: 25px;
 }
 
 .buton-primary-home:hover {

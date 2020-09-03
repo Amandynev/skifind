@@ -2,11 +2,12 @@
 .container-show{
   margin: 0px auto;
   width: 700px;
+  align-items: center;
 }
 
 .card-station{
   height: 60vw;
-  width: 90vw;
+  width: 80vw;
   padding-top: 30px;
   display:grid;
   grid-template-rows: 1fr 1fr;
@@ -15,12 +16,13 @@
 
 }
 .card-station-info{
-  height: 90vh;
+  height: 70vh;
   display:grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 10px;
   grid-auto-rows: minmax(100px, auto);
   padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
 
 }
 
