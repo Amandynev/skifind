@@ -143,6 +143,13 @@
 @media(max-width: 620px) {
   .card-station {
     grid-template-rows: 1fr;
+  }
+  .card-station-info {
+    grid-template-columns: 1fr;
+  }
+
+  .card-station-cta{
+    grid-template-columns: 1fr;
 
   }
 
