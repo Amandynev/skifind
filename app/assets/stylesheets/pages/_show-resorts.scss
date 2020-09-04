@@ -104,3 +104,20 @@ background-position: center;
   color: #011028;
   margin-bottom: -480px;
 }
+
+@media(max-width: 620px) {
+  .back-cta {
+    width: 300px;
+  }
+.localisation-show{
+  display:none;
+}
+
+.photo-caroussel{
+height: 100vh;
+width: 100vw;
+background-size: cover;
+background-position: center;
+}
+
+  }
