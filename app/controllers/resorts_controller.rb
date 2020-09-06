@@ -8,11 +8,16 @@ class ResortsController < ApplicationController
           @resorts = Resort.where(sql_query, query: "%#{params[:query]}%")
                            .map { |resort| [resort, nil]}
 
-        else
+        elsif current_user
+
           # Ici on va trier les resorts en fonction des préférences
 
           # On récupère la préférence du user (preference)
-          @resorts = current_user.top_resorts  # [[#<Resort....>, 67], [......]
+          @resorts = current_user.top_resorts
+
+        else
+          user = User.find_by_id(session[:user_id])
+          @resorts = user.top_resorts # [[#<Resort....>, 67], [......]
         end
     end
 
