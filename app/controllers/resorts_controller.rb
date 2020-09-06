@@ -16,7 +16,8 @@ class ResortsController < ApplicationController
           @resorts = current_user.top_resorts
 
         else
-          @resorts = @user.top_resorts # [[#<Resort....>, 67], [......]
+          user = User.find_by_id(session[:user_id])
+          @resorts = user.top_resorts # [[#<Resort....>, 67], [......]
         end
     end
 

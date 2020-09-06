@@ -12,10 +12,11 @@ class PreferencesController < ApplicationController
       user = User.find_by_id(session[:user_id])
       preference = user.preference
       preference.update(preference_params)
+      set_pref(user)
     else
       @user = User.create(email: "#{SecureRandom.uuid}@skifind.com", password: "azerty")
-      session[:user_id] = user.id
-      set_pref(user)
+      session[:user_id] = @user.id
+      set_pref(@user)
     end
   end
 
