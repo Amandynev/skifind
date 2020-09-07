@@ -68,7 +68,7 @@ const loadDynamicBannerText = (text, id) => {
 const displayQuestion = (questionElement) => setTimeout(() => questionElement.classList.remove('invisible'), 100);
 
 const displayResponses = (responseElements) => {
-  let d = 1200;
+  let d = 100;
 
   for (const response of responseElements) {
     setTimeout(() => {
@@ -420,8 +420,6 @@ const initGeorges = () => {
     falseResponse.classList.remove('d-flex');
     falseResponse.classList.add('d-none');
 
-    document.getElementById('geocation-false').style.paddingBottom = '84px';
-
 
 
     const lastPrevResponse = document.getElementById('geocation-false');
@@ -433,6 +431,7 @@ const initGeorges = () => {
 
     const btnSubmit = document.getElementById('submit-georges').classList.remove('invisible');
     btnSubmit.classList.remove('invisible');
+    document.getElementById('geocation-false').style.paddingBottom = '84px';
 
     scrollTo(document.getElementById('submit-georges2'));
     // submitForm
